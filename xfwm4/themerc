@@ -1,8 +1,8 @@
-# Name: Numix Frost xfwm4 theme
+# Name: Numix Frost Light xfwm4 theme
 # Author: Satyajit Sahoo <satyajit.happy@gmail.com>
 # License: GPL-3.0+
 
-active_text_color=#dcdcdc
+active_text_color=#555555
 inactive_text_color=#888888
 button_offset=3
 button_spacing=0

@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-	<name>Numix Frost</name>
+	<name>Numix Frost Light</name>
 	<author>Satyajit Sahoo</author>
 	<copyright>GPL-3.0+</copyright>
 	<date>15 April 2015</date>
-	<description>Numix Frost Mutter Theme</description>
+	<description>Numix Frost Light Mutter Theme</description>
 </info>
 
 <!-- ::: CONSTANTS ::: -->
-<constant name="C_titlebar" value="gtk:custom(wm_bg,#2d2d2d)" />
-<constant name="C_border_focused" value="gtk:custom(wm_border_focused,#484848)" />
-<constant name="C_border_unfocused" value="gtk:custom(wm_border_unfocused,#393939)" />
-<constant name="C_title_focused" value="gtk:custom(wm_title_focused,#dcdcdc)" />
+<constant name="C_titlebar" value="gtk:custom(wm_bg,#dedede)" />
+<constant name="C_border_focused" value="gtk:custom(wm_border_focused,#999999)" />
+<constant name="C_border_unfocused" value="gtk:custom(wm_border_unfocused,#aaaaaa)" />
+<constant name="C_title_focused" value="gtk:custom(wm_title_focused,#555555)" />
 <constant name="C_title_unfocused" value="gtk:custom(wm_title_unfocused,#888888)" />
-<constant name="C_icons_focused" value="gtk:custom(wm_icons_focused,#dcdcdc)" />
+<constant name="C_icons_focused" value="gtk:custom(wm_icons_focused,#555555)" />
 <constant name="C_icons_focused_prelight" value="gtk:custom(wm_icons_focused_prelight,gtk:bg[SELECTED])" />
 <constant name="C_icons_focused_pressed" value="gtk:custom(wm_icons_focused_pressed,shade/gtk:bg[SELECTED]/0.8)" />
 <constant name="C_icons_unfocused" value="gtk:custom(wm_icons_unfocused,#888888)" />
