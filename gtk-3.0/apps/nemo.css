@@ -32,7 +32,6 @@ NemoPathbarButton {
 	background-color: shade(@toolbar_bg_color, 1.08);
 	background-image: none;
 	color: @toolbar_fg_color;
-
 	-NemoPathbarButton-border-radius: 2px;
 }
 
@@ -86,8 +85,8 @@ background-color: transparent;
 .sidebar NemoPlacesTreeView:selected:hover {
 	color: @theme_selected_fg_color;
 	text-shadow: 1px 1px 1px @theme_selected_bg_color;
-
 }
+
 NemoWindow .dialog-vbox .notebook tab.top {
 padding: 8px 15px;
 }
@@ -120,6 +119,7 @@ NemoWindow .menubar > .menuitem:hover {
 	background-image: none;
 	color: shade(@fg_color, 0.85);
 }
+
 NemoStatusBar .button.image-button {
 padding-left: 10px;
 padding-right: 10px;
