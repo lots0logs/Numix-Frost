@@ -4,17 +4,17 @@
 	<name>Numix-Frost-Light</name>
 	<author>Satyajit Sahoo</author>
 	<copyright>GPL-3.0+</copyright>
-	<date>15 April 2015</date>
-	<description>Numix Frost Light Metacity Theme</description>
+	<date>28 April 2015</date>
+	<description>Numix Frost Metacity Theme</description>
 </info>
 
 <!-- ::: CONSTANTS ::: -->
-<constant name="C_titlebar" value="#dedede" />
-<constant name="C_border_focused" value="#999999" />
-<constant name="C_border_unfocused" value="#aaaaaa" />
-<constant name="C_title_focused" value="#555555" />
+<constant name="C_titlebar" value="#2d2d2d" />
+<constant name="C_border_focused" value="#484848" />
+<constant name="C_border_unfocused" value="#393939" />
+<constant name="C_title_focused" value="#dcdcdc" />
 <constant name="C_title_unfocused" value="#888888" />
-<constant name="C_icons_focused" value="#555555" />
+<constant name="C_icons_focused" value="#dcdcdc" />
 <constant name="C_icons_focused_prelight" value="gtk:bg[SELECTED])" />
 <constant name="C_icons_focused_pressed" value="shade/gtk:bg[SELECTED]/0.8" />
 <constant name="C_icons_unfocused" value="#888888" />
@@ -30,7 +30,7 @@
 	<distance name="right_titlebar_edge" value="4" />
 	<distance name="title_vertical_pad" value="0" />
 	<aspect_ratio name="button" value="1.0" />
-	<border name="title_border" left="8" right="8" top="4" bottom="4" />
+	<border name="title_border" left="8" right="8" top="6" bottom="6" />
 	<border name="button_border" left="0" right="0" top="0" bottom="0" />
 </frame_geometry>
 
