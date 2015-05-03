@@ -229,28 +229,28 @@ GtkAssistant .sidebar {
     border-width: 1px;
     border-radius: 2px;
     border-style: solid;
-    border-color: shade(@theme_bg_color, 0.8);
+    border-color: shade(@theme_bg_color, 0.9);
     background-color: shade(@theme_bg_color, 1.08);
     background-image: none;
     color: @theme_fg_color;
 }
 
 .button:hover {
-    border-color: shade(@theme_bg_color, 0.7);
+    border-color: shade(@theme_bg_color, 0.8);
     background-color: shade(@theme_bg_color, 1.10);
     background-image: none;
 }
 
 .button:active,
 .button:checked {
-    border-color: shade(@theme_bg_color, 0.8);
+    border-color: shade(@theme_bg_color, 0.9);
     background-color: shade(@theme_bg_color, 0.95);
     background-image: none;
 }
 
 .button:active:hover,
 .button:checked:hover {
-    border-color: shade(@theme_bg_color, 0.7);
+    border-color: shade(@theme_bg_color, 0.8);
 }
 
 .button:focus,
@@ -259,11 +259,11 @@ GtkAssistant .sidebar {
 .button:active:hover:focus,
 .button:checked:focus,
 .button:checked:hover:focus {
-    border-color: shade(@theme_bg_color, 0.7);
+    border-color: shade(@theme_bg_color, 0.8);
 }
 
 .button:insensitive {
-    border-color: shade(@theme_bg_color, 0.85);
+    border-color: shade(@theme_bg_color, 0.95);
     background-color: shade(@theme_bg_color, 0.9);
     background-image: none;
 }
@@ -277,25 +277,25 @@ GtkAssistant .sidebar {
 
 /* default button */
 .button.default {
-    border-color: shade(@theme_selected_bg_color, 0.8);
+    border-color: shade(@theme_selected_bg_color, 0.9);
     background-color: shade(@theme_selected_bg_color, 1.08);
     color: @theme_selected_fg_color;
 }
 
 .button.default:hover {
-    border-color: shade(@theme_selected_bg_color, 0.7);
+    border-color: shade(@theme_selected_bg_color, 0.8);
     background-color: @theme_selected_bg_color;
 }
 
 .button.default:active,
 .button.default:checked {
-    border-color: shade(@theme_selected_bg_color, 0.8);
+    border-color: shade(@theme_selected_bg_color, 0.9);
     background-color: shade(@theme_selected_bg_color, 0.95);
 }
 
 .button.default:active:hover,
 .button.default:checked:hover {
-    border-color: shade(@theme_selected_bg_color, 0.7);
+    border-color: shade(@theme_selected_bg_color, 0.8);
     background-color: shade(@theme_selected_bg_color, 0.97);
 }
 
