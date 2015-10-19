@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-	<name>Numix</name>
+	<name>Numix-Frost</name>
 	<author>Satyajit Sahoo</author>
 	<copyright>GPL-3.0+</copyright>
-	<date>11 December 2013</date>
-	<description>Numix Metacity Theme</description>
+	<date>28 April 2015</date>
+	<description>Numix Frost Metacity Theme</description>
 </info>
 
 <!-- ::: CONSTANTS ::: -->
@@ -30,7 +30,7 @@
 	<distance name="right_titlebar_edge" value="4" />
 	<distance name="title_vertical_pad" value="0" />
 	<aspect_ratio name="button" value="1.0" />
-	<border name="title_border" left="8" right="8" top="4" bottom="4" />
+	<border name="title_border" left="8" right="8" top="5" bottom="5" />
 	<border name="button_border" left="0" right="0" top="0" bottom="0" />
 </frame_geometry>
 
@@ -990,7 +990,7 @@
 	<button function="unstick" state="pressed"><draw_ops></draw_ops></button>
 </frame_style>
 
-<frame_style name="dialog_focused" geometry="nobuttons">
+<frame_style name="dialog_focused" geometry="normal">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
 	<piece position="titlebar" draw_ops="rounded_titlebar_focused" />
 	<piece position="title" draw_ops="title_focused" />
@@ -1024,7 +1024,7 @@
 	<button function="unstick" state="pressed"><draw_ops></draw_ops></button>
 </frame_style>
 
-<frame_style name="dialog_unfocused" geometry="nobuttons">
+<frame_style name="dialog_unfocused" geometry="normal_unfocused">
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
 	<piece position="titlebar" draw_ops="titlebar_fill_unfocused" />
 	<piece position="title" draw_ops="title_unfocused" />

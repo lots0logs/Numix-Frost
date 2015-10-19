@@ -27,7 +27,11 @@ style "notify-button" {
 }
 
 style "notify-text" {
+<<<<<<< HEAD
     GtkWidget::link-color = "#f0544c"
+=======
+    GtkWidget::link-color = "#1a80b6"
+>>>>>>> origin/frost_sass
 
     fg[NORMAL] = "#f9f9f9"
     fg[PRELIGHT] = "#f9f9f9"
