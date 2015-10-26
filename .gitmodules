@@ -1,0 +1,3 @@
+[submodule "includes/cinnamon"]
+	path = includes/cinnamon
+	url = git@github.com:lots0logs/numix-cinnamon
