@@ -17,13 +17,9 @@ menu.items.text.color: #eeeeee
 menu.items.disabled.text.color: #888888
 
 menu.items.active.bg: flat solid
-<<<<<<< HEAD
-menu.items.active.bg.color: #f06860
-menu.items.active.text.color: #ffffff
-=======
 menu.items.active.bg.color: #1a80b6
 menu.items.active.text.color: #f9f9f9
->>>>>>> origin/frost_sass
+
 
 menu.separator.color: #262626
 menu.separator.width: 1
@@ -53,13 +49,9 @@ window.active.button.unpressed.bg.color: #333333
 window.active.button.unpressed.image.color: #eeeeee
 
 window.active.button.pressed.bg: flat solid
-<<<<<<< HEAD
-window.active.button.pressed.bg.color: #333333
-window.active.button.pressed.image.color: #f06860
-=======
+
 window.active.button.pressed.bg.color: #2d2d2d
 window.active.button.pressed.image.color: #1a80b6
->>>>>>> origin/frost_sass
 
 window.active.button.disabled.bg: flat solid
 window.active.button.disabled.bg.color: #333333
@@ -88,13 +80,9 @@ window.inactive.button.unpressed.bg.color: #333333
 window.inactive.button.unpressed.image.color: #888888
 
 window.inactive.button.pressed.bg: flat solid
-<<<<<<< HEAD
-window.inactive.button.pressed.bg.color: #333333
-window.inactive.button.pressed.image.color: #f06860
-=======
 window.inactive.button.pressed.bg.color: #2d2d2d
 window.inactive.button.pressed.image.color: #1a80b6
->>>>>>> origin/frost_sass
+
 
 window.inactive.button.disabled.bg: flat solid
 window.inactive.button.disabled.bg.color: #333333
@@ -112,11 +100,7 @@ osd.label.bg.color: #333333
 osd.label.text.color: #eeeeee
 
 osd.hilight.bg: flat solid
-<<<<<<< HEAD
-osd.hilight.bg.color: #f06860
-=======
 osd.hilight.bg.color: #1a80b6
->>>>>>> origin/frost_sass
 
 osd.unhilight.bg: flat solid
 osd.unhilight.bg.color: #888888
@@ -133,11 +117,7 @@ osd.button.focused.bg: flat solid border
 osd.button.focused.bg.color: #303030
 osd.button.focused.*.border.color: #1e1e1e
 
-<<<<<<< HEAD
-osd.button.focused.box.color: #f06860
-=======
 osd.button.focused.box.color: #1a80b6
->>>>>>> origin/frost_sass
 
 
 # Fonts
