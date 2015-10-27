@@ -1,6 +1,6 @@
-Numix is a modern flat theme with a combination of light and dark elements. It supports Gnome, Unity, XFCE and Openbox.
+Numix Frost is a modern flat theme with a combination of light and dark elements. It supports Gnome, Cinnamon, XFCE and Openbox.
 
-Numix is a part of the [Numix Project](http://numixproject.org).
+Numix Frost is designed by the [Numix Project](http://numixproject.org) exclusively for [Antergos](http://antergos.com).
 
 ### Manual installation
 
@@ -25,15 +25,15 @@ sudo make install
 To set the theme in Gnome, run the following commands in Terminal,
 
 ```sh
-gsettings set org.gnome.desktop.interface gtk-theme "Numix"
-gsettings set org.gnome.desktop.wm.preferences theme "Numix"
+gsettings set org.gnome.desktop.interface gtk-theme "Numix-Frost"
+gsettings set org.gnome.desktop.wm.preferences theme "Numix-Frost"
 ```
 
 To set the theme in Xfce, run the following commands in Terminal,
 
 ```sh
-xfconf-query -c xsettings -p /Net/ThemeName -s "Numix"
-xfconf-query -c xfwm4 -p /general/theme -s "Numix"
+xfconf-query -c xsettings -p /Net/ThemeName -s "Numix-Frost"
+xfconf-query -c xfwm4 -p /general/theme -s "Numix-Frost"
 ```
 
 ### For developers
