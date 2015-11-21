@@ -1,6 +1,6 @@
-# Numix GTK Theme
+# Numix GTK2 Theme
 
-gtk-color-scheme = "bg_color:#e7e7e7\nfg_color:#555555\nbase_color:#f9f9f9\ntext_color:#333333\nselected_bg_color:#1a80b6\nselected_fg_color:#f9f9f9\ntooltip_bg_color:#2d2d2d\ntooltip_fg_color:#dedede\ntitlebar_bg_color:#2d2d2d\ntitlebar_fg_color:#dcdcdc\nmenubar_bg_color:#2d2d2d\nmenubar_fg_color:#dcdcdc\ntoolbar_bg_color:#e7e7e7\ntoolbar_fg_color:#555555\nmenu_bg_color:#2d2d2d\nmenu_fg_color:#dcdcdc\npanel_bg_color:#2d2d2d\npanel_fg_color:#dcdcdc\nlink_color:#fc6f5d"
+gtk-color-scheme = "bg_color:#e7e7e7\nfg_color:#555555\nbase_color:#f9f9f9\ntext_color:#333333\nselected_bg_color:#1D90CD\nselected_fg_color:#f9f9f9\ntooltip_bg_color:#444444\ntooltip_fg_color:#eeeeee\ntitlebar_bg_color:#444444\ntitlebar_fg_color:#eeeeee\nmenubar_bg_color:#444444\nmenubar_fg_color:#eeeeee\ntoolbar_bg_color:#e7e7e7\ntoolbar_fg_color:#555555\nmenu_bg_color:#444444\nmenu_fg_color:#eeeeee\npanel_bg_color:#444444\npanel_fg_color:#eeeeee\nlink_color:#3f51b5"
 
 # Default Style
 
@@ -29,7 +29,7 @@ style "murrine-default" {
 	GtkMenu::horizontal-padding = 0
 	GtkMenu::vertical-padding = 0
 
-	GtkMenuBar::internal-padding = 0
+	GtkMenuBar::internal-padding = 5
 	GtkMenuBar::window-dragging = 1
 
 	GtkMenuItem::arrow-scaling= 0.5
@@ -343,7 +343,7 @@ style "murrine-menu-item" = "murrine-wider" {
 
 	engine "murrine" {
 		textstyle = 0
-		border_shades = { 1.2, 1.2 }
+		border_shades = { 1.1, 1.1 }
 	}
 }
 
