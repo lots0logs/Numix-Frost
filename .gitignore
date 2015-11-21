@@ -1,6 +1,5 @@
 # Ignore Backup Copies from Text Editor
 *~
-<<<<<<< HEAD
 
 # Ignore SASS files
 .sass-cache
@@ -8,7 +7,7 @@ gtk.gresource
 dist
 
 # Jetbrains
-=======
->>>>>>> origin/frost_sass
 .idea
 *.iml
+
+unity/
