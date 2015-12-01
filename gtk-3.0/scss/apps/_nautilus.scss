@@ -36,16 +36,6 @@
                 border-color: shade($bg_color, ($contrast + .1));
                 background-color: $bg_color;
             }
-
-        GtkPlacesSidebar {
-            .sidebar-row {
-                padding: 3px 10px;
-
-                & .sidebar-icon {
-                    padding-right: 5px;
-                }
-            }
-        }
         }
     }
 
