@@ -7,7 +7,7 @@ $bg_color: if($variant == "dark", #444, #f0f0f0);
 $fg_color: if($variant == "dark", #ddd, #555);
 $base_color: if($variant == "dark", #333, #f9f9f9);
 $text_color: if($variant == "dark", #eee, #333);
-$selected_bg_color: #1D90CD;
+$selected_bg_color: #1d90cd;
 $selected_fg_color: #f9f9f9;
 $tooltip_bg_color: #444;
 $tooltip_fg_color: #eee;
