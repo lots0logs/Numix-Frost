@@ -26,10 +26,10 @@ style "murrine-default" {
 
 	GtkImage::x-ayatana-indicator-dynamic = 1
 
-	GtkMenu::horizontal-padding = 0
-	GtkMenu::vertical-padding = 0
+	GtkMenu::horizontal-padding = 5
+	GtkMenu::vertical-padding = 5
 
-	GtkMenuBar::internal-padding = 0
+	GtkMenuBar::internal-padding = 5
 	GtkMenuBar::window-dragging = 1
 
 	GtkMenuItem::arrow-scaling= 0.5
@@ -132,7 +132,7 @@ style "murrine-default" {
 		glow_shade = 1.0 # amount of glow
 		gradient_shades = { 1.0, 1.0, 1.0, 1.0 } # gradient to draw on widgets
 		highlight_shade = 1.0 # amount of highlight
-		lightborder_shade = 0.5 # amount of inset light border
+		lightborder_shade = 1.0 # amount of inset light border
 		lightborderstyle = 1 # 0 = lightborder on top side, 1 = lightborder on all sides
 		listviewheaderstyle = 0 # 0 = flat, 1 = glassy, 2 = raised
 		listviewstyle = 0 # 0 = none, 1 = dotted, 2 = line
@@ -293,7 +293,7 @@ style "murrine-entry" = "murrine-wider" {
 	}
 }
 
-style "metacity-frame" = "murrine-thin" {
+style "metacity-frame" = "murrine-default" {
 	bg[SELECTED] = @selected_bg_color
 }
 
