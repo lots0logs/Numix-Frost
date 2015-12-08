@@ -240,9 +240,14 @@
         &, &:backdrop {
             @include button(transparent, currentColor);
 
-            &:focus:hover, &:active:hover, &:hover, &:selected {
+            &:focus:hover, &:checked:hover, &:active:hover, &:hover, &:selected {
                 background-image: none;
                 background-color: $selected_bg_color;
+                color: $selected_fg_color;
+                box-shadow: none;
+            }
+            &:checked {
+                box-shadow: none;
                 color: $selected_fg_color;
             }
         }
