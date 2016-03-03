@@ -1,19 +1,156 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 48" xmlns:xlink="http://www.w3.org/1999/xlink">
- <g id="0" transform="matrix(.2824 0 0 .2824 146.92015 -382.52444)" fill="none" stroke="#fff" stroke-linecap="round" color="#000" stroke-width="7.082">
-  <path d="m -477.76072,1373.3569 0,9.4717" opacity="0.6"/>
-  <path d="m -461.0171,1380.2922 -7.23427,7.3824" opacity="0.7"/>
-  <path d="m -454.08163,1397.0359 -9.47165,0" opacity="0.8"/>
-  <path d="m -461.01709,1413.7796 -6.93831,-7.0864" opacity="0.9"/>
-  <path d="m -477.76074,1420.715 9e-5,-9.4716"/>
-  <path d="m -494.50442,1413.7796 6.79048,-6.9384" opacity="0.3"/>
-  <path d="m -501.43987,1397.0359 9.47174,0" opacity="0.4"/>
-  <path d="m -494.5044,1380.2922 6.64243,6.9384" opacity="0.5"/>
- </g>
- <use width="400" height="400" xlink:href="#0" id="1" transform="matrix(.70711 .70711 -.70711 .70711 36 -4.97056)"/>
- <use width="400" height="400" xlink:href="#1" id="2" transform="matrix(.70711 .70711 -.70711 .70711 43.03248 -21.90969)"/>
- <use width="400" height="400" xlink:href="#2" id="3" transform="matrix(.70711 .70711 -.70711 .70711 50.08199 -38.90462)"/>
- <use width="400" height="400" xlink:href="#3" id="4" transform="matrix(.70711 .70711 -.70711 .70711 -38.92 -31.87214)"/>
- <use width="400" height="400" xlink:href="#4" id="5" transform="matrix(.70711 .70711 -.70711 .70711 52.98663 2.08905)"/>
- <use width="400" height="400" xlink:href="#5" id="6" transform="matrix(.70711 .70711 -.70711 .70711 60.01303 -14.91294)"/>
- <use width="400" height="400" xlink:href="#6" transform="matrix(.70711 .70711 -.70711 .70711 67.0224 -31.85913)"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 61.4142 31.206108"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="process-working.svg"
+   width="61.4142"
+   height="31.206108">
+  <metadata
+     id="metadata33">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs31" />
+  <sodipodi:namedview
+     pagecolor="#b6b6b6"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1014"
+     id="namedview29"
+     showgrid="false"
+     fit-margin-top="2"
+     fit-margin-bottom="2"
+     fit-margin-left="2"
+     fit-margin-right="2"
+     inkscape:zoom="3.9583333"
+     inkscape:cx="-11.33323"
+     inkscape:cy="23.721"
+     inkscape:window-x="0"
+     inkscape:window-y="35"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <g
+     id="0"
+     transform="matrix(0.21928415,0,0,0.21928415,112.74536,-298.04828)"
+     style="color:#000000;fill:none;stroke:#ffffff;stroke-width:7.08199978;stroke-linecap:round">
+    <path
+       d="m -477.76072,1373.3569 0,9.4717"
+       id="path5"
+       inkscape:connector-curvature="0"
+       style="opacity:0.6" />
+    <path
+       d="m -461.0171,1380.2922 -7.23427,7.3824"
+       id="path7"
+       inkscape:connector-curvature="0"
+       style="opacity:0.7" />
+    <path
+       d="m -454.08163,1397.0359 -9.47165,0"
+       id="path9"
+       inkscape:connector-curvature="0"
+       style="opacity:0.8" />
+    <path
+       d="m -461.01709,1413.7796 -6.93831,-7.0864"
+       id="path11"
+       inkscape:connector-curvature="0"
+       style="opacity:0.9" />
+    <path
+       d="m -477.76074,1420.715 9e-5,-9.4716"
+       id="path13"
+       inkscape:connector-curvature="0" />
+    <path
+       d="m -494.50442,1413.7796 6.79048,-6.9384"
+       id="path15"
+       inkscape:connector-curvature="0"
+       style="opacity:0.3" />
+    <path
+       d="m -501.43987,1397.0359 9.47174,0"
+       id="path17"
+       inkscape:connector-curvature="0"
+       style="opacity:0.4" />
+    <path
+       d="m -494.5044,1380.2922 6.64243,6.9384"
+       id="path19"
+       inkscape:connector-curvature="0"
+       style="opacity:0.5" />
+  </g>
+  <use
+     width="400"
+     height="400"
+     xlink:href="#0"
+     id="1"
+     transform="matrix(0.70711,0.70711,-0.70711,0.70711,23.386306,-3.4164145)"
+     x="0"
+     y="0" />
+  <use
+     width="400"
+     height="400"
+     xlink:href="#1"
+     id="2"
+     transform="matrix(0.70711,0.70711,-0.70711,0.70711,27.707794,-14.120928)"
+     x="0"
+     y="0" />
+  <use
+     width="400"
+     height="400"
+     xlink:href="#2"
+     id="3"
+     transform="matrix(0.70711,0.70711,-0.70711,0.70711,31.814228,-24.646944)"
+     x="0"
+     y="0" />
+  <use
+     width="400"
+     height="400"
+     xlink:href="#3"
+     id="4"
+     transform="matrix(0.70711,0.70711,-0.70711,0.70711,-23.964024,-20.349626)"
+     x="0"
+     y="0" />
+  <use
+     width="400"
+     height="400"
+     xlink:href="#4"
+     id="5"
+     transform="matrix(0.70711,0.70711,-0.70711,0.70711,33.926573,1.2264677)"
+     x="0"
+     y="0" />
+  <use
+     width="400"
+     height="400"
+     xlink:href="#5"
+     id="6"
+     transform="matrix(0.70711,0.70711,-0.70711,0.70711,38.326757,-9.7283023)"
+     x="0"
+     y="0" />
+  <use
+     width="400"
+     height="400"
+     xlink:href="#6"
+     transform="matrix(0.70711,0.70711,-0.70711,0.70711,42.642975,-20.246249)"
+     id="use27"
+     x="0"
+     y="0" />
 </svg>
