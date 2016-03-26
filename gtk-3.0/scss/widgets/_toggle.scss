@@ -56,7 +56,7 @@ $suffix: if($variant == "dark", "-dark", "");
 
     .check { @include toggle("checkbox"); }
 
-    GtkIconView.content-view.cell.check {
+    iconview.content-view.cell.check {
         -gtk-icon-source: url("assets/grid-selection-unchecked#{$suffix}.png");
 
         &:active { -gtk-icon-source: url("assets/grid-selection-checked#{$suffix}.png"); }

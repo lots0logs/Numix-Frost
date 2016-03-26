@@ -90,18 +90,18 @@
                 border-bottom-right-radius: 0;
             }
 
-            GtkLabel { color: mix($text_color, $base_color, .3); }
+            label { color: mix($text_color, $base_color, .3); }
 
             /* close button styling */
             .button { @extend %close_button; }
         }
 
         .prelight-page {
-            &, GtkLabel { color: mix($text_color, $base_color, .15); }
+            &, label { color: mix($text_color, $base_color, .15); }
         }
 
         .active-page {
-            &, GtkLabel { color: $text_color; }
+            &, label { color: $text_color; }
         }
 
         .reorderable-page {

@@ -43,6 +43,12 @@
 @define-color menu_fg_color @dark_fg_color;
 @define-color panel_bg_color @dark_bg_color;
 @define-color panel_fg_color @dark_fg_color;
+@define-color borders #{"" +$borders_color};
+@define-color unfocused_borders #{"" +$backdrop_borders_color};
+
+
+@define-color insensitive_bg_color #{"" +$insensitive_bg_color};
+@define-color insensitive_fg_color #{"" +$insensitive_fg_color};
 
 /* osd */
 @define-color osd_base #{"" + $osd_base};

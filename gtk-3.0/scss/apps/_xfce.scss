@@ -21,6 +21,6 @@
 
         .button { @extend %panelbutton; }
 
-        .menu { -gtk-image-effect: none; }
+        .menu { -gtk-icon-effect: none; }
     }
 }

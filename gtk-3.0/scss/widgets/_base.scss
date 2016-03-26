@@ -15,7 +15,7 @@
     outline-style: dashed;
     outline-width: 1px;
     outline-offset: -1px;
-    outline-radius: $roundness;
+    -gtk-outline-radius: $roundness;
 }
 
 
@@ -42,9 +42,9 @@
     &:insensitive,
     &:insensitive:insensitive { color: mix($fg_color, $bg_color, .5); }
 
-    &:insensitive { -gtk-image-effect: dim; }
+    &:insensitive, &:disabled { -gtk-icon-effect: dim; }
 
-    &:hover { -gtk-image-effect: highlight; }
+    &:hover { -gtk-icon-effect: highlight; }
 
     &:link, &:visited { color: $link_color; }
 }
@@ -55,7 +55,7 @@
 
     &:backdrop {
         text-shadow: none;
-        icon-shadow: none;
+        -gtk-icon-shadow: none;
     }
 
     &.csd { background-color: $bg_color; }
@@ -83,18 +83,61 @@
     &:selected { @extend %selected; }
 }
 
-GtkImage, GtkLabel, GtkBox, GtkGrid {
+image, label, box, grid {
     &, &:insensitive { background-color: transparent; }
 }
 
-GtkLabel {
+label {
     &.separator {
         @extend .dim-label;
 
         color: $fg_color;
+
+        &:backdrop { color: $backdrop_fg_color; }
     }
 
-    &:selected { @extend %selected; }
+    row:selected &,
+    &:selected { @extend %nobg_selected_items; }
 
-    &:insensitive { color: mix($fg_color, $bg_color, .5); }
+    selection {
+        background-color: $selected_bg_color;
+        color: $selected_fg_color;
+    }
+
+    &:disabled {
+        color: $insensitive_fg_color;
+
+        selection { @extend %selected_items:disabled; }
+
+        &:backdrop { color: $backdrop_insensitive_color; }
+    }
+
+    &:backdrop {
+        color: $backdrop_fg_color;
+
+        selection { @extend %selected_items:backdrop; }
+    }
+}
+
+.dim-label {
+    opacity: 0.55;
+    text-shadow: none;
+}
+
+assistant {
+    .sidebar {
+        background-color: $base_color;
+        border-top: 1px solid $borders_color;
+
+        &:backdrop {
+            background-color: $backdrop_base_color;
+            border-color: $backdrop_borders_color;
+        }
+    }
+
+    &.csd .sidebar { border-top-style: none; }
+
+    .sidebar label { padding: 6px 12px; }
+
+    .sidebar label.highlight { background-color: mix($bg_color, $fg_color, 80%); }
 }

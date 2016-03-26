@@ -154,7 +154,7 @@
         .entry { @include entry($menu_bg_color, $menu_fg_color); }
     }
 
-    GtkModelMenuItem GtkBox GtkImage { padding-right: $spacing; }
+    GtkModelMenuItem box image { padding-right: $spacing; }
 }
 
 

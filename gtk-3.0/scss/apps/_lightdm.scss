@@ -9,7 +9,7 @@
         color: $white;
         font: bold;
         text-shadow: 0 1px alpha($black, .5);
-        icon-shadow: 0 1px alpha($black, .5);
+        -gtk-icon-shadow: 0 1px alpha($black, .5);
 
         .menubar {
             &, > .menuitem {
@@ -18,7 +18,7 @@
                 color: $white;
                 font: bold;
                 text-shadow: 0 1px alpha($black, .5);
-                icon-shadow: 0 1px alpha($black, .5);
+                -gtk-icon-shadow: 0 1px alpha($black, .5);
 
                 *:hover { color: $white; }
 

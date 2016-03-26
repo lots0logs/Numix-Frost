@@ -99,9 +99,9 @@
             -GtkWidget-vertical-separator: 0;
         }
 
-        GtkLabel:last-child { color: alpha(currentColor, .7); }
+        label:last-child { color: alpha(currentColor, .7); }
 
-        GtkImage:last-child { color: alpha(currentColor, .7); }
+        image:last-child { color: alpha(currentColor, .7); }
     }
 
     GtkFileChooser {

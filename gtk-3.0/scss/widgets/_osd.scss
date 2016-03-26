@@ -89,7 +89,7 @@
             }
         }
 
-        GtkIconView.cell {
+        iconview.cell {
             &:selected, &:selected:focus {
                 background-color: transparent;
                 border: 3px solid mix(shade($osd_bg, .87), $osd_fg, .21);
