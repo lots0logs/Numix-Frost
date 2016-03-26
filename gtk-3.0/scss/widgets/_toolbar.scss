@@ -32,7 +32,7 @@
 
     .button.linked, .linked .button { @include linked_button($bg); }
 
-    GtkComboBox, .button {
+    combobox, .button {
         padding: $spacing - 1px;
 
         &.text-button { padding: $spacing; }
@@ -40,7 +40,7 @@
         &.image-button { padding: ($spacing + 1px) ($spacing - 1px) ($spacing + 1px) $spacing; }
     }
 
-    GtkSeparatorToolItem, .separator, .separator:insensitive {
+    .separator, .separator:insensitive {
         color: shade($bg, ($contrast + .1));
         border-color: currentColor;
 

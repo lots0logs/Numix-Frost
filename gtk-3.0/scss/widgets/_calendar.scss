@@ -3,7 +3,7 @@
 ***********/
 
 @include exports("calendar") {
-    GtkCalendar {
+    calendar {
         padding: $spacing;
         outline-offset: -1px;
 

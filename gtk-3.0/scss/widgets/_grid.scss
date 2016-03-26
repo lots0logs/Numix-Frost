@@ -33,7 +33,7 @@
     }
 
     .grid-child {
-        &, GtkFlowBox & {
+        &, flowBox & {
             padding: $spacing;
             border-radius: $roundness;
 

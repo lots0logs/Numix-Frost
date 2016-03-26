@@ -3,7 +3,7 @@
 ******************/
 
 @include exports("progressbar") {
-    GtkProgressBar {
+    progressbar {
         padding: 0;
         border-radius: $roundness;
         font-size: smaller;
@@ -58,7 +58,7 @@
         }
     }
 
-    GtkLevelBar {
+    levelbar {
         -GtkLevelBar-min-block-width: 34;
         -GtkLevelBar-min-block-height: 3;
 

@@ -69,7 +69,7 @@ $suffix: if($variant == "dark", "-dark", "");
 *********/
 
 @include exports("switch") {
-    GtkSwitch {
+    switch {
         padding: 0;
         border-radius: $roundness;
         font: bold condensed;

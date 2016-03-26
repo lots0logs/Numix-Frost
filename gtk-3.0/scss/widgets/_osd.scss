@@ -6,7 +6,7 @@
 ********/
 
 @include exports("osd") {
-    GtkOverlay.osd { background-color: transparent; }
+    overlay.osd { background-color: transparent; }
 
     .osd {
         &.background {
@@ -106,7 +106,7 @@
         }
     }
 
-    .osd GtkProgressBar, GtkProgressBar.osd {
+    .osd progressBar, progressBar.osd {
         -GtkProgressBar-xspacing: 0;
         -GtkProgressBar-yspacing: 2px;
         -GtkProgressBar-min-horizontal-bar-height: 2px;

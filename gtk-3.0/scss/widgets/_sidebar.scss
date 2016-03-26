@@ -4,7 +4,7 @@
 
 @include exports("sidebar") {
     .sidebar {
-        &, &.view, .view, GtkScrolledWindow {
+        &, &.view, .view, scrolledwindow {
             background-color: $bg_color;
             color: mix($fg_color, $bg_color, .1);
 
@@ -41,7 +41,7 @@
                 background-color: shade($bg_color, 1.05);
             }
         }
-        
+
         .sidebar-label {
             padding-left: $spacing;
             padding-right: $spacing;
@@ -53,7 +53,7 @@
               padding-right: $spacing * 2;
         }
 
-        GtkAssistant & {
+        assistant & {
             padding: $spacing;
             border-width: 0 1px 0 0;
             border-style: solid;
@@ -85,7 +85,7 @@
 *******/
 
 @include exports("paned") {
-    GtkPaned {
+    paned {
         -GtkPaned-handle-size: 1;
         -gtk-icon-source: none;
 
@@ -93,25 +93,25 @@
     }
 
 
-    GtkPaned:dir(rtl) {
+    paned:dir(rtl) {
         margin-right: 0;
         margin-left: $spacing;
     }
 
-    GtkPaned .pane-separator { background-color: shade($bg_color, .9); }
+    paned .pane-separator { background-color: shade($bg_color, .9); }
 
-    GtkPaned.wide {
+    paned.wide {
         -GtkPaned-handle-size: 4;
 
         margin: 0;
     }
 
-    GtkPaned.wide .pane-separator {
+    paned.wide .pane-separator {
         background-color: transparent;
         border-style: none solid;
         border-color: shade($bg_color, .9);
         border-width: 1px;
     }
 
-    GtkPaned.wide.vertical .pane-separator { border-style: solid none; }
+    paned.wide.vertical .pane-separator { border-style: solid none; }
 }

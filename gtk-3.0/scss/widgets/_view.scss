@@ -303,6 +303,6 @@
     }
 
     /* avoid double borders when a viewport is packed into a GtkScrolledWindow */
-    GtkScrolledWindow GtkViewport.frame { border: 0; }
+    scrolledwindow viewport.frame { border: 0; }
 }
 

@@ -37,7 +37,7 @@
 ************/
 
 @include exports("dialogs") {
-    GtkMessageDialog, .message-dialog, .prompt {
+    messagedialog, .message-dialog, .prompt {
         -GtkDialog-content-area-border: 0;
         -GtkDialog-action-area-border: $spacing;
         -GtkDialog-button-spacing: 0;
@@ -75,7 +75,7 @@
 **************/
 
 @include exports("expander") {
-    GtkExpander {
+    expander {
         padding: $spacing;
         outline-offset: 1px;
     }
@@ -217,7 +217,7 @@
 ********************/
 
 @include exports("gnome-bluetooth") {
-    GtkEntry.entry.pin-entry {
+    entry.entry.pin-entry {
         font: regular 50;
         padding-left: 25px;
         padding-right: 25px;

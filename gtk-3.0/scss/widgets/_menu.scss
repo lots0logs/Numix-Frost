@@ -45,7 +45,7 @@
         -GtkMenu-vertical-padding: 0;
     }
 
-    GtkTreeMenu, GtkMenuToolButton, GtkComboBox {
+    combobox {
         &.menu, .menu {
             background-color: $menu_bg_color;
             margin: $spacing;
@@ -73,11 +73,6 @@
     .context-menu { font: initial; }
 
     .menuitem {
-        GtkTreeMenu & {
-            padding: 0;
-            border-width: 0;
-        }
-
         &, .menu & {
             margin: $spacing;
             padding: $spacing;
@@ -133,7 +128,7 @@
             }
         }
 
-        GtkCalendar {
+        calendar {
             &:inconsistent { color: mix($menu_fg_color, $menu_bg_color, .5); }
 
             .button {
@@ -153,8 +148,6 @@
 
         .entry { @include entry($menu_bg_color, $menu_fg_color); }
     }
-
-    GtkModelMenuItem box image { padding-right: $spacing; }
 }
 
 
@@ -163,7 +156,7 @@
 **********/
 
 @include exports("popover") {
-    GtkPopover {
+    popover {
         @include border($menu_bg_color);
 
         margin: 10px;
@@ -236,7 +229,7 @@
         }
     }
 
-    GtkModelButton.button {
+    modelbutton.button {
         &, &:backdrop {
             @include button(transparent, currentColor);
 

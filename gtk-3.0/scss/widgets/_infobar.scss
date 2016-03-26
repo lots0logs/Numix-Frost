@@ -6,7 +6,7 @@
 **********/
 
 @include exports("infobar") {
-    GtkInfoBar {
+    infobar {
         border: 0;
 
         $types: (
