@@ -95,15 +95,15 @@
                     inset 0 -1px alpha($dark_shadow, .05);
     }
 
-    &:insensitive { box-shadow: inset -1px 0 shade($bg, .8); }
+    &:disabled { box-shadow: inset -1px 0 shade($bg, .8); }
 
     &:last-child, &:only-child { box-shadow: 0 1px 2px -1px alpha($dark_shadow, .12 + $shadow_strength); }
 
     &:last-child:hover, &:only-child:hover { box-shadow: 0 1px 2px -1px alpha($dark_shadow, .32 + $shadow_strength); }
 
-    &:insensitive:last-child, &:insensitive:only-child,
-    &:active:insensitive:last-child, &:active:insensitive:only-child,
-    &:checked:insensitive:last-child, &:checked:insensitive:only-child { box-shadow: none; }
+    &:disabled:last-child, &:disabled:only-child,
+    &:active:disabled:last-child, &:active:disabled:only-child,
+    &:checked:disabled:last-child, &:checked:disabled:only-child { box-shadow: none; }
 
     &:active:last-child, &:active:last-child:focus, &:active:last-child:hover, &:active:last-child:hover:focus,
     &:checked:last-child, &:checked:last-child:focus, &:checked:last-child:hover, &:checked:last-child:hover:focus, {
@@ -165,14 +165,14 @@
 
         &:focus, &:hover { color: $fg; }
 
-        &:active:insensitive, &:checked:insensitive {
+        &:active:disabled, &:checked:disabled {
             @include linear-gradient(shade($button_bg, .9));
 
             color: $fg;
             box-shadow: none;
         }
 
-        &:insensitive:insensitive {
+        &:disabled:disabled {
             @if (lightness($button_bg) > 50) {
                 @include linear-gradient(shade($button_bg, .95));
             } @else {
@@ -188,7 +188,7 @@
         border: 1px solid currentColor;
         color: shade($bg, ($contrast + .1));
 
-        &:insensitive { color: shade($button_bg, .85); }
+        &:disabled { color: shade($button_bg, .85); }
     }
 }
 
@@ -243,7 +243,7 @@
             background-image: none;
             box-shadow: inset 1px 0 shade($base_color, .9);
 
-            &:insensitive {
+            &:disabled {
                 color: mix($text_color, $base_color, .7);
                 box-shadow: inset 1px 0 shade($base_color, .85);
             }
@@ -286,7 +286,7 @@
 
             &:focus, &:hover:focus, &:active:focus, &:active:hover:focus { border-color: shade($bg_color, .7); }
 
-            &:insensitive {
+            &:disabled {
                 border-color: shade($bg_color, .85);
                 background-color: shade($bg_color, .9);
                 background-image: none;

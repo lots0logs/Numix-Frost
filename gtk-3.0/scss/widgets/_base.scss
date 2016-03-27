@@ -39,10 +39,10 @@
 
     &:selected { @extend %selected; }
 
-    &:insensitive,
-    &:insensitive:insensitive { color: mix($fg_color, $bg_color, .5); }
+    &:disabled,
+    &:disabled:disabled { color: mix($fg_color, $bg_color, .5); }
 
-    &:insensitive, &:disabled { -gtk-icon-effect: dim; }
+    &:disabled, &:disabled { -gtk-icon-effect: dim; }
 
     &:hover { -gtk-icon-effect: highlight; }
 
@@ -75,7 +75,7 @@
         color: $fg_color;
     }
 
-    &:insensitive {
+    &:disabled {
         background-color: shade(shade($bg_color, .95), 1.05);
         color: mix($fg_color, $bg_color, .5);
     }
@@ -84,7 +84,7 @@
 }
 
 image, label, box, grid {
-    &, &:insensitive { background-color: transparent; }
+    &, &:disabled { background-color: transparent; }
 }
 
 label {

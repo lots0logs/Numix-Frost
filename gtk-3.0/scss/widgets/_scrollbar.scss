@@ -81,6 +81,6 @@
 
         &:active { background-color: $selected_bg_color; }
 
-        &:insensitive { background-color: shade($bg_color, .9); }
+        &:disabled { background-color: shade($bg_color, .9); }
     }
 }

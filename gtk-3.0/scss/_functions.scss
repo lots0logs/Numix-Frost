@@ -73,7 +73,7 @@ $modules: () !default;
     &:checked, &:checked:hover,
     &:checked:focus, &:checked:hover:focus { border-color: border_active($color); }
 
-    &:insensitive { border-color: border_insensitive($color); }
+    &:disabled { border-color: border_insensitive($color); }
 
-    &:active:insensitive, &:checked:insensitive { border-color: border_normal($color); }
+    &:active:disabled, &:checked:disabled { border-color: border_normal($color); }
 }

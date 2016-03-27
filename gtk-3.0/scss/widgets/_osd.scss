@@ -45,7 +45,7 @@
                 @include linear-gradient(shade($osd_bg, 1.08));
                 @include border($osd_bg);
 
-                &:insensitive { @include linear-gradient(shade($osd_bg, .9)); }
+                &:disabled { @include linear-gradient(shade($osd_bg, .9)); }
             }
 
             &.trough {
@@ -59,7 +59,7 @@
                     background-image: none;
                 }
 
-                &:insensitive, &.highlight:insensitive {
+                &:disabled, &.highlight:disabled {
                     border-color: shade($osd_bg, .85);
                     background-color: shade($osd_bg, .9);
                     background-image: none;

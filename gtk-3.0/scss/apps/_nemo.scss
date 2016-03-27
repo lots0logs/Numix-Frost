@@ -128,7 +128,7 @@
             }
         }
 
-        GtkSeparatorToolItem, separator, separator:insensitive {
+        GtkSeparatorToolItem, separator, separator:disabled {
             color: shade($bg_color, ($contrast + .1));
             border-color: currentColor;
 

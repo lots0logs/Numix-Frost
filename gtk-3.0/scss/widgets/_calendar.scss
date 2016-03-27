@@ -7,10 +7,10 @@
         padding: $spacing;
         outline-offset: -1px;
 
-        &:inconsistent { color: mix($fg_color, $bg_color, .5); }
+        &:indeterminate { color: mix($fg_color, $bg_color, .5); }
 
         &.view, &.highlight, &.header, &.button {
-            &, &:focus, &:hover, &:insensitive {
+            &, &:focus, &:hover, &:disabled {
                 border: 0;
                 background-color: transparent;
                 background-image: none;

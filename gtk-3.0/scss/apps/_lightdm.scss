@@ -29,7 +29,7 @@
                     color: $white;
                 }
 
-                &:insensitive { color: alpha($white, .7); }
+                &:disabled { color: alpha($white, .7); }
 
                 .menu {
                     border-radius: 1px;

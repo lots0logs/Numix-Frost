@@ -46,7 +46,7 @@
         color: $selected_fg_color;
     }
 
-    &:insensitive { box-shadow: none; }
+    &:disabled { box-shadow: none; }
 
     &.progressbar {
         @include linear-gradient($selected_bg_color);
@@ -68,7 +68,7 @@
 
     &:focus, &:active { border-color: $selected_bg_color; }
 
-    &:insensitive {
+    &:disabled {
         @include linear-gradient(shade($bg, .9), to top);
 
         color: mix($bg, $fg, .5);

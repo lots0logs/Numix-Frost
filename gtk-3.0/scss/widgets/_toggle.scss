@@ -9,39 +9,39 @@ $suffix: if($variant == "dark", "-dark", "");
 
     -gtk-icon-source: url("../assets/#{$type}-unchecked#{$suffix}.png");
 
-    &:insensitive { -gtk-icon-source: url("../assets/#{$type}-unchecked-insensitive#{$suffix}.png"); }
+    &:disabled { -gtk-icon-source: url("../assets/#{$type}-unchecked-insensitive#{$suffix}.png"); }
 
     &:checked, &:active {
         -gtk-icon-source: url("../assets/#{$type}-checked#{$suffix}.png");
 
-        &:insensitive { -gtk-icon-source: url("../assets/#{$type}-checked-insensitive#{$suffix}.png"); }
+        &:disabled { -gtk-icon-source: url("../assets/#{$type}-checked-insensitive#{$suffix}.png"); }
     }
 
-    &:inconsistent {
+    &:indeterminate {
         -gtk-icon-source: url("../assets/#{$type}-mixed#{$suffix}.png");
 
-        &:insensitive { -gtk-icon-source: url("../assets/#{$type}-mixed-insensitive#{$suffix}.png"); }
+        &:disabled { -gtk-icon-source: url("../assets/#{$type}-mixed-insensitive#{$suffix}.png"); }
     }
 
     &.menuitem {
         -gtk-icon-source: none;
 
-        &:insensitive { -gtk-icon-source: none; }
+        &:disabled { -gtk-icon-source: none; }
 
         &:checked, &:active {
             -gtk-icon-source: url("../assets/menuitem-#{$type}-checked.png");
 
             &:hover { -gtk-icon-source: url("../assets/menuitem-#{$type}-checked-hover.png"); }
 
-            &:insensitive { -gtk-icon-source: url("../assets/menuitem-#{$type}-checked-insensitive.png"); }
+            &:disabled { -gtk-icon-source: url("../assets/menuitem-#{$type}-checked-insensitive.png"); }
         }
 
-        &:inconsistent {
+        &:indeterminate {
             -gtk-icon-source: url("../assets/menuitem-#{$type}-mixed.png");
 
             &:hover { -gtk-icon-source: url("../assets/menuitem-#{$type}-mixed-hover.png"); }
 
-            &:insensitive { -gtk-icon-source: url("../assets/menuitem-#{$type}-mixed-insensitive.png"); }
+            &:disabled { -gtk-icon-source: url("../assets/menuitem-#{$type}-mixed-insensitive.png"); }
         }
     }
 }
@@ -81,7 +81,7 @@ $suffix: if($variant == "dark", "-dark", "");
             border: 1px solid rgba(0, 0, 0, .2);
             box-shadow: 0 1px 2px -1px alpha($dark_shadow, .12);
 
-            &:insensitive {
+            &:disabled {
                 border-color: rgba(0, 0, 0, .1);
                 background-color: shade($bg_color, .9);
                 box-shadow: none;
@@ -105,7 +105,7 @@ $suffix: if($variant == "dark", "-dark", "");
                 color: $selected_fg_color;
             }
 
-            &:insensitive {
+            &:disabled {
                 @include linear-gradient(shade($bg_color, .9), to top);
 
                 border-color: border_insensitive($bg_color);

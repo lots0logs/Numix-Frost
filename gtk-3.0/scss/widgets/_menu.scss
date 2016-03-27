@@ -62,7 +62,7 @@
         &:selected { background-color: $selected_bg_color; }
 
         button {
-            &, &:hover, &:active, &:active *:insensitive, &:insensitive {
+            &, &:hover, &:active, &:active *:disabled, &:disabled {
                 border-width: 0;
                 background-color: transparent;
                 background-image: none;
@@ -92,13 +92,13 @@
 
             *:active, *:hover { color: $selected_fg_color; }
 
-            &:insensitive, *:insensitive { color: mix($menu_fg_color, $menu_bg_color, .5); }
+            &:disabled, *:disabled { color: mix($menu_fg_color, $menu_bg_color, .5); }
         }
 
         &.check, &.radio {
-            &, &:focus, &:hover, &:insensitive { background-image: none; }
+            &, &:focus, &:hover, &:disabled { background-image: none; }
 
-            &, &:focus, &:hover, &:active, &:insensitive {
+            &, &:focus, &:hover, &:active, &:disabled {
                 border-style: none;
                 background-color: transparent;
             }
@@ -113,7 +113,7 @@
         }
 
         &.button, &.button.flat {
-            &, &:focus, &:active, &:insensitive, &:active:insensitive {
+            &, &:focus, &:active, &:disabled, &:active:disabled {
                 background-color: transparent;
                 background-image: none;
                 border: 0;
@@ -129,7 +129,7 @@
         }
 
         calendar {
-            &:inconsistent { color: mix($menu_fg_color, $menu_bg_color, .5); }
+            &:indeterminate { color: mix($menu_fg_color, $menu_bg_color, .5); }
 
             .button {
                 border-style: none;
@@ -143,7 +143,7 @@
 
             &:hover { color: alpha($selected_fg_color, .8); }
 
-            &:insensitive { color: alpha(mix($menu_fg_color, $menu_bg_color, .5), .4); }
+            &:disabled { color: alpha(mix($menu_fg_color, $menu_bg_color, .5), .4); }
         }
 
         entry { @include entry($menu_bg_color, $menu_fg_color); }
