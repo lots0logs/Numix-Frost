@@ -15,7 +15,7 @@
             color: $selected_fg_color;
         }
 
-        &:active, &:prelight, &:selected {
+        &:active, &:hover, &:selected {
             text-shadow: none;
         }
     }
