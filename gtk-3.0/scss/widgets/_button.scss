@@ -11,8 +11,6 @@
         transition: 150ms ease;
         outline-color: transparent;
 
-        -GtkWidget-focus-line-width: 0;
-
         &:focus, &:hover, &:active { transition: none; }
     }
 
