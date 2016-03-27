@@ -41,7 +41,7 @@
     }
 
     NemoWindow {
-        .toolbar {
+        toolbar {
             border-width: 0 0 1px;
             border-style: solid;
             border-color: border_normal($toolbar_bg_color);
@@ -56,7 +56,7 @@
             padding-right: $spacing;
         }
 
-        GtkPaned {
+        paned {
             border-width: 0 1px 0 0;
             border-style: solid;
 
@@ -74,13 +74,13 @@
             border-bottom-width: 0;
         }
 
-        .frame {
+        frame {
             border: 0;
         }
     }
 
     NemoQueryEditor {
-        .toolbar {
+        toolbar {
             padding-top: $spacing - 1px;
             padding-bottom: $spacing - 2px;
             border-width: 1px 0 0;
@@ -108,15 +108,15 @@
     }
 
     NemoToolbar {
-        .button {
+        button {
             @include button($bg_color, $fg_color);
         }
 
-        .button.linked, .linked .button {
+        button.linked, .linked .button {
             @include linked_button($bg_color);
         }
 
-        GtkComboBox, .button {
+        combobox, button {
             padding: $spacing - 1px;
 
             &.text-button {
@@ -128,14 +128,14 @@
             }
         }
 
-        GtkSeparatorToolItem, .separator, .separator:insensitive {
+        GtkSeparatorToolItem, separator, separator:insensitive {
             color: shade($bg_color, ($contrast + .1));
             border-color: currentColor;
 
             -GtkWidget-window-dragging: true;
         }
 
-        .primary-toolbar .button {
+        toolbar.primary-toolbar button {
             padding: 5px 8px;
         }
     }

@@ -42,6 +42,11 @@
 *************/
 
 @include exports("treeview") {
+    .rubberband,
+    rubberband {
+        border: 1px solid darken($selected_bg_color, 10%);
+        background-color: transparentize(darken($selected_bg_color, 10%), 0.8);
+    }
     treeview entry {
         &.flat, & {
             border-radius: 0;
@@ -49,6 +54,32 @@
             background-color: $base_color;
 
             &:focus { border-color: $selected_bg_color; }
+        }
+    }
+    %column_header_button {
+        padding: 0 6px;
+        border-radius: 0;
+        background-image: none;
+        text-shadow: none;
+        border-style: none solid solid none;
+        border-color: $bg_color;
+
+        &:disabled {
+            border-color: $bg_color;
+            background-image: none;
+        }
+
+        &:backdrop {
+            border-color: $backdrop_bg_color;
+            border-style: none solid solid none;
+            color: mix($backdrop_fg_color, $backdrop_bg_color, 50%);
+            background-image: none;
+            background-color: $backdrop_base_color;
+
+            &:disabled {
+                border-color: $backdrop_bg_color;
+                background-image: none;
+            }
         }
     }
     treeview.view {

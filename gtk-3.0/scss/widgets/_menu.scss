@@ -6,7 +6,7 @@
 **********/
 
 @include exports("menubar") {
-    .menubar {
+    .menubar, menubar {
         -GtkWidget-window-dragging: true;
 
         border: 0;
@@ -15,7 +15,7 @@
         color: $menubar_fg_color;
 
 
-        &.menuitem, .menuitem {
+        &.menuitem, .menuitem, menuitem {
             padding: $spacing ($spacing * 2);
             border: 1px solid transparent;
             background-color: transparent;
@@ -46,7 +46,7 @@
     }
 
     combobox {
-        &.menu, .menu {
+        &.menu, .menu, menu {
             background-color: $menu_bg_color;
             margin: $spacing;
         }
@@ -61,7 +61,7 @@
 
         &:selected { background-color: $selected_bg_color; }
 
-        .button {
+        button {
             &, &:hover, &:active, &:active *:insensitive, &:insensitive {
                 border-width: 0;
                 background-color: transparent;
@@ -72,8 +72,8 @@
 
     .context-menu { font: initial; }
 
-    .menuitem {
-        &, .menu & {
+    .menuitem, menuitem {
+        &, .menu &, menu & {
             margin: $spacing;
             padding: $spacing;
             border: 0;
@@ -146,7 +146,7 @@
             &:insensitive { color: alpha(mix($menu_fg_color, $menu_bg_color, .5), .4); }
         }
 
-        .entry { @include entry($menu_bg_color, $menu_fg_color); }
+        entry { @include entry($menu_bg_color, $menu_fg_color); }
     }
 }
 
@@ -181,7 +181,7 @@
         &.osd {
             box-shadow: 0 2px 7px 3px alpha($black, .5);
 
-            > .toolbar .button {
+            > toolbar button {
                 border-radius: 0;
                 border-width: 0;
                 background-color: transparent;
@@ -189,13 +189,13 @@
             }
         }
 
-        .view, .list {
+        view, list {
             background-color: transparent;
             background-image: none;
             color: $menu_fg_color;
         }
 
-        .list-row {
+        .list-row, list row {
             &, &.button {
                 background-color: transparent;
                 background-image: none;
@@ -214,13 +214,13 @@
             border-radius: $roundness;
         }
 
-        .entry { @include entry($menu_bg_color, $menu_fg_color);  }
+        entry { @include entry($menu_bg_color, $menu_fg_color);  }
 
-        .button { @include button($menu_bg_color, $menu_fg_color);  }
+        button { @include button($menu_bg_color, $menu_fg_color);  }
 
-        > .list, > .view, > .toolbar { background-color: transparent; }
+        > list, > view, > toolbar { background-color: transparent; }
 
-        .separator {
+        separator {
             border: 0;
             background-color: transparent;
             color: alpha($menu_bg_color, .5);

@@ -52,9 +52,9 @@ $suffix: if($variant == "dark", "-dark", "");
         -GtkCheckMenuItem-indicator-size: 16;
     }
 
-    .radio { @include toggle("radio"); }
+    radio { @include toggle("radio"); }
 
-    .check { @include toggle("checkbox"); }
+    check { @include toggle("checkbox"); }
 
     iconview.content-view.cell.check {
         -gtk-icon-source: url("assets/grid-selection-unchecked#{$suffix}.png");
@@ -75,7 +75,7 @@ $suffix: if($variant == "dark", "-dark", "");
         font: bold condensed;
         outline-offset: -4px;
 
-        &.slider {
+        slider {
             @include linear-gradient(shade($bg_color, 1.2));
 
             border: 1px solid rgba(0, 0, 0, .2);
@@ -88,7 +88,7 @@ $suffix: if($variant == "dark", "-dark", "");
             }
         }
 
-        &.trough {
+        trough {
             @include linear-gradient(shade($bg_color, .95), to top);
 
             border: 1px solid border_normal($bg_color);

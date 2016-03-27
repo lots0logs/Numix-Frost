@@ -6,7 +6,7 @@
 ***********/
 
 @include exports("notebook") {
-    .notebook {
+    notebook {
         padding: 0;
         border-width: 1px 0 0;
         border-style: solid;
@@ -25,7 +25,7 @@
 
         &.frame { border-width: 1px; }
 
-        &.header {
+        > header {
             border-width: 0;
             background-color: shade($base_color, .9);
 
@@ -93,7 +93,7 @@
             label { color: mix($text_color, $base_color, .3); }
 
             /* close button styling */
-            .button { @extend %close_button; }
+            button { @extend %close_button; }
         }
 
         .prelight-page {

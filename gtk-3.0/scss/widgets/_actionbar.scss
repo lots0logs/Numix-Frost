@@ -6,7 +6,7 @@
 ***************/
 
 @include exports("actionbar") {
-    .action-bar {
+    actionbar {
         @include linear-gradient($bg_color);
 
         padding: $spacing;
@@ -29,6 +29,13 @@
         .subtitle {
             font: smaller;
             padding: 0 ($spacing * 2);
+        }
+
+        & > revealer >  box {
+            padding: 6px;
+            border-top: 1px solid $borders_color;
+
+            &:backdrop { border-color: $backdrop_borders_color; }
         }
     }
 }

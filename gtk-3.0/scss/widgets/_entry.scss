@@ -76,7 +76,7 @@
 }
 
 @include exports("entry") {
-    .entry {
+    entry {
         @include entry($base_color, $text_color);
 
         &.linked, .linked & { @extend %linked_entry; }

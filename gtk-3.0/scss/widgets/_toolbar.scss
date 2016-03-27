@@ -28,11 +28,11 @@
         padding: 0 ($spacing * 2);
     }
 
-    .button { @include button($bg, $fg); }
+    button { @include button($bg, $fg); }
 
-    .button.linked, .linked .button { @include linked_button($bg); }
+    button.linked, .linked button { @include linked_button($bg); }
 
-    combobox, .button {
+    combobox, button {
         padding: $spacing - 1px;
 
         &.text-button { padding: $spacing; }
@@ -40,18 +40,18 @@
         &.image-button { padding: ($spacing + 1px) ($spacing - 1px) ($spacing + 1px) $spacing; }
     }
 
-    .separator, .separator:insensitive {
+    separator, separator:insensitive {
         color: shade($bg, ($contrast + .1));
         border-color: currentColor;
 
         -GtkWidget-window-dragging: true;
     }
 
-    .menubar { -GtkToolbar-button-relief: normal; }
+    .menubar, menubar { -GtkToolbar-button-relief: normal; }
 }
 
 @include exports("toolbar") {
-    .toolbar {
+    toolbar {
         @include toolbar($bg_color, $fg_color);
 
         border-style: none;
@@ -62,7 +62,7 @@
         }
     }
 
-    .header-bar {
+    headerbar {
         @include toolbar($titlebar_bg_color, $titlebar_fg_color);
 
         border-width: 0 0 1px;

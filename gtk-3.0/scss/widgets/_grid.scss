@@ -3,11 +3,11 @@
 *******************/
 
 @include exports("grid") {
-    .list {
+    list {
         background-color: shade($bg_color, .97);
         color: $fg_color;
 
-        &-row {
+        row {
             &, &.button {
                 border: 0;
                 border-radius: 0;

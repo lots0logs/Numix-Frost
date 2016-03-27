@@ -226,14 +226,14 @@
         }
     }
 
-    .button {
+    button {
         @include button(shade($bg_color, 1.2), $fg_color);
 
         &.default { @include button($selected_bg_color, $selected_fg_color); }
 
         &.linked, .linked & { @include linked_button(shade($bg_color, 1.2)); }
 
-        .spinbutton & {
+        spinbutton & {
             color: mix($text_color, $base_color, .4);
             padding: $spacing ($spacing * 2);
             border: 0;
@@ -260,7 +260,7 @@
             &:dir(rtl) { box-shadow: inset -1px 0 shade($base_color, .9); }
         }
 
-        .spinbutton.vertical & {
+        spinbutton.vertical & {
             border: 1px solid shade($bg_color, .8);
             border-radius: $roundness;
             background-color: shade($bg_color, 1.08);
@@ -307,7 +307,7 @@
             }
         }
 
-        .spinbutton.vertical.entry {
+        spinbutton.vertical.entry {
             border-width: 1px;
             border-style: solid;
             border-radius: 0;
@@ -322,7 +322,7 @@
 
 @include exports("combobox") {
     combobox {
-        > .button {
+        > button {
             padding: ($spacing - 2px) ($spacing + 1px);
 
             -GtkComboBox-arrow-scaling: .5;
@@ -333,7 +333,7 @@
             .entry, .button { @extend %linked_button; }
         }
 
-        .separator {
+        separator {
             /* always disable separators */
             -GtkWidget-wide-separators: true;
             -GtkWidget-horizontal-separator: 0;
@@ -344,7 +344,7 @@
     }
 
     .linked > combobox {
-        > .button {
+        > button {
             // the combo is a composite widget so the way we do button linked doesn't
             // work, special case needed. See
             // https://bugzilla.gnome.org/show_bug.cgi?id=733979
@@ -352,10 +352,10 @@
             &:dir(rtl) { @extend %linked_middle:dir(rtl); }
         }
 
-        &:first-child > .button { @extend %linked_button:first-child; }
+        &:first-child > button { @extend %linked_button:first-child; }
 
-        &:last-child > .button { @extend %linked_button:last-child; }
+        &:last-child > button { @extend %linked_button:last-child; }
 
-        &:only-child > .button { @extend %linked_button:only-child; }
+        &:only-child > button { @extend %linked_button:only-child; }
     }
 }
