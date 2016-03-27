@@ -11,7 +11,6 @@
         transition: 150ms ease;
         outline-color: transparent;
 
-        -GtkWidget-focus-padding: 1;
         -GtkWidget-focus-line-width: 0;
 
         &:focus, &:hover, &:active { transition: none; }
@@ -335,7 +334,6 @@
 
         separator {
             /* always disable separators */
-            -GtkWidget-wide-separators: true;
             -GtkWidget-horizontal-separator: 0;
             -GtkWidget-vertical-separator: 0;
 

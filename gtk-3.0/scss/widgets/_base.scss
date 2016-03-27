@@ -35,7 +35,6 @@
     -GtkHTML-link-color: $link_color;
     -GtkIMHtml-hyperlink-color: $link_color;
     -GtkWidget-link-color: $link_color;
-    -GtkWidget-visited-link-color: $link_color;
 
     &:selected { @extend %selected; }
 

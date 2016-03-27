@@ -106,7 +106,6 @@
 
         &.separator {
             -GtkMenuItem-horizontal-padding: 0;
-            -GtkWidget-separator-height: 1;
 
             border-style: none;
             color: shade($menu_bg_color, ($contrast + .1));
