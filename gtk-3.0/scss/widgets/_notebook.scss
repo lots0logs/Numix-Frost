@@ -17,15 +17,10 @@
         background-clip: border-box;
         color: $text_color;
 
-        -GtkNotebook-initial-gap: 0;
-        -GtkNotebook-arrow-spacing: 5;
-        -GtkNotebook-tab-curvature: 0;
-        -GtkNotebook-tab-overlap: 1;
-        -GtkNotebook-has-tab-gap: false;
-
         &.frame { border-width: 1px; }
 
         > header {
+            margin: 0;
             border-width: 0;
             background-color: shade($base_color, .9);
 
@@ -39,6 +34,10 @@
                 &.bottom { border-width: 0 1px 1px; }
 
                 &.left { border-width: 1px 0 1px 1px; }
+            }
+
+            tabs arrow {
+                margin: 5px;
             }
         }
 

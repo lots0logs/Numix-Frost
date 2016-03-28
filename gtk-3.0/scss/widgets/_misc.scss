@@ -78,6 +78,7 @@
     expander {
         padding: $spacing;
         outline-offset: 1px;
+        min-width: 8;
     }
 
     .expander {
@@ -149,7 +150,7 @@
         }
 
         .button {
-            -GtkButton-image-spacing: 0;
+
             -GtkButton-inner-border: 0;
 
             border: 0;

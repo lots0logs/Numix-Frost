@@ -47,14 +47,15 @@ $suffix: if($variant == "dark", "-dark", "");
 }
 
 @include exports("checkradio") {
-    * {
-        -GtkCheckButton-indicator-size: 16;
-        -GtkCheckMenuItem-indicator-size: 16;
+    radio {
+        min-width: 16px;
+        @include toggle("radio");
     }
 
-    radio { @include toggle("radio"); }
-
-    check { @include toggle("checkbox"); }
+    check {
+        min-width: 16px;
+        @include toggle("checkbox");
+    }
 
     iconview.content-view.cell.check {
         -gtk-icon-source: url("assets/grid-selection-unchecked#{$suffix}.png");
