@@ -10,16 +10,15 @@
         -GtkRange-trough-under-steppers: 1;
         -GtkScrollbar-has-backward-stepper: false;
         -GtkScrollbar-has-forward-stepper: false;
-        -GtkScrollbar-min-slider-length: 80;
         -GtkScrolledWindow-scrollbar-spacing: 0;
         -GtkScrolledWindow-scrollbars-within-bevel: 1;
     }
 
-    .scrollbar {
+    scrollbar {
         border: 0;
         padding: 0;
 
-        &.button {
+        & button {
             &, &:active, &:active:hover {
                 border-width: 0;
                 border-radius: 0;
@@ -29,7 +28,7 @@
             }
         }
 
-        &.slider, &.slider.vertical {
+        & slider, & slider.vertical {
             border: 0;
             border-radius: $roundness;
             background-color: shade($bg_color, .5);
@@ -46,15 +45,13 @@
             &:not(.dragging):not(.hovering) {
                 opacity: .5;
 
-                -GtkRange-slider-width: 4px;
-
-                .slider {
+                slider {
                     margin: 0;
                     background-color: $fg_color;
                     background-clip: padding-box;
                 }
 
-                .trough {
+                trough {
                     border-style: none;
                     background-color: transparent;
                 }
@@ -64,9 +61,10 @@
         }
     }
 
-    .scrollbars-junction,
-    .scrollbars-junction.frame,
-    .scrollbar.trough {
+     scrollbars junction,
+     scrollbar junction.frame,
+     scrollbar trough,
+     junction {
         border: 0;
         border-radius: 0;
         background-color: $bg_color;
