@@ -1,6 +1,11 @@
-Numix Frost is a modern flat theme with a combination of light and dark elements. It supports Gnome, Cinnamon, XFCE and Openbox.
+### Numix Frost
+A modern, flat GTK+ theme with a combination of light and dark elements. It supports Gnome, Cinnamon, XFCE and Openbox.
 
 Numix Frost is designed by the [Numix Project](http://numixproject.org) exclusively for [Antergos](http://antergos.com).
+
+### Requirements
+GTK+ 3.20 or later version
+Murrine theme engine
 
 ### Manual installation
 
@@ -47,12 +52,6 @@ make watch
 ```
 
 If you change any assets, you'll need to regenerate the `gtk.gresource.xml` and `gtk.gresource` files. You can use [grrr](https://github.com/satya164/grrr) to do it easily.
-
-### Requirements
-
-GTK+ 3.16 or above
-
-Murrine theme engine
 
 ### Code and license
 
