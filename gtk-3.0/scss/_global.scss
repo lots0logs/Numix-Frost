@@ -26,7 +26,7 @@ $light_shadow: #fff;
 $black: #000;
 $white: #fff;
 
-$scrollbar_bg_color: if($variant == 'light', mix($bg_color, $fg_color, .8), mix($base_color, $bg_color, .5));
+$scrollbar_bg_color: if($variant == 'light', mix($bg_color, $fg_color, .2), mix($base_color, $bg_color, .4));
 $scrollbar_slider_color: unquote(mix($fg_color, $bg_color, .6));
 $scrollbar_slider_hover_color: unquote(mix($fg_color, $bg_color, 80%));
 $scrollbar_slider_active_color: if($variant == 'light', darken($selected_bg_color, 10%), lighten($selected_bg_color, 10%));
