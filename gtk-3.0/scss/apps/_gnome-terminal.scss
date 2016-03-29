@@ -3,6 +3,7 @@
 ***********************/
 
 @include exports("gnome-terminal") {
+    //noinspection ScssLintInspection,ScssLintInspection
     VteTerminal {
 	background-color: $osd_base;
 	color: $osd_fg;
@@ -12,10 +13,10 @@
 		background-color: $osd_base;
 	}
 	scrollbar {
-		& trough {
+		trough {
 			background-color: $osd_base;
 		}
-		& button {
+		button {
 			color: shade($osd_base, 0.6);
 			&:active {
 				color: shade($osd_base, 0.6);

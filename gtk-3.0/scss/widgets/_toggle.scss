@@ -48,13 +48,13 @@ $suffix: if($variant == "dark", "-dark", "");
 
 @include exports("checkradio") {
     radio {
-        min-width: 16px;
         @include toggle("radio");
+        min-width: 16px;
     }
 
     check {
-        min-width: 16px;
         @include toggle("checkbox");
+        min-width: 16px;
     }
 
     iconview.content-view.cell.check {
@@ -71,47 +71,31 @@ $suffix: if($variant == "dark", "-dark", "");
 
 @include exports("switch") {
     switch {
-        padding: 0;
-        border-radius: $roundness;
-        font: bold condensed;
-        outline-offset: -4px;
+        border-radius: 3px;
+        padding: 5px;
+        border: none;
+        outline: none;
+        transition: all 0.3s;
+        min-width: 95px;
+        background-color: #e8eaec;
+        color: #8e969e;
 
-        slider {
-            @include linear-gradient(shade($bg_color, 1.2));
+        &:active {
+            background-color: $selected_bg_color;
+            background-image: none;
+            border-color: $selected_bg_color;
+            color: $base_color;
 
-            border: 1px solid rgba(0, 0, 0, .2);
-            box-shadow: 0 1px 2px -1px alpha($dark_shadow, .12);
-
-            &:disabled {
-                border-color: rgba(0, 0, 0, .1);
-                background-color: shade($bg_color, .9);
-                box-shadow: none;
+            slider {
+                background-color: $white;
             }
         }
 
-        trough {
-            @include linear-gradient(shade($bg_color, .95), to top);
-
-            border: 1px solid border_normal($bg_color);
-            color: $fg_color;
-            box-shadow: inset 1px 0 alpha($dark_shadow, .07),
-                        inset 0 1px alpha($dark_shadow, .08),
-                        inset -1px 0 alpha($dark_shadow, .07),
-                        inset 0 -1px alpha($dark_shadow, .05);
-
-            &:active {
-                @include linear-gradient($selected_bg_color, to top);
-
-                border-color: shade($selected_bg_color, .9);
-                color: $selected_fg_color;
-            }
-
-            &:disabled {
-                @include linear-gradient(shade($bg_color, .9), to top);
-
-                border-color: border_insensitive($bg_color);
-                color: mix($fg_color, $bg_color, .5);
-            }
+        slider:disabled {
+            background-color: #d8d8d8;
+            background-image: none;
+            border-color: #ccc;
+            color: mix(#444, #f0f0f0, 0.5);
         }
     }
 }

@@ -1,16 +1,15 @@
-// scss-lint:disable ColorVariable
 
 @import "functions";
 
 // default color scheme
-$bg_color: if($variant == "dark", #444, #f0f0f0);
-$fg_color: if($variant == "dark", #ddd, #444);
-$base_color: if($variant == "dark", #333, #f9f9f9);
-$text_color: if($variant == "dark", #eee, #333);
+$bg_color: if($variant == "dark", #444444, #f0f0f0);
+$fg_color: if($variant == "dark", #dddddd, #444444);
+$base_color: if($variant == "dark", #333333, #f9f9f9);
+$text_color: if($variant == "dark", #eeeeee, #333333);
 $selected_bg_color: #1d90cd;
 $selected_fg_color: #f9f9f9;
-$selected_borders_color: if($variant== 'light', darken($selected_bg_color, 30%), darken($selected_bg_color, 20%));
-$borders_color: if($variant == 'light', darken($bg_color,30%), darken($bg_color,12%));
+$selected_borders_color: if($variant == 'light', darken($selected_bg_color, 30%), darken($selected_bg_color, 20%));
+$borders_color: if($variant == 'light', darken($bg_color, 30%), darken($bg_color, 12%));
 $borders_edge: if($variant == 'light', transparentize(white, 0.2), transparentize($fg_color, 0.93));
 $tooltip_bg_color: #444;
 $tooltip_fg_color: #eee;
@@ -26,6 +25,11 @@ $light_shadow: #fff;
 // white and black
 $black: #000;
 $white: #fff;
+
+$scrollbar_bg_color: if($variant == 'light', mix($bg_color, $fg_color, .8), mix($base_color, $bg_color, .5));
+$scrollbar_slider_color: unquote(mix($fg_color, $bg_color, .6));
+$scrollbar_slider_hover_color: unquote(mix($fg_color, $bg_color, 80%));
+$scrollbar_slider_active_color: if($variant == 'light', darken($selected_bg_color, 10%), lighten($selected_bg_color, 10%));
 
 // misc colors used by gtk+
 $info_fg_color: #fff;

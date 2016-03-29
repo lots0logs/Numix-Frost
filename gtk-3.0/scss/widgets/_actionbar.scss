@@ -31,7 +31,7 @@
             padding: 0 ($spacing * 2);
         }
 
-        & > revealer >  box {
+        > revealer >  box {
             padding: 6px;
             border-top: 1px solid $borders_color;
 
@@ -103,7 +103,7 @@
                 &:active { color: shade($selected_bg_color, ($contrast - .05)); }
             }
 
-            .dim-label, {
+            .dim-label {
                 &, .selection-menu.button & { color: shade($selected_bg_color, ($contrast - .1)); }
             }
         }

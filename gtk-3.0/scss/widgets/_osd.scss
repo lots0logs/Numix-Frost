@@ -14,15 +14,15 @@
             color: $osd_fg;
         }
 
-        & frame {
+        frame {
             background-clip: border-box;
             background-origin: border-box;
         }
 
-        & button, button { @include button($osd_bg, $osd_fg); }
+        button, button { @include button($osd_bg, $osd_fg); }
 
 
-        & toolbar {
+        toolbar {
             -GtkToolbar-button-relief: normal;
 
             padding: $spacing;
@@ -36,12 +36,12 @@
         }
 
         /* used by gnome-settings-daemon's media-keys OSD */
-        & trough { background-color: shade($osd_bg, .8); }
+        trough { background-color: shade($osd_bg, .8); }
 
-        & progressbar { background-color: $osd_fg; }
+        progressbar { background-color: $osd_fg; }
 
         scale {
-            & slider {
+            slider {
                 @include linear-gradient(shade($osd_bg, 1.08));
                 @include border($osd_bg);
 

@@ -1,5 +1,5 @@
 SASS=scss
-SASSFLAGS=--sourcemap=none
+SASSFLAGS=-l
 GLIB_COMPILE_RESOURCES=glib-compile-resources
 RES_DIR=gtk-3.0
 SCSS_DIR=$(RES_DIR)/scss
