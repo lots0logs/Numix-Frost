@@ -9,7 +9,7 @@ $text_color: if($variant == "dark", #eeeeee, #333333);
 $selected_bg_color: #1d90cd;
 $selected_fg_color: #f9f9f9;
 $selected_borders_color: if($variant == 'light', darken($selected_bg_color, 30%), darken($selected_bg_color, 20%));
-$borders_color: if($variant == 'light', darken($bg_color, 30%), darken($bg_color, 12%));
+$borders_color: if($variant == 'light', darken($bg_color, 15%), darken($bg_color, 12%));
 $borders_edge: if($variant == 'light', transparentize(white, 0.2), transparentize($fg_color, 0.93));
 $tooltip_bg_color: #444;
 $tooltip_fg_color: #eee;
@@ -26,10 +26,10 @@ $light_shadow: #fff;
 $black: #000;
 $white: #fff;
 
-$scrollbar_bg_color: if($variant == 'light', mix($bg_color, $fg_color, .2), mix($base_color, $bg_color, .4));
-$scrollbar_slider_color: unquote(mix($fg_color, $bg_color, .6));
-$scrollbar_slider_hover_color: unquote(mix($fg_color, $bg_color, 80%));
-$scrollbar_slider_active_color: if($variant == 'light', darken($selected_bg_color, 10%), lighten($selected_bg_color, 10%));
+$scrollbar_bg_color: if($variant == 'light', darken($bg_color, 5%), mix($base_color, $bg_color, .4));
+$scrollbar_slider_color: shade($bg_color, .5);
+$scrollbar_slider_hover_color: shade($bg_color, .3);
+$scrollbar_slider_active_color: if($variant == 'light', darken($selected_bg_color, 5%), lighten($selected_bg_color, 10%));
 
 // misc colors used by gtk+
 $info_fg_color: #fff;

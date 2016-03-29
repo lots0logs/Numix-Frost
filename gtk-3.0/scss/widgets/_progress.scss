@@ -8,24 +8,21 @@
         border-radius: $roundness;
         font-size: smaller;
         color: alpha($fg_color, .6);
-
-        -GtkProgressBar-min-horizontal-bar-height: 6;
-        -GtkProgressBar-min-vertical-bar-width: 6;
+        min-width: 6px;
+        min-height: 6px;
 
         &.osd {
-            -GtkProgressBar-xspacing: 0;
-            -GtkProgressBar-yspacing: 0;
-            -GtkProgressBar-min-horizontal-bar-height: 3;
+            min-height: 4px;
         }
 
-        &.trough {
+        trough {
             border: 1px solid alpha(border_normal($bg_color), .5);
             background-color: shade($bg_color, 1.08);
             background-image: none;
         }
     }
 
-    .progressbar {
+    progressbar progress {
         @include linear-gradient($selected_bg_color);
 
         border-radius: 0;
@@ -59,36 +56,36 @@
     }
 
     levelbar {
-        -GtkLevelBar-min-block-width: 34;
-        -GtkLevelBar-min-block-height: 3;
+        min-width: 34px;
+        min-height: 3px;
 
         &.vertical {
-            -GtkLevelBar-min-block-width: 3;
-            -GtkLevelBar-min-block-height: 34;
+            min-width: 3px;
+            min-height: 34px;
         }
     }
 
-    .level-bar {
-        &.trough {
+    levelbar {
+        trough {
             @include linear-gradient(shade($bg_color, 1.08), to top);
 
             border: 1px solid alpha(border_normal($bg_color), .5);
             border-radius: $roundness;
         }
 
-        &.fill-block {
+        &.discrete {
+            &.horizontal { margin-right: 1px; }
+
+            &.vertical { margin-bottom: 1px; }
+        }
+
+        block.filled {
             @include linear-gradient($selected_bg_color);
 
             // FIXME: it would be nice to set make fill blocks bigger, but we'd need
             // :nth-child working on discrete indicators
             border-color: transparent;
             border-radius: 0;
-
-            &.indicator-discrete {
-                &.horizontal { margin-right: 1px; }
-
-                &.vertical { margin-bottom: 1px; }
-            }
 
             &.level-high {
                 background-color: $success_color;
@@ -108,7 +105,7 @@
         }
     }
 
-    .scale {
+    scale {
         -GtkRange-slider-width: 16;
         -GtkRange-trough-border: 1;
         -GtkScale-slider-length: 16;
@@ -119,7 +116,7 @@
         outline-offset: -1px;
 
 
-        &.slider {
+        slider {
             @include linear-gradient(shade($bg_color, 1.08));
             @include border($bg_color);
 
@@ -141,10 +138,10 @@
             }
         }
 
-        &.mark { border-color: alpha(border_normal($bg_color), .5); }
+        mark { border-color: alpha(border_normal($bg_color), .5); }
 
 
-        &.trough {
+        trough {
             @include linear-gradient(shade($bg_color, 1.08));
 
             margin: 7px 0;
@@ -156,7 +153,7 @@
             &.vertical { margin: 0 7px; }
         }
 
-        &.highlight {
+        highlight {
             &, &.left, &.bottom {
                 @include linear-gradient($selected_bg_color);
 

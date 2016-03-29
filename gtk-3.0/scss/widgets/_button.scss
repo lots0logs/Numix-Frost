@@ -191,7 +191,7 @@
 
 @include exports("button") {
     * {
-        min-height: 24;
+        min-height: 24px;
     }
 
     %close_button {
@@ -221,86 +221,86 @@
         &.default { @include button($selected_bg_color, $selected_fg_color); }
 
         &.linked, .linked & { @include linked_button(shade($bg_color, 1.2)); }
+    }
 
-        spinbutton & {
-            color: mix($text_color, $base_color, .4);
-            padding: $spacing ($spacing * 2);
-            border: 0;
-            border-radius: 0;
-            border-style: none;
-            background-color: transparent;
-            background-image: none;
-            box-shadow: inset 1px 0 shade($base_color, .9);
+    spinbutton {
+        color: mix($text_color, $base_color, .4);
+        padding: $spacing ($spacing * 2);
+        border: 0;
+        border-radius: 0;
+        border-style: none;
+        background-color: transparent;
+        background-image: none;
+        box-shadow: inset 1px 0 shade($base_color, .9);
 
-            &:disabled {
-                color: mix($text_color, $base_color, .7);
-                box-shadow: inset 1px 0 shade($base_color, .85);
-            }
-
-            &:active, &:checked, &:hover { color: $text_color; }
-
-            &:first-child {
-                border-radius: $roundness 0 0 $roundness;
-                box-shadow: none;
-            }
-
-            &:last-child { border-radius: 0 $roundness $roundness 0; }
-
-            &:dir(rtl) { box-shadow: inset -1px 0 shade($base_color, .9); }
+        &:disabled {
+            color: mix($text_color, $base_color, .7);
+            box-shadow: inset 1px 0 shade($base_color, .85);
         }
 
-        spinbutton.vertical & {
-            border: 1px solid shade($bg_color, .8);
-            border-radius: $roundness;
-            background-color: shade($bg_color, 1.08);
-            background-image: none;
-            color: $fg_color;
+        &:active, &:checked, &:hover { color: $text_color; }
+
+        &:first-child {
+            border-radius: $roundness 0 0 $roundness;
             box-shadow: none;
-
-            &:hover {
-                border-color: shade($bg_color, .7);
-                background-color: shade($bg_color, 1.1);
-                background-image: none;
-            }
-
-            &:active, &:checked {
-                border-color: shade($bg_color, .8);
-                background-color: shade($bg_color, .95);
-                background-image: none;
-            }
-
-            &:active:hover, &:checked:hover {
-                border-color: shade($bg_color, .7);
-            }
-
-            &:focus, &:hover:focus, &:active:focus, &:active:hover:focus { border-color: shade($bg_color, .7); }
-
-            &:disabled {
-                border-color: shade($bg_color, .85);
-                background-color: shade($bg_color, .9);
-                background-image: none;
-            }
-
-            &:first-child {
-                border-width: 1px;
-                border-bottom-width: 0;
-                border-bottom-right-radius: 0;
-                border-bottom-left-radius: 0;
-            }
-
-            &:last-child {
-                border-width: 1px;
-                border-top-width: 0;
-                border-top-left-radius: 0;
-                border-top-right-radius: 0;
-            }
         }
 
-        spinbutton.vertical.entry {
+        &:last-child { border-radius: 0 $roundness $roundness 0; }
+
+        &:dir(rtl) { box-shadow: inset -1px 0 shade($base_color, .9); }
+    }
+
+    spinbutton.vertical {
+        border: 1px solid shade($bg_color, .8);
+        border-radius: $roundness;
+        background-color: shade($bg_color, 1.08);
+        background-image: none;
+        color: $fg_color;
+        box-shadow: none;
+
+        &:hover {
+            border-color: shade($bg_color, .7);
+            background-color: shade($bg_color, 1.1);
+            background-image: none;
+        }
+
+        &:active, &:checked {
+            border-color: shade($bg_color, .8);
+            background-color: shade($bg_color, .95);
+            background-image: none;
+        }
+
+        &:active:hover, &:checked:hover {
+            border-color: shade($bg_color, .7);
+        }
+
+        &:focus, &:hover:focus, &:active:focus, &:active:hover:focus { border-color: shade($bg_color, .7); }
+
+        &:disabled {
+            border-color: shade($bg_color, .85);
+            background-color: shade($bg_color, .9);
+            background-image: none;
+        }
+
+        &:first-child {
             border-width: 1px;
-            border-style: solid;
-            border-radius: 0;
+            border-bottom-width: 0;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
         }
+
+        &:last-child {
+            border-width: 1px;
+            border-top-width: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    }
+
+    spinbutton.vertical.entry {
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 0;
     }
 }
 
@@ -311,28 +311,14 @@
 
 @include exports("combobox") {
     combobox {
-        > button {
+        box button, box entry {
+            @extend %linked_button;
             padding: ($spacing - 2px) ($spacing + 1px);
-
-            -GtkComboBox-arrow-scaling: .5;
-            -GtkComboBox-shadow-type: none;
-        }
-
-        &.combobox-entry {
-            .entry, .button { @extend %linked_button; }
-        }
-
-        separator {
-            /* always disable separators */
-            -GtkWidget-horizontal-separator: 0;
-            -GtkWidget-vertical-separator: 0;
-
-            border-style: none;
         }
     }
 
     .linked > combobox {
-        > button {
+        box > button {
             // the combo is a composite widget so the way we do button linked doesn't
             // work, special case needed. See
             // https://bugzilla.gnome.org/show_bug.cgi?id=733979
