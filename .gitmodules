@@ -1,3 +1,6 @@
 [submodule "includes/cinnamon"]
 	path = includes/cinnamon
 	url = https://github.com/Antergos/numix-cinnamon
+[submodule "includes/gtk"]
+	path = includes/gtk
+	url = git@github.com:GNOME/gtk.git
