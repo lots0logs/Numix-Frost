@@ -19,7 +19,7 @@
             background-origin: border-box;
         }
 
-        button, button { @include button($osd_bg, $osd_fg); }
+        button { @include button($osd_bg, $osd_fg); }
 
 
         toolbar {
