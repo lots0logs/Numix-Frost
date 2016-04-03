@@ -3,7 +3,7 @@
 *********/
 
 @include exports("nemo") {
-    .nemo-desktop.nemo-canvas-item {
+    .nemo-desktop {
         color: $white;
         text-shadow: 1px 1px $black;
 
@@ -20,38 +20,51 @@
         }
     }
 
-    NemoPathbarButton {
+    nemo-pathbar {
         @include button($toolbar_bg_color, $toolbar_fg_color);
-
         -NemoPathbarButton-border-radius: $roundness;
     }
 
-    NemoPlacesTreeView {
-        -NemoPlacesTreeView-disk-full-bg-color: shade($toolbar_bg_color, .8);
-        -NemoPlacesTreeView-disk-full-fg-color: $selected_bg_color;
-        -NemoPlacesTreeView-disk-full-bar-width: 1px;
-        -NemoPlacesTreeView-disk-full-bar-radius: 1px;
-        -NemoPlacesTreeView-disk-full-bottom-padding: 2px;
-        -NemoPlacesTreeView-disk-full-max-length: 70px;
-
-        &:selected {
-            -NemoPlacesTreeView-disk-full-bg-color: $selected_fg_color;
-            -NemoPlacesTreeView-disk-full-fg-color: shade($selected_bg_color, 1.2);
-        }
-    }
-
-    NemoWindow {
+    .nemo-window {
         toolbar {
             border-width: 0 0 1px;
             border-style: solid;
             border-color: border_normal($toolbar_bg_color);
         }
 
-        .sidebar .frame {
+        > grid widget:last-child {
+            border-top-style: solid;
+            border-top-color: border_normal($toolbar_bg_color);
+            border-top-width: 1px;
+        }
+
+        menubar menuitem {
+            margin: 0px;
+        }
+
+        .sidebar .view {
+            -NemoPlacesTreeView-disk-full-bg-color: shade($toolbar_bg_color, .8);
+            -NemoPlacesTreeView-disk-full-fg-color: $selected_bg_color;
+            -NemoPlacesTreeView-disk-full-bar-width: 2px;
+            -NemoPlacesTreeView-disk-full-bar-radius: 1px;
+            -NemoPlacesTreeView-disk-full-bottom-padding: 0px;
+            -NemoPlacesTreeView-disk-full-max-length: 75px;
+
+            &:selected {
+                -NemoPlacesTreeView-disk-full-bg-color: $selected_fg_color;
+                -NemoPlacesTreeView-disk-full-fg-color: shade($selected_bg_color, 1.2);
+            }
+        }
+
+        .sidebar frame {
             border: 0;
         }
 
-        .sidebar-icon {
+        statusbar {
+            border: none;
+        }
+
+        .sidebar image {
             padding-left: $spacing;
             padding-right: $spacing;
         }
@@ -65,24 +78,20 @@
                 background-color: $bg_color;
             }
         }
-    }
 
-    NemoNotebook {
-        &.notebook {
-            border-right-width: 0;
-            border-left-width: 0;
-            border-bottom-width: 0;
-        }
+        notebook {
+            border-width: 0;
 
-        frame {
-            border: 0;
+            tabs {
+                border: 0;
+            }
         }
     }
 
     NemoQueryEditor {
         toolbar {
-            padding-top: $spacing - 1px;
-            padding-bottom: $spacing - 2px;
+            padding-top: $spacing - 3px;
+            padding-bottom: $spacing - 4px;
             border-width: 1px 0 0;
             border-style: solid;
             border-color: $toolbar_bg_color;
@@ -116,7 +125,7 @@
             @include linked_button($bg_color);
         }
 
-        combobox, button {
+        combobox button, button {
             padding: $spacing - 1px;
 
             &.text-button {
@@ -131,7 +140,6 @@
         GtkSeparatorToolItem, separator, separator:disabled {
             color: shade($bg_color, ($contrast + .1));
             border-color: currentColor;
-
             -GtkWidget-window-dragging: true;
         }
 

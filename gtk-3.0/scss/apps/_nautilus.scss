@@ -3,7 +3,7 @@
 *************/
 
 @include exports("nautilus") {
-    .nautilus-desktop.nautilus-canvas-item {
+    .nautilus-desktop * {
         color: $white;
         text-shadow: 1px 1px $black;
 
@@ -14,14 +14,17 @@
         &:active, &:hover, &:selected { text-shadow: none; }
     }
 
-    NautilusWindow {
+    .nautilus-window {
         toolbar {
             border-width: 0 0 1px;
             border-style: solid;
             border-color: border_normal($toolbar_bg_color);
         }
 
-        .sidebar frame { border: 0; }
+        .sidebar {
+            border: none;
+            frame { border: 0; }
+        }
 
         paned {
             border-width: 0 1px 0 0;
@@ -32,16 +35,11 @@
                 background-color: $bg_color;
             }
         }
-    }
 
-    NautilusNotebook {
-        &.notebook {
-            border-right-width: 0;
-            border-left-width: 0;
-            border-bottom-width: 0;
+        notebook {
+            border: none;
+            frame { border: 0; }
         }
-
-        frame { border: 0; }
     }
 
     NautilusQueryEditor {
