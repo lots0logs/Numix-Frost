@@ -104,7 +104,7 @@ $backdrop_scrollbar_slider_color: mix($backdrop_fg_color, $backdrop_bg_color, 40
 $backdrop_menu_color: if($variant == 'light', $backdrop_base_color, mix($backdrop_bg_color, $backdrop_base_color, 20%));
 
 // widget styles
-$roundness: 2px;
+$roundness: 3px;
 $spacing: 5px;
 $gradient: 0;
 $contrast: .8;
