@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <gresources>
-	<gresource prefix='/org/numixproject/frost/gtk'>
+	<gresource prefix='/org/numixproject/frost-light/gtk'>
 		<file preprocess='to-pixdata'>assets/checkbox-checked-dark.png</file>
 		<file preprocess='to-pixdata'>assets/checkbox-checked-insensitive-dark.png</file>
 		<file preprocess='to-pixdata'>assets/checkbox-checked-insensitive.png</file>
