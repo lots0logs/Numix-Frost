@@ -275,10 +275,10 @@
             }
         }
 
-        value { color: gtkalpha(currentColor, 0.4); }
+        value { color: alpha(currentColor, 0.4); }
 
         marks {
-            color: gtkalpha(currentColor, 0.4);
+            color: alpha(currentColor, 0.4);
 
             @each $marks_class, $marks_pos, $marks_margin in (top, top, bottom),
                 (bottom, bottom, top),
