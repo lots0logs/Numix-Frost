@@ -18,7 +18,7 @@
             opacity: 1;
             animation: spin 1s linear infinite;
 
-            &:disabled { opacity: .5; }
+            &:insensitive { opacity: .5; }
         }
     }
 }
