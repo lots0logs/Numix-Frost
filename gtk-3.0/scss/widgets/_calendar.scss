@@ -3,14 +3,14 @@
 ***********/
 
 @include exports("calendar") {
-    calendar {
+    GtkCalendar {
         padding: $spacing;
         outline-offset: -1px;
 
-        &:indeterminate { color: mix($fg_color, $bg_color, .5); }
+        &:inconsistent { color: mix($fg_color, $bg_color, .5); }
 
         &.view, &.highlight, &.header, &.button {
-            &, &:focus, &:hover, &:disabled {
+            &, &:focus, &:hover, &:insensitive {
                 border: 0;
                 background-color: transparent;
                 background-image: none;

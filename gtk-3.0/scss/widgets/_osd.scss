@@ -6,23 +6,23 @@
 ********/
 
 @include exports("osd") {
-    overlay.osd { background-color: transparent; }
+    GtkOverlay.osd { background-color: transparent; }
 
-    osd {
+    .osd {
         &.background {
             background-color: alpha($osd_bg, .8);
             color: $osd_fg;
         }
 
-        frame {
+        &.frame {
             background-clip: border-box;
             background-origin: border-box;
         }
 
-        button { @include button($osd_bg, $osd_fg); }
+        &.button, .button { @include button($osd_bg, $osd_fg); }
 
 
-        toolbar {
+        &.toolbar {
             -GtkToolbar-button-relief: normal;
 
             padding: $spacing;
@@ -32,23 +32,23 @@
             background-image: none;
             color: $osd_fg;
 
-            separator { color: shade($osd_bg, ($contrast + .1)); }
+            .separator { color: shade($osd_bg, ($contrast + .1)); }
         }
 
         /* used by gnome-settings-daemon's media-keys OSD */
-        trough { background-color: shade($osd_bg, .8); }
+        &.trough { background-color: shade($osd_bg, .8); }
 
-        progressbar { background-color: $osd_fg; }
+        &.progressbar { background-color: $osd_fg; }
 
-        scale {
-            slider {
+        .scale {
+            &.slider {
                 @include linear-gradient(shade($osd_bg, 1.08));
                 @include border($osd_bg);
 
-                &:disabled { @include linear-gradient(shade($osd_bg, .9)); }
+                &:insensitive { @include linear-gradient(shade($osd_bg, .9)); }
             }
 
-             trough {
+            &.trough {
                 border-color: shade($osd_bg, .8);
                 background-color: shade($osd_bg, 1.08);
                 background-image: none;
@@ -59,7 +59,7 @@
                     background-image: none;
                 }
 
-                &:disabled, &.highlight:disabled {
+                &:insensitive, &.highlight:insensitive {
                     border-color: shade($osd_bg, .85);
                     background-color: shade($osd_bg, .9);
                     background-image: none;
@@ -67,12 +67,12 @@
             }
         }
 
-        &.view, .view, view { background-color: $osd_bg; }
+        &.view, .view { background-color: $osd_bg; }
 
-        scrollbar {
-            trough { background-color: $osd_bg; }
+        .scrollbar {
+            .trough { background-color: $osd_bg; }
 
-            slider {
+            .slider {
                 border: 1px solid mix(shade($osd_bg, .87), $osd_fg, .21);
                 border-radius: 0;
                 background-color: mix($osd_bg, $osd_fg, .21);
@@ -89,7 +89,7 @@
             }
         }
 
-        iconview.cell {
+        GtkIconView.cell {
             &:selected, &:selected:focus {
                 background-color: transparent;
                 border: 3px solid mix(shade($osd_bg, .87), $osd_fg, .21);
@@ -106,7 +106,7 @@
         }
     }
 
-    .osd progressBar, progressBar.osd {
+    .osd GtkProgressBar, GtkProgressBar.osd {
         -GtkProgressBar-xspacing: 0;
         -GtkProgressBar-yspacing: 2px;
         -GtkProgressBar-min-horizontal-bar-height: 2px;

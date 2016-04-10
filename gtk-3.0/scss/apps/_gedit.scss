@@ -17,10 +17,10 @@
         background-color: $bg_color;
         color: mix($fg_color, $bg_color, .1);
 
-        list row {
+        .list-row {
             padding: $spacing;
 
-            button {
+            .button {
                 padding: 1px;
                 border-radius: $roundness;
                 border-style: solid;
@@ -29,11 +29,11 @@
                 background-color: transparent;
                 background-image: none;
                 color: transparent;
-                -gtk-icon-shadow: none;
+                icon-shadow: none;
             }
         }
 
-        .prelight-row button {
+        .prelight-row .button {
             border-color: alpha($black, .1);
             color: alpha($white, .8);
 
@@ -44,8 +44,8 @@
             }
         }
 
-        list row, .prelight-row {
-            button:hover {
+        list-row, .prelight-row {
+            .button:hover {
                 border-color: alpha($black, .1);
                 color: $white;
             }
@@ -79,12 +79,12 @@
         transition: all 200ms ease-in;
     }
 
-    statusbar { border-top: 1px solid border_normal($bg_color); }
+    GeditStatusbar { border-top: 1px solid border_normal($bg_color); }
 
-    statusbar GeditSmallButton, GeditStatusMenuButton {
+    GeditStatusbar GeditSmallButton, GeditStatusMenuButton {
         text-shadow: none;
 
-        button {
+        .button {
             border-style: solid;
             border-width: 0 1px;
             border-color: transparent;

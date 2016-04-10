@@ -3,7 +3,7 @@
 ****************/
 
 @include exports("colorchooser") {
-    colorswatch {
+    GtkColorSwatch {
         &, &:selected {
             border: 1px solid alpha($black, .1);
             border-radius: $roundness - 1px;
@@ -37,7 +37,7 @@
             border-bottom-right-radius: $roundness;
         }
 
-        coloreditor & {
+        GtkColorEditor & {
             border-radius: $roundness;
 
             &.color-dark:hover, &.color-light:hover {
@@ -91,19 +91,20 @@
 ************************/
 
 @include exports("miscchoosers") {
-    GtkFontButton, filechooserbutton {
+    GtkFontButton, GtkFileChooserButton {
         .separator {
             /* always disable separators */
+            -GtkWidget-wide-separators: true;
             -GtkWidget-horizontal-separator: 0;
             -GtkWidget-vertical-separator: 0;
         }
 
-        label:last-child { color: alpha(currentColor, .7); }
+        GtkLabel:last-child { color: alpha(currentColor, .7); }
 
-        image:last-child { color: alpha(currentColor, .7); }
+        GtkImage:last-child { color: alpha(currentColor, .7); }
     }
 
-    filechooser {
+    GtkFileChooser {
         .pane-separator {
             &, &:hover {
                 border-width: 0 1px 0 0;

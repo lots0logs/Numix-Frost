@@ -6,7 +6,7 @@
 **********/
 
 @include exports("infobar") {
-    infobar {
+    GtkInfoBar {
         border: 0;
 
         $types: (
@@ -27,7 +27,7 @@
                 border: 1px solid shade($bg_color, .8);
                 color: $fg_color;
 
-                button {
+                .button {
                     @include button($bg_color, $fg_color);
 
                     &.close { @extend %close_button; }

@@ -3,7 +3,10 @@
 ***************/
 
 * {
+    -GtkArrow-arrow-scaling: .5;
+    -GtkExpander-expander-size: 8;
     -GtkStatusbar-shadow-type: none;
+    -GtkToolItemGroup-expander-size: 8;
     -GtkWindow-resize-grip-height: 0;
     -GtkWindow-resize-grip-width: 0;
     -WnckTasklist-fade-overlay-rect: 0;
@@ -12,7 +15,7 @@
     outline-style: dashed;
     outline-width: 1px;
     outline-offset: -1px;
-    -gtk-outline-radius: $roundness;
+    outline-radius: $roundness;
 }
 
 
@@ -29,16 +32,19 @@
 
 * {
     /* hyperlinks */
+    -GtkHTML-link-color: $link_color;
     -GtkIMHtml-hyperlink-color: $link_color;
+    -GtkWidget-link-color: $link_color;
+    -GtkWidget-visited-link-color: $link_color;
 
     &:selected { @extend %selected; }
 
-    &:disabled,
-    &:disabled:disabled { color: mix($fg_color, $bg_color, .5); }
+    &:insensitive,
+    &:insensitive:insensitive { color: mix($fg_color, $bg_color, .5); }
 
-    &:disabled, &:disabled { -gtk-icon-effect: dim; }
+    &:insensitive { -gtk-image-effect: dim; }
 
-    &:hover { -gtk-icon-effect: highlight; }
+    &:hover { -gtk-image-effect: highlight; }
 
     &:link, &:visited { color: $link_color; }
 }
@@ -49,7 +55,7 @@
 
     &:backdrop {
         text-shadow: none;
-        -gtk-icon-shadow: none;
+        icon-shadow: none;
     }
 
     &.csd { background-color: $bg_color; }
@@ -59,7 +65,7 @@
     background-color: alpha($bg_color, .5);
     color: $fg_color;
 
-    &:hover {
+    &:prelight {
         background-color: shade($bg_color, 1.1);
         color: $fg_color;
     }
@@ -69,7 +75,7 @@
         color: $fg_color;
     }
 
-    &:disabled {
+    &:insensitive {
         background-color: shade(shade($bg_color, .95), 1.05);
         color: mix($fg_color, $bg_color, .5);
     }
@@ -77,61 +83,18 @@
     &:selected { @extend %selected; }
 }
 
-image, label, box, grid {
-    &, &:disabled { background-color: transparent; }
+GtkImage, GtkLabel, GtkBox, GtkGrid {
+    &, &:insensitive { background-color: transparent; }
 }
 
-label {
+GtkLabel {
     &.separator {
         @extend .dim-label;
 
         color: $fg_color;
-
-        &:backdrop { color: $backdrop_fg_color; }
     }
 
-    row:selected &,
-    &:selected { @extend %nobg_selected_items; }
+    &:selected { @extend %selected; }
 
-    selection {
-        background-color: $selected_bg_color;
-        color: $selected_fg_color;
-    }
-
-    &:disabled {
-        color: $insensitive_fg_color;
-
-        selection { @extend %selected_items:disabled; }
-
-        &:backdrop { color: $backdrop_insensitive_color; }
-    }
-
-    &:backdrop {
-        color: $backdrop_fg_color;
-
-        selection { @extend %selected_items:backdrop; }
-    }
-}
-
-.dim-label {
-    opacity: 0.55;
-    text-shadow: none;
-}
-
-assistant {
-    .sidebar {
-        background-color: $base_color;
-        border-top: 1px solid $borders_color;
-
-        &:backdrop {
-            background-color: $backdrop_base_color;
-            border-color: $backdrop_borders_color;
-        }
-    }
-
-    &.csd .sidebar { border-top-style: none; }
-
-    .sidebar label { padding: 6px 12px; }
-
-    .sidebar label.highlight { background-color: mix($bg_color, $fg_color, 80%); }
+    &:insensitive { color: mix($fg_color, $bg_color, .5); }
 }
