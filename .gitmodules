@@ -1,6 +1,3 @@
-[submodule "includes/cinnamon"]
-	path = includes/cinnamon
-	url = git@github.com:antergos/Numix-Cinnamon.git
 [submodule "includes/gtk"]
 	path = includes/gtk
 	url = git@github.com:GNOME/gtk.git
