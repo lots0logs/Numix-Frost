@@ -35,6 +35,7 @@ install: all
 	install -d -m755 $(INSTALL_DIR)
 
 	for f in *; do cp -pr $$f $(INSTALL_DIR)/; done
+	rm -rf $(INSTALL_DIR)/includes
 
 uninstall:
 	rm -rf $(INSTALL_DIR)
