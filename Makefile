@@ -35,6 +35,8 @@ install: all
 	install -d -m755 $(INSTALL_DIR)
 
 	for f in *; do cp -pr $$f $(INSTALL_DIR)/; done
+	rm -rf $(INSTALL_DIR)/includes
+	rm -f $(INSTALL_DIR)/cinnamon/*.js
 
 uninstall:
 	rm -rf $(INSTALL_DIR)
