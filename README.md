@@ -8,7 +8,6 @@ GTK+ 3.16 or later version
 Murrine theme engine
 
 ### Manual installation
-
 First, you need to compile the theme using the [Sass](http://sass-lang.com/) compiler.
 
 To install Sass, install ruby and the gem command using your distro's package manager. Then install `sass` with the `gem` command,
