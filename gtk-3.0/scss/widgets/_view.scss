@@ -126,6 +126,45 @@
             background-color: $base_color;
             background-image: none;
         }
+
+        .progressbar {
+            @include linear-gradient($selected_bg_color);
+            border: 1px solid border_normal($selected_bg_color);
+
+            &:selected {
+                &:focus, & {
+                    @include linear-gradient($selected_bg_color);
+                    border: 1px solid border_focus($selected_bg_color);
+                    color: $selected_fg_color;
+                }
+            }
+
+            &:insensitive {
+                &:insensitive {
+                    @include linear-gradient($bg_color);
+                    border-color: border_insensitive($bg_color);
+                }
+            }
+        }
+
+        .trough {
+            background-color: mix($bg_color, $base_color, .5);
+            border: 1px solid border_normal($base_color);
+
+            &:selected {
+                &:focus, & {
+                    background-color: $base_color;
+                    border: 1px solid border_focus($bg_color);
+                    color: $text_color;
+                }
+            }
+
+            &:insensitive {
+                &:insensitive {
+                    background-color: $base_color;
+                }
+            }
+        }
     }
 }
 
