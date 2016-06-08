@@ -15,7 +15,7 @@
 ************/
 
 @include exports("tooltip") {
-    .tooltip {
+    tooltip {
         &.background {
             @include linear-gradient($tooltip_bg_color);
 
