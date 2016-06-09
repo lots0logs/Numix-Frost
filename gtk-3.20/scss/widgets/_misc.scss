@@ -15,13 +15,12 @@
 ************/
 
 @include exports("tooltip") {
-    .tooltip {
+    tooltip {
         &.background {
             @include linear-gradient($tooltip_bg_color);
 
             border: 0;
             border-radius: $roundness;
-            color: $tooltip_fg_color;
         }
 
         * {
