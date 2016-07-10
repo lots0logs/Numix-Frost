@@ -41,7 +41,6 @@ install: all
 	cp -pr openbox-3	$(INSTALL_DIR)
 	cp -pr xfce-notify-4.0	$(INSTALL_DIR)
 	cp -pr xfwm4		$(INSTALL_DIR)
-	cp -pr unity		$(INSTALL_DIR)
 	cp -p  index.theme	$(INSTALL_DIR)
 
 uninstall:
