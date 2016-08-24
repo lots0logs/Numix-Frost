@@ -1,14 +1,8 @@
-### Numix Frost Light
-A modern, flat GTK+ theme with a combination of light and dark elements. It supports Gnome, Cinnamon, XFCE and Openbox.
-
-Numix Frost Light is designed by the [Numix Project](http://numixproject.org) exclusively for [Antergos](http://antergos.com).
-
-### Requirements
-GTK+ 3.18 or later version
-Murrine theme engine
+## Numix Frost Light
+##### A modern flat theme with a combination of light and dark elements. It supports GNOME, Cinnamon, Xfce, and Openbox.
+[![By The Numix Project](https://img.shields.io/badge/By-The%20Numix%20Project-f0544c.svg?style=flat-square)](https://numixproject.org/) &nbsp;[![In collaboration with: antergos](https://img.shields.io/badge/By-antergos-234F91.svg?style=flat-square)](https://antergos.com/) &nbsp;[![Circle CI](https://img.shields.io/circleci/project/antergos/numix-frost/master.svg?circle-token=b14acf911433d315298235b0c2fbf7b2670a92a8&maxAge=2592000&style=flat-square)](https://circleci.com/gh/antergos/numix-frost/tree/master) &nbsp;![Supports GTK+ 3.18](https://img.shields.io/badge/GTK%2B-3.18-4a90d9.svg?style=flat-square) &nbsp;![Supports GTK+ 3.20](https://img.shields.io/badge/GTK%2B-3.20-4a90d9.svg?style=flat-square)
 
 ### Manual installation
-
 First, you need to compile the theme using the [Sass](http://sass-lang.com/) compiler.
 
 To install Sass, install ruby and the gem command using your distro's package manager. Then install `sass` with the `gem` command,
