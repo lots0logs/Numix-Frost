@@ -8,6 +8,7 @@ RES_DIR320=gtk-3.20
 SCSS_DIR320=$(RES_DIR320)/scss
 DIST_DIR320=$(RES_DIR320)/dist
 INSTALL_DIR=$(DESTDIR)/usr/share/themes/Numix-Frost
+UTILS=scripts/utils.sh
 
 all: clean gresource
 
@@ -53,6 +54,10 @@ install: all
 
 uninstall:
 	rm -rf $(INSTALL_DIR)
+
+changes:
+	$(UTILS) changes
+
 
 .PHONY: all
 .PHONY: css
