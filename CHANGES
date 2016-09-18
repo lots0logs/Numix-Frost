@@ -1,0 +1,218 @@
+[2016-09-18 04:14:33 -0500]  add task to makefile for generating/updating CHANGES file before re..  Dustin Falgout  {21358d8}
+[2016-09-18 04:31:07 -0500]  Update CHANGES                                                         Dustin Falgout  {539076b}
+[2016-09-18 04:23:37 -0500]  add emacs mode string to CHANGES file (so hopefully, links to issue..  Dustin Falgout  {ecfd664}
+[2016-09-18 04:15:02 -0500]  RELEASE PREP :: Update CHANGES file.                                   Dustin Falgout  {df8e66d}
+[2016-09-18 04:14:33 -0500]  add task to makefile for generating/updating CHANGES file before re..  Dustin Falgout  {0e6c45b}
+[2016-09-18 03:15:15 -0500]  RELEASE PREP :: Update CHANGES file.                                   Dustin Falgout  {840c1ff}
+[2016-09-18 02:57:43 -0500]  add task to makefile for generating/updating CHANGES file before re..  Dustin Falgout  {040b869}
+[2016-09-18 01:17:24 -0500]  fix makefile                                                           Dustin Falgout  {20f4b49}
+[2016-09-18 01:16:29 -0500]  fix readme                                                             Dustin Falgout  {9343618}
+[2016-09-11 14:01:44 -0500]  Updating readme to specifically list package names. Fixes #555 & #493    Naren Dasan   {6649435}
+[2016-09-02 10:19:32 -0500]  [Gtk-3.20] Refactor toolbar code. Fixes #486                            Csaba Jakosa   {9cc08c8}
+[2016-08-31 13:08:31 -0500]  [Gtk-3.20] Redecorate osd toolbar & fix volume slider. Fixes #463       Csaba Jakosa   {b9dfb64}
+[2016-08-24 08:52:29 -0500]  * Readme update. (#519)                                                 Csaba Jakosa   {2ef0615}
+[2016-07-27 10:49:25 -0500]  Restore and fix Xfce desktop icon shadows. Fix #492                     Jeremy Bicha   {af5a280}
+[2016-07-26 02:06:35 -0500]  Don't install GTK3 source files. Fixes #503 (#504)                      Jeremy Bicha   {2181c0b}
+[2016-07-19 14:07:58 -0500]  Drop support for Gtk-3.16                                               Khurshid Alam  {23db63b}
+[2016-09-11 14:01:44 -0500]  Updating readme to specifically list package names. Fixes #555 & #493    Naren Dasan   {dbf231b}
+[2016-09-03 11:00:42 +0200]  GTK 3.20 :: Clean code (#553)                                           Csaba Jakosa   {67bf7e2}
+[2016-09-02 17:19:32 +0200]  [Gtk-3.20] Refactor toolbar code. Fixes #486                            Csaba Jakosa   {e2658ff}
+[2016-08-31 20:08:31 +0200]  [Gtk-3.20] Redecorate osd toolbar & fix volume slider. Fixes #463       Csaba Jakosa   {ff98d44}
+[2016-08-31 21:26:48 +0530]  [Gtk-3.20] Re-adjust titlebar(for Unity), headerbar and toolbar hei..   Khurshid Alam  {03bb8b3}
+[2016-08-31 20:03:05 +0530]  Merge pull request #542 from megax/patch15                              Khurshid Alam  {9c07db4}
+[2016-08-31 13:42:27 +0200]  * Minimal fix #452                                                          Megax      {8547acc}
+[2016-08-30 03:23:11 +0530]  Optimize buttons. Fixes #452                                            Khurshid Alam  {6cb9d03}
+[2016-08-29 08:02:56 +0200]  [Gtk-3.20] Reduce menubar height to match gtk2 theme. Fixes #453        Csaba Jakosa   {e86ef11}
+[2016-08-28 18:37:43 +0200]  [GTK 3.20] Fixed unity-panel calendar color.                            Csaba Jakosa   {9909cec}
+[2016-08-28 18:36:10 +0200]  [GTK 3.20] Unity-greeter rewrite sass format.                           Csaba Jakosa   {27b4ce7}
+[2016-08-26 22:12:37 +0530]  [Gtk-3.20] 3.20 port for Unity                                          Khurshid Alam  {57cb0b4}
+[2016-08-24 15:52:29 +0200]  * Readme update. (#519)                                                 Csaba Jakosa   {ea2a171}
+[2016-08-22 11:02:05 +0200]  [GTK 3.20] Use old link color. Fixes #499                               Csaba Jakosa   {220dc21}
+[2016-07-27 23:47:11 +0530]  [Gtk-3.18] Use old link color. Fixes #499                               Khurshid Alam  {c65721b}
+[2016-07-27 11:49:25 -0400]  Restore and fix Xfce desktop icon shadows. Fix #492                     Jeremy Bicha   {d2fecfd}
+[2016-07-26 03:06:35 -0400]  Don't install GTK3 source files. Fixes #503 (#504)                      Jeremy Bicha   {b0aaf84}
+[2016-07-20 00:37:58 +0530]  Drop support for Gtk-3.16                                               Khurshid Alam  {c565223}
+[2016-07-20 00:21:53 +0530]  [Gtk-3.18] Provide gap between buttons in message dialog. Fixes #498    Khurshid Alam  {58642c3}
+[2016-07-15 08:59:15 +0300]  Fix for issue #492 (#496)                                               Alexey Donoga  {76321bb}
+[2016-07-10 06:43:05 -0500]  fix makefile                                                           Dustin Falgout  {133f4a4}
+[2016-06-16 18:13:40 -0500]  fix Makefile to only install theme files (#487) (cherry picked from..   Jeremy Bicha   {dc935ba}
+[2016-07-10 06:34:38 -0500]  syn metacity themes with upstream copy                                 Dustin Falgout  {2b2351f}
+[2016-06-16 19:13:40 -0400]  fix Makefile to only install theme files (#487)                         Jeremy Bicha   {5d51fce}
+[2016-06-12 05:50:24 -0500]  * Implement textview border. (numixproject/numix-gtk-theme#477) (ch..  Dustin Falgout  {83689a4}
+[2016-06-10 04:45:17 -0500]  Basic MATE Gtk3 support (numixproject/numix-gtk-theme#473)             Alexei Sorokin  {1f9f677}
+[2016-05-21 10:53:03 -0500]  [Gtk-3.18]: Progressbar under treeview : removed backdrop state         Khurshid Alam  {b514e7f}
+[2016-06-10 13:45:17 +0400]  Basic MATE Gtk3 support (#473)                                         Alexei Sorokin  {1315b5f}
+[2016-05-21 21:23:03 +0530]  [Gtk-3.18]: Progressbar under treeview : removed backdrop state         Khurshid Alam  {ca12530}
+[2016-05-16 01:44:12 +0530]  Merge pull request #437 from megax/patch11                              Khurshid Alam  {4ba345b}
+[2016-05-16 00:55:42 +0530]  Merge pull request #441 from megax/patch12                              Khurshid Alam  {62f60a6}
+[2016-05-15 21:12:37 +0200]  * Optimized headerbar padding size.                                         Megax      {2b42ee4}
+[2016-05-11 08:59:24 -0500]  Create circle.yml                                                      Dustin Falgout  {7d17698}
+[2016-05-11 08:50:12 -0500]  Update README.md                                                       Dustin Falgout  {e9b86c2}
+[2016-05-08 23:37:06 -0500]  update .gitmodules                                                     Dustin Falgout  {dbf1b70}
+[2016-05-08 23:06:44 -0500]  update submodule ref                                                   Dustin Falgout  {edffe9c}
+[2016-05-08 23:02:56 -0500]  Merge branch 'master' of github.com:Antergos/Numix-Frost               Dustin Falgout  {695c7d4}
+[2016-05-08 23:02:23 -0500]  update submodule ref                                                   Dustin Falgout  {ccf3205}
+[2016-05-08 18:30:57 +0530]  Merge pull request #412 from megax/patch2                               Khurshid Alam  {76a8fc2}
+[2016-05-08 03:57:33 -0500]  Update README.md                                                       Dustin Falgout  {562a5c0}
+[2016-05-08 03:14:56 -0500]  update makefile                                                        Dustin Falgout  {5550937}
+[2016-05-08 02:52:09 -0500]  Update README.md                                                       Dustin Falgout  {cd754f5}
+[2016-05-07 01:54:15 -0500]  fix color                                                              Dustin Falgout  {c1f1fe6}
+[2016-05-07 00:59:53 -0500]  update submodule ref                                                   Dustin Falgout  {8a22c46}
+[2016-05-07 00:56:23 -0500]  merge change that was missed during last cherry-picks                  Dustin Falgout  {3ef6858}
+[2016-05-04 10:31:00 +0200]  Fixed issue spottted by @lots0logs (#405)                                 Jonathan     {2ba74a2}
+[2016-05-03 18:09:32 +0530]  Merge pull request #404 from vanillajonathan/patch-1                   Satyajit Sahoo  {cb81db7}
+[2016-05-03 14:10:18 +0200]  Fixed capitalization, use https                                           Jonathan     {9f258db}
+[2016-04-25 11:39:50 -0500]  * Remove old file. (cherry picked from commit numixproject/numix-gt..       Megax      {dedc2fd}
+[2016-04-25 23:40:11 +0530]  Merge pull request #395 from megax/patch2                               Khurshid Alam  {a6be634}
+[2016-04-25 18:39:50 +0200]  * Remove old file.                                                          Megax      {c1d0981}
+[2016-04-23 23:29:33 +0530]  Merge pull request #379 from megax/patch15                              Khurshid Alam  {dbdd6ed}
+[2016-04-22 21:05:07 -0500]  * Fixed #346 (#347) (cherry picked from commit d60348a)                 Csaba Jakosa   {ba50f59}
+[2016-04-23 04:23:25 -0500]  update submodule ref                                                   Dustin Falgout  {713668a}
+[2016-04-23 01:48:14 -0500]  ok i quit..github sucks :unamused:                                     Dustin Falgout  {05b3800}
+[2016-04-23 01:45:56 -0500]  update readme                                                          Dustin Falgout  {d0f4508}
+[2016-04-23 01:24:18 -0500]  update readme                                                          Dustin Falgout  {3dab4e9}
+[2016-04-23 04:05:07 +0200]  * Fixed #346 (#347)                                                     Csaba Jakosa   {d60348a}
+[2016-04-19 01:46:57 +0530]  Fix link to issues page in README                                      Satyajit Sahoo  {a0736e4}
+[2016-04-14 07:34:46 -0500]  fix entry border                                                       Dustin Falgout  {686c999}
+[2016-04-14 07:16:41 -0500]  fix background for notebook stack. fix entry selection. Closes #342..  Dustin Falgout  {79e110f}
+[2016-04-14 07:16:41 -0500]  fix background for notebook stack. fix entry selection. Closes #342..  Dustin Falgout  {5b69b56}
+[2016-04-13 04:08:45 -0500]  update submodule ref                                                   Dustin Falgout  {79ac587}
+[2016-04-12 09:23:43 -0500]  * Fix backdrop->selected font color and frame (border color). (#324..   Csaba Jakosa   {45e1e43}
+[2016-04-11 00:32:16 -0500]  update scss-lint.yml (cherry picked from commit 2813263)               Dustin Falgout  {7bb4909}
+[2016-04-10 07:32:37 -0500]  gtk 3.20: Menu and paned fix. (#311)                                    Csaba Jakosa   {3cdc3c9}
+[2016-04-13 02:43:21 -0500]  update submodule ref                                                   Dustin Falgout  {e18b081}
+[2016-04-12 16:23:43 +0200]  * Fix backdrop->selected font color and frame (border color). (#324)    Csaba Jakosa   {a6e09d9}
+[2016-04-11 00:32:16 -0500]  update scss-lint.yml                                                   Dustin Falgout  {2813263}
+[2016-04-10 14:32:37 +0200]  gtk 3.20: Menu and paned fix. (#311)                                    Csaba Jakosa   {06ae107}
+[2016-04-10 05:03:14 -0500]  update submodule ref                                                   Dustin Falgout  {f58869a}
+[2016-04-10 03:21:22 -0500]  fix invalid parameters given to gtk's mix function (cherry picked f..  Dustin Falgout  {99ed561}
+[2016-04-10 04:32:35 -0500]  update submodule ref                                                   Dustin Falgout  {d06c39e}
+[2016-04-10 04:22:37 -0500]  update submodule ref                                                   Dustin Falgout  {5a1d3dd}
+[2016-04-10 03:35:46 -0500]  fix  color variables again                                             Dustin Falgout  {d46388b}
+[2016-04-10 03:21:22 -0500]  fix invalid parameters given to gtk's mix function (cherry picked f..  Dustin Falgout  {219593d}
+[2016-04-10 00:36:14 -0500]  use default spinner image for now to work-around gnome-shell crashi..  Dustin Falgout  {c84c1c8}
+[2016-04-10 02:22:43 -0500]  update Makefile (cherry picked from commit f58a107)                    Dustin Falgout  {56728f9}
+[2016-04-10 02:49:23 -0500]  fix gresource paths                                                    Dustin Falgout  {109999e}
+[2016-04-10 02:06:02 -0500]  bring back support for gtk versions less than 3.20 so this repo wil..  Dustin Falgout  {b79b016}
+[2016-04-08 23:33:21 -0500]  cherry-pick 50c2e1d for gtk 3.20                                       Dustin Falgout  {521f66f}
+[2016-04-08 23:30:09 -0500]  Add support (beta) for gtk 3.20.                                       Dustin Falgout  {36ceea5}
+[2016-04-08 22:59:01 -0500]  update .gitignore                                                      Dustin Falgout  {20a91a6}
+[2016-04-07 19:59:16 +0530]  Merge pull request #309 from megax/patch4                               Khurshid Alam  {f647c1d}
+[2016-04-07 15:03:55 +0200]  * Gedit: Fix decorate popover list view background color.                   Megax      {50c2e1d}
+[2016-04-07 01:34:01 +0530]  Merge pull request #308 from megax/patch3                               Khurshid Alam  {854ff8b}
+[2016-04-06 17:01:32 +0200]  * Gedit: Fixed Open file list border stlye.                                 Megax      {c074693}
+[2016-04-05 22:45:14 +0530]  Merge pull request #307 from megax/patch2                               Khurshid Alam  {7fd31b8}
+[2016-04-05 18:16:57 +0200]  * GtkPaned code css converted sass.                                         Megax      {f5d1b84}
+[2016-04-05 21:13:30 +0530]  Merge pull request #306 from megax/patch1                               Khurshid Alam  {0c7c585}
+[2016-04-05 17:22:30 +0200]  * Fixed #273 and other fix.                                                 Megax      {21dbafe}
+[2016-04-03 00:44:05 -0500]  fix _globals (accidentally cherry-picked it from light branch)         Dustin Falgout  {b1d17dd}
+[2016-04-03 00:42:25 -0500]  fix _globals (accidentally cherry-picked it from light branch)         Dustin Falgout  {d47824f}
+[2016-04-03 00:38:38 -0500]  fix nemo and nautilus. fix menu padding and box-shadow. fix scale s..  Dustin Falgout  {05cf630}
+[2016-04-02 03:46:25 -0500]  fix colors                                                             Dustin Falgout  {86eb61b}
+[2016-04-02 03:34:00 -0500]  fighting with modelbuttons (cherry picked from commit 446f7d1)         Dustin Falgout  {27c8f15}
+[2016-04-02 03:41:04 -0500]  sync                                                                   Dustin Falgout  {e57a5fc}
+[2016-03-30 06:09:08 -0500]  add gtk submodule for convience during development                     Dustin Falgout  {bbbd602}
+[2016-03-29 02:01:24 -0500]  :unamused: (cherry picked from commit 360c24f)                         Dustin Falgout  {8e4009f}
+[2016-03-29 01:13:34 -0500]  more tweaks to switches and scrollbars                                 Dustin Falgout  {49650d0}
+[2016-03-28 19:35:43 -0500]  fix switches and scrollbars (cherry picked from commit cf0346f)        Dustin Falgout  {3d1b0e6}
+[2016-03-28 05:27:29 -0500]  use widget names instead of classes for scrollbars                     Dustin Falgout  {40fb0e5}
+[2016-03-28 04:42:27 -0500]  remove more depricated properties. (cherry picked from commit 1d484..  Dustin Falgout  {0f75d26}
+[2016-03-28 02:24:01 -0500]  update readme                                                          Dustin Falgout  {ca721ae}
+[2016-03-27 16:43:56 -0500]  remove 3.20 fallback as current state is functional enough to be us..  Dustin Falgout  {9be526a}
+[2016-03-26 22:06:58 -0500]  remove some more deprecated properties (cherry picked from commit d..  Dustin Falgout  {9d7965c}
+[2016-03-26 21:55:41 -0500]  remove some more deprecated properties (cherry picked from commit 5..  Dustin Falgout  {7a9fb32}
+[2016-03-26 21:42:54 -0500]  :prelight is depricated (cherry picked from commit f0e42b9)            Dustin Falgout  {1fda410}
+[2016-03-26 21:41:59 -0500]  replace deprecated psuedo classes with new alternatives (cherry pic..  Dustin Falgout  {9d52eed}
+[2016-03-26 19:56:56 -0500]  yep, still working on 3.20                                             Dustin Falgout  {14b9c2f}
+[2016-03-27 01:19:37 +0530]  Merge pull request #303 from megax/master                              Satyajit Sahoo  {dae4da6}
+[2016-03-26 17:19:29 +0100]  * Progressbar style fix and update.                                         Megax      {4e1027a}
+[2016-03-26 21:33:54 +0530]  Merge pull request #302 from actionless/progressbar-inside-treeview    Satyajit Sahoo  {76883d2}
+[2016-03-25 12:55:15 +0100]  fix(gtk3): progressbar inside treeview                                   actionless    {e6cc722}
+[2016-03-26 07:36:17 -0500]  more work on 3.20                                                      Dustin Falgout  {cf96cf1}
+[2016-03-26 07:05:37 -0500]  started working on gtk 3.20 changes                                    Dustin Falgout  {ada7520}
+[2016-03-08 11:16:22 -0600]  Fixed all XPM files to function correctly with xfwm4. (cherry picke..  Amanda Poopshits {cdca971}
+[2016-03-26 04:28:19 -0500]  override our styles with Adwaita until we incorporate all the theme..  Dustin Falgout  {710a6d9}
+[2016-03-11 22:15:11 +0530]  Merge pull request #301 from veganism/master                            Khurshid Alam  {20c317a}
+[2016-03-08 11:16:22 -0600]  Fixed all XPM files to function correctly with xfwm4.                  Amanda Poopshits {78006ef}
+[2016-03-03 00:44:39 -0600]  attempt to fix #10                                                     Dustin Falgout  {6a71223}
+[2016-02-16 11:05:30 +0530]  More tweaks for window border color under unity decoration              Khurshid Alam  {e462716}
+[2016-02-14 03:39:03 -0600]  update submodule ref                                                   Dustin Falgout  {8f92bb7}
+[2016-02-06 12:19:54 +0530]  Do not use transparent window borders in unity decoration.Fixes #290    Khurshid Alam  {0619757}
+[2016-02-05 13:03:08 +0530]  Merge pull request #280 from wa4557/fies                                Khurshid Alam  {1b3e667}
+[2016-01-30 11:07:23 +0100]  Decreased padding to 3px                                                  Test User    {0f0cb6d}
+[2016-01-03 11:49:16 +0100]  Fixes theming of option-button                                            Test User    {85a7646}
+[2016-01-03 10:09:23 +0100]  Removes unnecessary declaration                                           Test User    {da251e8}
+[2016-01-03 10:07:51 +0100]  Hound                                                                     Test User    {12d6ea9}
+[2016-01-03 10:06:24 +0100]  Restores highlighting rectangle                                           Test User    {c96c8d6}
+[2015-12-28 14:17:00 +0100]  Styling                                                                   Test User    {3f5d2a0}
+[2015-12-28 14:14:42 +0100]  Hound complained                                                          Test User    {fa2e9ed}
+[2015-12-28 14:09:23 +0100]  Small fixes                                                               Test User    {646c676}
+[2015-12-14 02:31:09 +0530]  Merge pull request #278 from shimmerproject/revert-276-nautilus-pla..  Satyajit Sahoo  {70b2565}
+[2015-12-14 02:30:59 +0530]  Revert "gtk-3.0: Fix Nautilus places sidebar"                          Satyajit Sahoo  {34f6ec3}
+[2015-12-14 00:09:28 +0530]  Merge pull request #276 from leoetlino/nautilus-places-sidebar         Satyajit Sahoo  {90555ed}
+[2015-12-13 13:21:55 +0100]  gtk-3.0: Fix Nautilus places sidebar                                       Léo Lam     {77d6544}
+[2015-12-13 17:12:34 +0530]  Merge pull request #275 from leoetlino/overshoot-undershoot            Satyajit Sahoo  {9a96449}
+[2015-12-13 11:50:45 +0100]  gtk-3.0: Add support for undershoot and overshoot                          Léo Lam     {055e22c}
+[2015-12-08 08:50:06 -0600]  Fixes shimmerproject/Numix#273 (cherry picked from commit 8603796)     Dustin Falgout  {e33e579}
+[2015-12-08 08:20:40 -0600]  Possible fix for shimmerproject/Numix#273 (cherry picked from commi..  Dustin Falgout  {406faa6}
+[2015-12-06 07:23:30 -0600]  Fixes #15 (cherry picked from commit 33e7928)                          Dustin Falgout  {bb24628}
+[2015-12-01 12:28:31 -0600]  Fixes #15 and a few other things                                       Dustin Falgout  {ca7b18d}
+[2015-12-01 01:32:04 -0600]  update submodule ref                                                   Dustin Falgout  {164ef6d}
+[2015-12-01 00:08:11 -0600]  few more fixes (cherry picked from commit f9da9f2)                     Dustin Falgout  {89e7c01}
+[2015-11-30 23:42:27 -0600]  few more fixes                                                         Dustin Falgout  {22fe525}
+[2015-11-30 23:15:06 -0600]  update submodule                                                       Dustin Falgout  {3366fab}
+[2015-11-30 22:51:29 -0600]  few more fixes                                                         Dustin Falgout  {c0895ee}
+[2015-11-30 22:08:28 -0600]  few more fixes                                                         Dustin Falgout  {22d0f2f}
+[2015-11-30 21:25:41 -0600]  few fixes                                                              Dustin Falgout  {1499cbf}
+[2015-11-29 20:46:10 -0600]  update makefile                                                        Dustin Falgout  {b0d2609}
+[2015-11-23 08:00:49 -0600]  update makefile                                                        Dustin Falgout  {5decfe5}
+[2015-11-23 07:49:52 -0600]  update submodule ref                                                   Dustin Falgout  {29da49b}
+[2015-11-21 16:33:54 -0600]  update gitignore                                                       Dustin Falgout  {297abc3}
+[2015-11-21 16:32:54 -0600]  remove unity assets                                                    Dustin Falgout  {2b386ef}
+[2015-11-21 16:31:26 -0600]  update submodule ref                                                   Dustin Falgout  {49fbc3b}
+[2015-11-21 16:16:55 -0600]  sync with local                                                        Dustin Falgout  {8f9470b}
+[2015-11-05 06:00:23 -0600]  update submodule ref                                                   Dustin Falgout  {235d81c}
+[2015-11-05 05:43:41 -0600]  update submodule ref                                                   Dustin Falgout  {4d2d865}
+[2015-11-05 05:17:35 -0600]  ubdate submodule ref                                                   Dustin Falgout  {f4b6c09}
+[2015-11-05 05:14:29 -0600]  ubdate submodule ref                                                   Dustin Falgout  {9d46901}
+[2015-11-03 02:41:09 -0600]  Merge pull request #9 from shimmerproject/master                       Dustin Falgout  {f4dfcf8}
+[2015-10-27 18:53:34 -0500]  fix symlinks                                                           Dustin Falgout  {53c9d48}
+[2015-10-27 07:16:24 -0500]  fix submodule url                                                      Dustin Falgout  {bedb16e}
+[2015-10-26 23:14:22 -0500]  Merge remote-tracking branch 'origin/master'                           Dustin Falgout  {5ff47bb}
+[2015-10-26 23:13:31 -0500]  update assets                                                          Dustin Falgout  {ceb019a}
+[2015-10-26 23:10:56 -0500]  Updated submodule reference                                            Dustin Falgout  {9bdcac8}
+[2015-10-26 09:52:22 -0500]  Update README.md                                                       Dustin Falgout  {c423d24}
+[2015-10-26 09:51:44 -0500]  Update README.md                                                       Dustin Falgout  {28df8cd}
+[2015-10-26 09:40:23 -0500]  cleanup after aborted merge                                            Dustin Falgout  {b6ec55a}
+[2015-10-26 09:02:16 -0500]  cleanup after merge                                                    Dustin Falgout  {78066ad}
+[2015-10-26 08:59:53 -0500]  Merge branch 'frost_sass'                                              Dustin Falgout  {f20e964}
+[2015-10-26 08:54:41 -0500]  fix assets to workaround errors in nemo                                Dustin Falgout  {8cdd441}
+[2015-10-26 07:58:46 -0500]  fix leftovers from aborted merge                                       Dustin Falgout  {6084cee}
+[2015-10-26 07:55:14 -0500]  update package.json (cherry picked from commit 53e25e5)                Dustin Falgout  {adbe0bc}
+[2015-10-20 08:56:48 -0500]  Fixes wrong menu color in gtk3.16 apps issue: #253 (cherry picked f..   Khurshid Alam  {15fe482}
+[2015-10-19 10:38:35 -0500]  fix some issues that showed up with gtk 3.18 to hold us over until ..  Dustin Falgout  {92833fc}
+[2015-10-19 10:18:53 -0500]  ...                                                                    Dustin Falgout  {e9caade}
+[2015-10-19 10:15:48 -0500]  update assets                                                          Dustin Falgout  {caa60df}
+[2015-10-19 09:52:20 -0500]  rm old png assets                                                      Dustin Falgout  {26db06b}
+[2015-10-17 05:40:33 -0500]  fix nautilus sidebar                                                   Dustin Falgout  {3b473c4}
+[2015-10-17 04:26:41 -0500]  fix nautilus sidebar bg color bug (cherry picked from commit b619c2d)  Dustin Falgout  {436972b}
+[2015-05-16 20:55:21 -0500]  fix nautilus sidebar bg color bug                                      Dustin Falgout  {b619c2d}
+[2015-05-16 12:27:32 -0500]  fix nemo/nautilus padding while scrolling issue (cherry picked from..  Dustin Falgout  {20aa3a5}
+[2015-05-16 09:55:48 -0500]  fix overscroll color                                                   Dustin Falgout  {5694b82}
+[2015-05-14 11:06:29 -0500]  Merge remote-tracking branch 'origin/master'                           Dustin Falgout  {179c992}
+[2015-05-14 11:06:23 -0500]  fixes #2 (for real this time)                                          Dustin Falgout  {1f25f97}
+[2015-05-11 03:54:13 +0000]  Merge pull request #3 from shimmerproject/master                       Dustin Falgout  {6b9538b}
+[2015-05-03 01:02:30 -0500]  fix desklet border for cinnamon                                        Dustin Falgout  {a8e2790}
+[2015-05-03 00:47:42 -0500]  lighten button border color and fix titlebar height                    Dustin Falgout  {93278fc}
+[2015-04-28 19:42:24 -0500]  few more fixes                                                         Dustin Falgout  {507c7bb}
+[2015-04-18 18:20:08 -0500]  make nemo selectors more specific                                      Dustin Falgout  {1aa1b7e}
+[2015-04-18 02:07:39 -0500]  lets try this once again                                               Dustin Falgout  {8c557bb}
+[2015-04-18 00:03:51 -0500]  few fixes                                                              Dustin Falgout  {b6d31c0}
+[2015-04-17 21:51:33 -0500]  few fixes                                                              Dustin Falgout  {0eea784}
+[2015-04-17 10:36:39 -0500]  few fixes for nemo (cherry picked from commit d373953)                 Dustin Falgout  {49f17f8}
+[2015-04-17 06:04:01 -0500]  few fixes for nemo                                                     Dustin Falgout  {d373953}
+[2015-04-17 05:20:51 -0500]  update thumbnails for cinnamon theme. change toolbar menu color. (c..  Dustin Falgout  {3029d51}
+[2015-04-17 03:53:26 -0500]  add cinnamon theme                                                     Dustin Falgout  {dd1c2b2}
+[2015-04-17 03:52:24 -0500]  add gnome-shell theme                                                  Dustin Falgout  {6e94965}
+[2015-04-17 03:49:44 -0500]  remove unity theme since we do not support Unity in Antergos (nor d..  Dustin Falgout  {018bf21}
+[2015-04-17 03:44:22 -0500]  merge current state of frost.                                          Dustin Falgout  {8f2abf9}
