@@ -7,8 +7,8 @@ DIST_DIR=$(RES_DIR)/dist
 RES_DIR320=gtk-3.20
 SCSS_DIR320=$(RES_DIR320)/scss
 DIST_DIR320=$(RES_DIR320)/dist
-INSTALL_DIR=$(DESTDIR)/usr/share/themes/Numix-Frost-Light
-UTILS=scripts/utils.sh
+INSTALL_DIR=$(DESTDIR)/usr/share/themes/Numix-Frost
+LATEST_STABLE_RELEASE=$(git describe --tags $(git rev-list --tags --max-count=1))
 
 all: clean gresource
 
@@ -56,8 +56,14 @@ uninstall:
 	rm -rf $(INSTALL_DIR)
 
 changes:
-	$(UTILS) changes
-
+	[ -f CHANGES ] && mv CHANGES CHANGES.old
+	git log \
+		--pretty=format:"[%ai] %<(69,trunc) %s %><(15) %aN {%h}" \
+		--cherry-pick "${LATEST_STABLE_RELEASE}...HEAD" > CHANGES
+	[ -f CHANGES.old ] && cat CHANGES.old >> CHANGES && rm CHANGES.old
+	git add CHANGES
+	git commit -m 'RELEASE PREP :: Update CHANGES file.'
+	git push
 
 .PHONY: all
 .PHONY: css
@@ -66,6 +72,7 @@ changes:
 .PHONY: clean
 .PHONY: install
 .PHONY: uninstall
+.PHONY: changes
 
 .DEFAULT_GOAL := all
 
