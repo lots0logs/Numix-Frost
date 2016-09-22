@@ -1,4 +1,23 @@
+-------------->>>> 2.6.4 <<<<-------------------------->>>> 2.6.4 <<<<-------------------------->>>> 2.6.4 <<<<--------------
+[2016-09-22 00:18:08 -0500]  uncomment lines in utils.sh                                            Dustin Falgout  {3fb1331}
+[2016-09-21 23:13:08 -0500]  update utils.sh. fix missing new line in CHANGES file.                 Dustin Falgout  {db4bd99}
+[2016-09-22 00:12:18 -0500]  move assets to top level of src directory                              Dustin Falgout  {1033b7f}
+[2016-09-18 05:50:46 -0500]  update Makefile (moved install commands to utils script)               Dustin Falgout  {44a3ba4}
+[2016-09-22 00:03:09 -0500]  move submodules into src directory                                     Dustin Falgout  {1a33d54}
+[2016-09-21 23:59:40 -0500]  move theme source files into src directory                             Dustin Falgout  {002b9cb}
+[2016-09-18 04:14:33 -0500]  add task to makefile for generating/updating CHANGES file before re..  Dustin Falgout  {a920e3c}
+[2016-09-18 02:57:43 -0500]  add task to makefile for generating/updating CHANGES file before re..  Dustin Falgout  {4980ee3}
+[2016-09-21 22:11:27 -0500]  RELEASE PREP :: Update CHANGES file.                                   Dustin Falgout  {9e2cf88}
+[2016-09-21 22:05:08 -0500]  move assets into src directory                                         Dustin Falgout  {8df9804}
+[2016-09-21 22:04:17 -0500]  move assets into src directory                                         Dustin Falgout  {c769c23}
+[2016-09-21 22:01:55 -0500]  move assets into src directory                                         Dustin Falgout  {a0f0e73}
+[2016-09-21 13:22:27 -0500]  RELEASE PREP :: Update CHANGES file.                                   Dustin Falgout  {9dc075a}
+[2016-09-18 06:08:12 -0500]  RELEASE PREP :: Update CHANGES file.                                   Dustin Falgout  {6b1c04d}
 [2016-09-18 04:14:33 -0500]  add task to makefile for generating/updating CHANGES file before re..  Dustin Falgout  {21358d8}
+[2016-09-18 05:50:46 -0500]  update Makefile (moved install commands to utils script)               Dustin Falgout  {a8205ba}
+[2016-09-18 05:15:06 -0500]  move source files into subdirectory instead of being at repo root      Dustin Falgout  {62b93af}
+[2016-09-18 05:02:05 -0500]  Update README.md                                                       Dustin Falgout  {75bebed}
+[2016-09-18 04:59:57 -0500]  Update README.md                                                       Dustin Falgout  {2dccff1}
 [2016-09-18 04:31:07 -0500]  Update CHANGES                                                         Dustin Falgout  {539076b}
 [2016-09-18 04:23:37 -0500]  add emacs mode string to CHANGES file (so hopefully, links to issue..  Dustin Falgout  {ecfd664}
 [2016-09-18 04:15:02 -0500]  RELEASE PREP :: Update CHANGES file.                                   Dustin Falgout  {df8e66d}
@@ -21,6 +40,7 @@
 [2016-08-31 21:26:48 +0530]  [Gtk-3.20] Re-adjust titlebar(for Unity), headerbar and toolbar hei..   Khurshid Alam  {03bb8b3}
 [2016-08-31 20:03:05 +0530]  Merge pull request #542 from megax/patch15                              Khurshid Alam  {9c07db4}
 [2016-08-31 13:42:27 +0200]  * Minimal fix #452                                                          Megax      {8547acc}
+[2016-08-31 15:47:06 +0530]  [Gtk-3.20] Redecorate OSD: Implement spinbutton and entry. Fixes #457   Khurshid Alam  {23fca70}
 [2016-08-30 03:23:11 +0530]  Optimize buttons. Fixes #452                                            Khurshid Alam  {6cb9d03}
 [2016-08-29 08:02:56 +0200]  [Gtk-3.20] Reduce menubar height to match gtk2 theme. Fixes #453        Csaba Jakosa   {e86ef11}
 [2016-08-28 18:37:43 +0200]  [GTK 3.20] Fixed unity-panel calendar color.                            Csaba Jakosa   {9909cec}
@@ -46,13 +66,24 @@
 [2016-05-16 01:44:12 +0530]  Merge pull request #437 from megax/patch11                              Khurshid Alam  {4ba345b}
 [2016-05-16 00:55:42 +0530]  Merge pull request #441 from megax/patch12                              Khurshid Alam  {62f60a6}
 [2016-05-15 21:12:37 +0200]  * Optimized headerbar padding size.                                         Megax      {2b42ee4}
+[2016-05-15 22:37:02 +0530]  Merge pull request #440 from megax/patch12                              Khurshid Alam  {b73fb6f}
+[2016-05-14 20:59:11 +0530]  Merge pull request #432 from megax/patch8                               Khurshid Alam  {94e5f7a}
+[2016-05-14 20:58:42 +0530]  Merge pull request #435 from megax/patch10                              Khurshid Alam  {f46215c}
+[2016-05-14 18:58:43 +0530]  Merge pull request #433 from megax/patch9                               Khurshid Alam  {7692d47}
 [2016-05-11 08:59:24 -0500]  Create circle.yml                                                      Dustin Falgout  {7d17698}
+[2016-05-11 19:22:05 +0530]  Merge pull request #429 from megax/patch6                               Khurshid Alam  {62839b2}
 [2016-05-11 08:50:12 -0500]  Update README.md                                                       Dustin Falgout  {e9b86c2}
+[2016-05-11 15:31:49 +0530]  Merge pull request #425 from megax/patch4                               Khurshid Alam  {e5116cc}
+[2016-05-10 21:07:33 +0530]  Merge pull request #419 from megax/patch1                               Khurshid Alam  {d3fcccc}
+[2016-05-10 12:35:26 +0530]  Merge pull request #415 from megax/patch1                               Khurshid Alam  {3ad6588}
+[2016-05-10 12:34:06 +0530]  Merge pull request #416 from megax/patch2                               Khurshid Alam  {0b04851}
+[2016-05-09 22:42:38 +0530]  Merge pull request #413 from megax/patch1                               Khurshid Alam  {5e6ae19}
 [2016-05-08 23:37:06 -0500]  update .gitmodules                                                     Dustin Falgout  {dbf1b70}
 [2016-05-08 23:06:44 -0500]  update submodule ref                                                   Dustin Falgout  {edffe9c}
 [2016-05-08 23:02:56 -0500]  Merge branch 'master' of github.com:Antergos/Numix-Frost               Dustin Falgout  {695c7d4}
 [2016-05-08 23:02:23 -0500]  update submodule ref                                                   Dustin Falgout  {ccf3205}
 [2016-05-08 18:30:57 +0530]  Merge pull request #412 from megax/patch2                               Khurshid Alam  {76a8fc2}
+[2016-05-08 15:12:17 +0530]  Merge pull request #411 from megax/patch1                               Khurshid Alam  {6ef1bd1}
 [2016-05-08 03:57:33 -0500]  Update README.md                                                       Dustin Falgout  {562a5c0}
 [2016-05-08 03:14:56 -0500]  update makefile                                                        Dustin Falgout  {5550937}
 [2016-05-08 02:52:09 -0500]  Update README.md                                                       Dustin Falgout  {cd754f5}
@@ -62,9 +93,13 @@
 [2016-05-04 10:31:00 +0200]  Fixed issue spottted by @lots0logs (#405)                                 Jonathan     {2ba74a2}
 [2016-05-03 18:09:32 +0530]  Merge pull request #404 from vanillajonathan/patch-1                   Satyajit Sahoo  {cb81db7}
 [2016-05-03 14:10:18 +0200]  Fixed capitalization, use https                                           Jonathan     {9f258db}
+[2016-04-29 00:13:25 +0530]  Merge pull request #394 from megax/patch1                               Khurshid Alam  {b6097cc}
+[2016-04-28 19:39:02 +0530]  Merge pull request #388 from SammysHP/app-notification                 Satyajit Sahoo  {7a7994b}
+[2016-04-27 13:29:03 +0530]  Merge pull request #361 from SammysHP/scrollbar                         Khurshid Alam  {cc6d6d8}
 [2016-04-25 11:39:50 -0500]  * Remove old file. (cherry picked from commit numixproject/numix-gt..       Megax      {dedc2fd}
 [2016-04-25 23:40:11 +0530]  Merge pull request #395 from megax/patch2                               Khurshid Alam  {a6be634}
 [2016-04-25 18:39:50 +0200]  * Remove old file.                                                          Megax      {c1d0981}
+[2016-04-25 21:16:29 +0530]  Merge pull request #345 from megax/patch5                               Khurshid Alam  {4824360}
 [2016-04-23 23:29:33 +0530]  Merge pull request #379 from megax/patch15                              Khurshid Alam  {dbdd6ed}
 [2016-04-22 21:05:07 -0500]  * Fixed #346 (#347) (cherry picked from commit d60348a)                 Csaba Jakosa   {ba50f59}
 [2016-04-23 04:23:25 -0500]  update submodule ref                                                   Dustin Falgout  {713668a}
