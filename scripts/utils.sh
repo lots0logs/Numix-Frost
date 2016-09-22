@@ -62,9 +62,9 @@ update_changes_file() {
 
 	[[ -f CHANGES.old ]] && echo "" >> CHANGES && cat CHANGES.old >> CHANGES && rm CHANGES.old
 
-	#git add CHANGES
-	#git commit -m 'RELEASE PREP :: Update CHANGES file.'
-	#git push
+	git add CHANGES
+	git commit -m 'RELEASE PREP :: Update CHANGES file.'
+	git push
 }
 
 
