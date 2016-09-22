@@ -49,7 +49,7 @@ output_changes_file_version_marker() {
 
 update_changes_file() {
 	local LATEST_STABLE_RELEASE
-	LATEST_STABLE_RELEASE=$(git describe --tags $(git rev-list --tags --max-count=1))
+	LATEST_STABLE_RELEASE=$(git describe --abbrev=0 --tags)
 
 	[[ -f CHANGES ]] && mv CHANGES CHANGES.old
 
