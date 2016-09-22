@@ -1,3 +1,0 @@
-[submodule "includes/gtk"]
-	path = includes/gtk
-	url = git@github.com:GNOME/gtk.git
