@@ -51,9 +51,10 @@ update_changes_file() {
 	local LATEST_STABLE_RELEASE
 	LATEST_STABLE_RELEASE=$(git describe --abbrev=0 --tags)
 
-	[[ -f CHANGES ]] && mv CHANGES CHANGES.old
-
-	output_changes_file_version_marker "${LATEST_STABLE_RELEASE}" > CHANGES
+	[[ -f CHANGES ]] && {
+		mv CHANGES CHANGES.old
+		output_changes_file_version_marker "${LATEST_STABLE_RELEASE}" > CHANGES
+	}
 
 	{ git log \
 		--pretty=format:"[%ai] %<(69,trunc) %s %><(15) %aN {%h}" \
