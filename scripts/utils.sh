@@ -13,7 +13,7 @@ do_install() {
 	cp index.theme "${INSTALL_DIR}"
 
 	cp -rt "${INSTALL_DIR}" \
-			assets gtk-2.0 metacity-1 openbox-3 xfce-notify-4.0 xfwm4 unity
+			assets gtk-2.0 metacity-1 openbox-3 xfce-notify-4.0 xfwm4
 
 	for _DIR in "${GTKDIR}" "${GTK320DIR}"
 	do
