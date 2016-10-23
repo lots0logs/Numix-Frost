@@ -95,20 +95,6 @@
         border-width: 0 0 1px;
         border-style: solid;
 
-        // add vertical margins to common widget on the headerbar to avoid them spanning the whole height
-        entry,
-        spinbutton,
-        separator,
-        button { // Size height
-            margin-top: $spacing + 3px;
-            margin-bottom: $spacing + 3px;
-        }
-
-        switch { // Size height
-            margin-top: $spacing + 1px;
-            margin-bottom: $spacing + 1px;
-        }
-
         window:not(.tiled):not(.maximized) separator:first-child + &, // tackles the paned container case
         window:not(.tiled):not(.maximized) &:first-child { &:backdrop, & { border-top-left-radius: $roundness; } }
 
