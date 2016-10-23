@@ -7,7 +7,7 @@ DIST_DIR=$(RES_DIR)/dist
 RES_DIR320=src/gtk-3.20
 SCSS_DIR320=$(RES_DIR320)/scss
 DIST_DIR320=$(RES_DIR320)/dist
-INSTALL_DIR=$(DESTDIR)/usr/share/themes/Numix-Frost-Light
+INSTALL_DIR=$(DESTDIR)/usr/share/themes/Numix-Frost
 ROOT_DIR=${PWD}
 UTILS=scripts/utils.sh
 
@@ -45,8 +45,8 @@ changes:
 
 zip: all
 	mkdir $(ROOT_DIR)/dist
-	$(UTILS) install $(ROOT_DIR)/dist/Numix-Frost-Light
-	cd $(ROOT_DIR)/dist && zip --symlinks -rq Numix Numix
+	$(UTILS) install $(ROOT_DIR)/dist/$$(basename $(ROOT_DIR))
+	cd $(ROOT_DIR)/dist && zip --symlinks -rq $$(basename $(ROOT_DIR)) $$(basename $(ROOT_DIR))
 
 
 .PHONY: all
