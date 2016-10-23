@@ -9,26 +9,30 @@ INDEX="../src/assets/all-assets.txt"
 
 for i in `cat $INDEX`
 do 
-if [ -f $ASSETS_DIR/$i.png ]; then
-    echo $ASSETS_DIR/$i.png exists.
-else
-    echo
-    echo Rendering $ASSETS_DIR/$i.png
-    $INKSCAPE --export-id=$i \
-              --export-id-only \
-              --export-png=$ASSETS_DIR/$i.png $SRC_FILE >/dev/null #\
-    # && $OPTIPNG -o7 --quiet $ASSETS_DIR/$i.png 
-fi
-if [ -f $ASSETS_DIR/$i@2.png ]; then
-    echo $ASSETS_DIR/$i@2.png exists.
-else
-    echo
-    echo Rendering $ASSETS_DIR/$i@2.png
-    $INKSCAPE --export-id=$i \
-              --export-dpi=180 \
-              --export-id-only \
-              --export-png=$ASSETS_DIR/$i@2.png $SRC_FILE >/dev/null #\
-    # && $OPTIPNG -o7 --quiet $ASSETS_DIR/$i@2.png 
-fi
+	if [[ -f $ASSETS_DIR/$i.png ]]; then
+		rm $ASSETS_DIR/$i.png
+	fi
+
+	echo
+	echo Rendering $ASSETS_DIR/$i.png
+	$INKSCAPE \
+		--export-id=$i \
+		--export-id-only \
+		--export-png=$ASSETS_DIR/$i.png \
+		$SRC_FILE >/dev/null
+
+	if [[ -f $ASSETS_DIR/$i@2.png ]]; then
+		rm $ASSETS_DIR/$i@2.png
+	fi
+
+	echo
+	echo Rendering $ASSETS_DIR/$i@2.png
+	$INKSCAPE \
+		--export-id=$i \
+		--export-dpi=180 \
+		--export-id-only \
+		--export-png=$ASSETS_DIR/$i@2.png \
+		$SRC_FILE >/dev/null
 done
+
 exit 0
