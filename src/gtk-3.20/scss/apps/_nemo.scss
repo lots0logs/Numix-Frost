@@ -61,8 +61,8 @@
         grid {
             > widget:last-child {
                 button {
-                    min-height: ($spacing * 3px);
-                    min-width: ($spacing * 4px);
+                    min-height: ($spacing * 3);
+                    min-width: ($spacing * 4);
                 }
 
                 button:first-child {
