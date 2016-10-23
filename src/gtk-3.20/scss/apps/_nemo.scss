@@ -34,10 +34,18 @@
                 -GtkWidget-window-dragging: true;
             }
 
-            &.primary-toolbar button {
-                padding: 5px 6px;
+            &.primary-toolbar button.image-button {
+                padding: $spacing ($spacing + 1px);
             }
-            
+
+            combobox, button {
+                padding: $spacing ($spacing + 1px);
+
+                &.text-button { padding: $spacing ($spacing + 1px); }
+
+                &.image-button { padding: $spacing ($spacing + 1px); }
+            }
+
             /* Path Bar */
             toolitem stack {
                 margin-left: 15px;
@@ -47,15 +55,14 @@
                     -NemoPathbarButton-border-radius: $roundness;
                 }
             }
-
         } // END toolbar
 
         /* Status Bar */
         grid {
             > widget:last-child {
                 button {
-                    min-height: 15px;
-                    min-width: 20px;
+                    min-height: ($spacing * 3px);
+                    min-width: ($spacing * 4px);
                 }
 
                 button:first-child {
@@ -73,7 +80,7 @@
                 > box > scale {
                     margin-right: 12px;
                 }
-                
+
                 statusbar {
                     border: 0;
                 }
@@ -113,7 +120,7 @@
                     }
                 }
             }
-            
+
             /* Nemo Query Editor (File Search Bar) */
             + separator + box .primary-toolbar {
                 @include linear-gradient(shade($bg_color, .98)); // Searchbar color (_actionbar.scss)
@@ -134,7 +141,7 @@
                     border-top-left-radius: 0;
                     border-bottom-left-radius: 0;
                 }
-                
+
                 button.flat {
                     $bg: $bg_color;
                     $fg: $fg_color;
