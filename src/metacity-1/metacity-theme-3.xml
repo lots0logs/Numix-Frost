@@ -30,7 +30,7 @@
 	<distance name="right_titlebar_edge" value="4" />
 	<distance name="title_vertical_pad" value="0" />
 	<aspect_ratio name="button" value="1.0" />
-	<border name="title_border" left="8" right="8" top="6" bottom="6" />
+	<border name="title_border" left="8" right="8" top="4" bottom="4" />
 	<border name="button_border" left="0" right="0" top="0" bottom="0" />
 </frame_geometry>
 
@@ -209,111 +209,47 @@
 <!-- note: negative values in x or y causes gnome-shell to crash -->
 <!-- close icon -->
 <draw_ops name="close_focused">
-	<line
-		x1="width-(width-width%3)/3-2" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-2"
-		color="C_icons_focused" />
-	<line
-		x1="width-(width-width%3)/3-2" y1="(height-height%3)/3+2"
-		x2="(width-width%3)/3+2" y2="height-(height-height%3)/3-2"
-		color="C_icons_focused" />
-	<line
-		x1="width-(width-width%3)/3-3" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-3"
-		color="C_icons_focused" />
-	<line
-		x1="(width-width%3)/3+1" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-2" y2="height-(height-height%3)/3-2"
-		color="C_icons_focused" />
-	<line
-		x1="(width-width%3)/3+1" y1="(height-height%3)/3+2"
-		x2="width-(width-width%3)/3-3" y2="height-(height-height%3)/3-2"
-		color="C_icons_focused" />
-	<line
-		x1="(width-width%3)/3+2" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-2" y2="height-(height-height%3)/3-3"
-		color="C_icons_focused" />
+	<image
+		filename="theme:window-close-symbolic"
+		alpha="1"
+		x="(width-object_width)/2"
+		y="(height-object_height)/2"
+		width="object_width"
+		height="object_height"
+		colorize="C_icons_focused" />
 </draw_ops>
 
 <draw_ops name="close_focused_prelight">
-	<line
-		x1="width-(width-width%3)/3-2" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-2"
-		color="C_icons_focused_prelight" />
-	<line
-		x1="width-(width-width%3)/3-2" y1="(height-height%3)/3+2"
-		x2="(width-width%3)/3+2" y2="height-(height-height%3)/3-2"
-		color="C_icons_focused_prelight" />
-	<line
-		x1="width-(width-width%3)/3-3" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-3"
-		color="C_icons_focused_prelight" />
-	<line
-		x1="(width-width%3)/3+1" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-2" y2="height-(height-height%3)/3-2"
-		color="C_icons_focused_prelight" />
-	<line
-		x1="(width-width%3)/3+1" y1="(height-height%3)/3+2"
-		x2="width-(width-width%3)/3-3" y2="height-(height-height%3)/3-2"
-		color="C_icons_focused_prelight" />
-	<line
-		x1="(width-width%3)/3+2" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-2" y2="height-(height-height%3)/3-3"
-		color="C_icons_focused_prelight" />
+	<image
+		filename="theme:window-close-symbolic"
+		alpha="1"
+		x="(width-object_width)/2"
+		y="(height-object_height)/2"
+		width="object_width"
+		height="object_height"
+		colorize="C_icons_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="close_focused_pressed">
-	<line
-		x1="width-(width-width%3)/3-2" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-2"
-		color="C_icons_focused_pressed" />
-	<line
-		x1="width-(width-width%3)/3-2" y1="(height-height%3)/3+2"
-		x2="(width-width%3)/3+2" y2="height-(height-height%3)/3-2"
-		color="C_icons_focused_pressed" />
-	<line
-		x1="width-(width-width%3)/3-3" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-3"
-		color="C_icons_focused_pressed" />
-	<line
-		x1="(width-width%3)/3+1" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-2" y2="height-(height-height%3)/3-2"
-		color="C_icons_focused_pressed" />
-	<line
-		x1="(width-width%3)/3+1" y1="(height-height%3)/3+2"
-		x2="width-(width-width%3)/3-3" y2="height-(height-height%3)/3-2"
-		color="C_icons_focused_pressed" />
-	<line
-		x1="(width-width%3)/3+2" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-2" y2="height-(height-height%3)/3-3"
-		color="C_icons_focused_pressed" />
+	<image
+		filename="theme:window-close-symbolic"
+		alpha="1"
+		x="(width-object_width)/2"
+		y="(height-object_height)/2"
+		width="object_width"
+		height="object_height"
+		colorize="C_icons_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="close_unfocused">
-	<line
-		x1="width-(width-width%3)/3-2" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-2"
-		color="C_icons_unfocused" />
-	<line
-		x1="width-(width-width%3)/3-2" y1="(height-height%3)/3+2"
-		x2="(width-width%3)/3+2" y2="height-(height-height%3)/3-2"
-		color="C_icons_unfocused" />
-	<line
-		x1="width-(width-width%3)/3-3" y1="(height-height%3)/3+1"
-		x2="(width-width%3)/3+1" y2="height-(height-height%3)/3-3"
-		color="C_icons_unfocused" />
-	<line
-		x1="(width-width%3)/3+1" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-2" y2="height-(height-height%3)/3-2"
-		color="C_icons_unfocused" />
-	<line
-		x1="(width-width%3)/3+1" y1="(height-height%3)/3+2"
-		x2="width-(width-width%3)/3-3" y2="height-(height-height%3)/3-2"
-		color="C_icons_unfocused" />
-	<line
-		x1="(width-width%3)/3+2" y1="(height-height%3)/3+1"
-		x2="width-(width-width%3)/3-2" y2="height-(height-height%3)/3-3"
-		color="C_icons_unfocused" />
+	<image
+		filename="theme:window-close-symbolic"
+		alpha="1"
+		x="(width-object_width)/2"
+		y="(height-object_height)/2"
+		width="object_width"
+		height="object_height"
+		colorize="C_icons_unfocused" />
 </draw_ops>
 
 <draw_ops name="close_unfocused_prelight">
@@ -326,47 +262,47 @@
 
 <!-- maximize icon -->
 <draw_ops name="maximize_focused">
-	<rectangle
-		x="(width-width%3)/3+1" y="(height-height%3)/3+1"
-		width="width-2*(width-width%3)/3-3" height="height-2*(height-height%3)/3-3"
-		color="C_icons_focused" />
-	<rectangle
-		x="(width-width%3)/3+2" y="(height-height%3)/3+2"
-		width="width-2*(width-width%3)/3-5" height="height-2*(height-height%3)/3-5"
-		color="C_icons_focused" />
+	<image
+		filename="theme:window-maximize-symbolic"
+		alpha="1"
+		x="(width-object_width)/2"
+		y="(height-object_height)/2"
+		width="object_width"
+		height="object_height"
+		colorize="C_icons_focused" />
 </draw_ops>
 
 <draw_ops name="maximize_focused_prelight">
-	<rectangle
-		x="(width-width%3)/3+1" y="(height-height%3)/3+1"
-		width="width-2*(width-width%3)/3-3" height="height-2*(height-height%3)/3-3"
-		color="C_icons_focused_prelight" />
-	<rectangle
-		x="(width-width%3)/3+2" y="(height-height%3)/3+2"
-		width="width-2*(width-width%3)/3-5" height="height-2*(height-height%3)/3-5"
-		color="C_icons_focused_prelight" />
+	<image
+		filename="theme:window-maximize-symbolic"
+		alpha="1"
+		x="(width-object_width)/2"
+		y="(height-object_height)/2"
+		width="object_width"
+		height="object_height"
+		colorize="C_icons_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="maximize_focused_pressed">
-	<rectangle
-		x="(width-width%3)/3+1" y="(height-height%3)/3+1"
-		width="width-2*(width-width%3)/3-3" height="height-2*(height-height%3)/3-3"
-		color="C_icons_focused_pressed" />
-	<rectangle
-		x="(width-width%3)/3+2" y="(height-height%3)/3+2"
-		width="width-2*(width-width%3)/3-5" height="height-2*(height-height%3)/3-5"
-		color="C_icons_focused_pressed" />
+	<image
+		filename="theme:window-maximize-symbolic"
+		alpha="1"
+		x="(width-object_width)/2"
+		y="(height-object_height)/2"
+		width="object_width"
+		height="object_height"
+		colorize="C_icons_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="maximize_unfocused">
-	<rectangle
-		x="(width-width%3)/3+1" y="(height-height%3)/3+1"
-		width="width-2*(width-width%3)/3-3" height="height-2*(height-height%3)/3-3"
-		color="C_icons_unfocused" />
-	<rectangle
-		x="(width-width%3)/3+2" y="(height-height%3)/3+2"
-		width="width-2*(width-width%3)/3-5" height="height-2*(height-height%3)/3-5"
-		color="C_icons_unfocused" />
+	<image
+		filename="theme:window-maximize-symbolic"
+		alpha="1"
+		x="(width-object_width)/2"
+		y="(height-object_height)/2"
+		width="object_width"
+		height="object_height"
+		colorize="C_icons_unfocused" />
 </draw_ops>
 
 <draw_ops name="maximize_unfocused_prelight">
@@ -379,47 +315,47 @@
 
 <!-- unmaximize icon -->
 <draw_ops name="unmaximize_focused">
-	<rectangle
-		x="(width-width%3)/3+1" y="(height-height%3)/3+1"
-		width="width-2*(width-width%3)/3-3" height="height-2*(height-height%3)/3-3"
-		color="C_icons_focused" />
-	<rectangle
-		x="(width-width%3)/3+2" y="(height-height%3)/3+2"
-		width="width-2*(width-width%3)/3-5" height="height-2*(height-height%3)/3-5"
-		color="C_icons_focused" />
+	<image
+		filename="theme:window-restore-symbolic"
+		alpha="1"
+		x="(width-object_width)/2"
+		y="(height-object_height)/2"
+		width="object_width"
+		height="object_height"
+		colorize="C_icons_focused" />
 </draw_ops>
 
 <draw_ops name="unmaximize_focused_prelight">
-	<rectangle
-		x="(width-width%3)/3+1" y="(height-height%3)/3+1"
-		width="width-2*(width-width%3)/3-3" height="height-2*(height-height%3)/3-3"
-		color="C_icons_focused_prelight" />
-	<rectangle
-		x="(width-width%3)/3+2" y="(height-height%3)/3+2"
-		width="width-2*(width-width%3)/3-5" height="height-2*(height-height%3)/3-5"
-		color="C_icons_focused_prelight" />
+	<image
+		filename="theme:window-restore-symbolic"
+		alpha="1"
+		x="(width-object_width)/2"
+		y="(height-object_height)/2"
+		width="object_width"
+		height="object_height"
+		colorize="C_icons_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="unmaximize_focused_pressed">
-	<rectangle
-		x="(width-width%3)/3+1" y="(height-height%3)/3+1"
-		width="width-2*(width-width%3)/3-3" height="height-2*(height-height%3)/3-3"
-		color="C_icons_focused_pressed" />
-	<rectangle
-		x="(width-width%3)/3+2" y="(height-height%3)/3+2"
-		width="width-2*(width-width%3)/3-5" height="height-2*(height-height%3)/3-5"
-		color="C_icons_focused_pressed" />
+	<image
+		filename="theme:window-restore-symbolic"
+		alpha="1"
+		x="(width-object_width)/2"
+		y="(height-object_height)/2"
+		width="object_width"
+		height="object_height"
+		colorize="C_icons_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="unmaximize_unfocused">
-	<rectangle
-		x="(width-width%3)/3+1" y="(height-height%3)/3+1"
-		width="width-2*(width-width%3)/3-3" height="height-2*(height-height%3)/3-3"
-		color="C_icons_unfocused" />
-	<rectangle
-		x="(width-width%3)/3+2" y="(height-height%3)/3+2"
-		width="width-2*(width-width%3)/3-5" height="height-2*(height-height%3)/3-5"
-		color="C_icons_unfocused" />
+	<image
+		filename="theme:window-restore-symbolic"
+		alpha="1"
+		x="(width-object_width)/2"
+		y="(height-object_height)/2"
+		width="object_width"
+		height="object_height"
+		colorize="C_icons_unfocused" />
 </draw_ops>
 
 <draw_ops name="unmaximize_unfocused_prelight">
@@ -432,31 +368,47 @@
 
 <!-- minimize icon -->
 <draw_ops name="minimize_focused">
-	<rectangle
-		x="(width-width%3)/3+2" y="height-(height-height%3)/3-5"
-		width="width-2*(width-width%3)/3-2" height="2" filled="true"
-		color="C_icons_focused" />
+	<image
+		filename="theme:window-minimize-symbolic"
+		alpha="1"
+		x="(width-object_width)/2"
+		y="(height-object_height)/2"
+		width="object_width"
+		height="object_height"
+		colorize="C_icons_focused" />
 </draw_ops>
 
 <draw_ops name="minimize_focused_prelight">
-	<rectangle
-		x="(width-width%3)/3+2" y="height-(height-height%3)/3-5"
-		width="width-2*(width-width%3)/3-2" height="2" filled="true"
-		color="C_icons_focused_prelight" />
+	<image
+		filename="theme:window-minimize-symbolic"
+		alpha="1"
+		x="(width-object_width)/2"
+		y="(height-object_height)/2"
+		width="object_width"
+		height="object_height"
+		colorize="C_icons_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="minimize_focused_pressed">
-	<rectangle
-		x="(width-width%3)/3+2" y="height-(height-height%3)/3-5"
-		width="width-2*(width-width%3)/3-2" height="2" filled="true"
-		color="C_icons_focused_pressed" />
+	<image
+		filename="theme:window-minimize-symbolic"
+		alpha="1"
+		x="(width-object_width)/2"
+		y="(height-object_height)/2"
+		width="object_width"
+		height="object_height"
+		colorize="C_icons_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="minimize_unfocused">
-	<rectangle
-		x="(width-width%3)/3+2" y="height-(height-height%3)/3-5"
-		width="width-2*(width-width%3)/3-2" height="2" filled="true"
-		color="C_icons_unfocused" />
+	<image
+		filename="theme:window-minimize-symbolic"
+		alpha="1"
+		x="(width-object_width)/2"
+		y="(height-object_height)/2"
+		width="object_width"
+		height="object_height"
+		colorize="C_icons_unfocused" />
 </draw_ops>
 
 <draw_ops name="minimize_unfocused_prelight">
@@ -877,9 +829,9 @@
 	<button function="close" state="normal" draw_ops="close_focused" />
 	<button function="close" state="prelight" draw_ops="close_focused_prelight" />
 	<button function="close" state="pressed" draw_ops="close_focused_pressed" />
-	<button function="maximize" state="normal" draw_ops="maximize_focused" />
-	<button function="maximize" state="prelight" draw_ops="maximize_focused_prelight" />
-	<button function="maximize" state="pressed" draw_ops="maximize_focused_pressed" />
+	<button function="maximize" state="normal" draw_ops="unmaximize_focused" />
+	<button function="maximize" state="prelight" draw_ops="unmaximize_focused_prelight" />
+	<button function="maximize" state="pressed" draw_ops="unmaximize_focused_pressed" />
 	<button function="minimize" state="normal" draw_ops="minimize_focused" />
 	<button function="minimize" state="prelight" draw_ops="minimize_focused_prelight" />
 	<button function="minimize" state="pressed" draw_ops="minimize_focused_pressed" />
@@ -910,9 +862,9 @@
 	<button function="close" state="normal" draw_ops="close_unfocused" />
 	<button function="close" state="prelight" draw_ops="close_unfocused_prelight" />
 	<button function="close" state="pressed" draw_ops="close_unfocused_pressed" />
-	<button function="maximize" state="normal" draw_ops="maximize_unfocused" />
-	<button function="maximize" state="prelight" draw_ops="maximize_unfocused_prelight" />
-	<button function="maximize" state="pressed" draw_ops="maximize_unfocused_pressed" />
+	<button function="maximize" state="normal" draw_ops="unmaximize_unfocused" />
+	<button function="maximize" state="prelight" draw_ops="unmaximize_unfocused_prelight" />
+	<button function="maximize" state="pressed" draw_ops="unmaximize_unfocused_pressed" />
 	<button function="minimize" state="normal" draw_ops="minimize_unfocused" />
 	<button function="minimize" state="prelight" draw_ops="minimize_unfocused_prelight" />
 	<button function="minimize" state="pressed" draw_ops="minimize_unfocused_pressed" />
@@ -943,9 +895,9 @@
 	<button function="close" state="normal" draw_ops="close_focused" />
 	<button function="close" state="prelight" draw_ops="close_focused_prelight" />
 	<button function="close" state="pressed" draw_ops="close_focused_pressed" />
-	<button function="maximize" state="normal" draw_ops="maximize_focused" />
-	<button function="maximize" state="prelight" draw_ops="maximize_focused_prelight" />
-	<button function="maximize" state="pressed" draw_ops="maximize_focused_pressed" />
+	<button function="maximize" state="normal" draw_ops="unmaximize_focused" />
+	<button function="maximize" state="prelight" draw_ops="unmaximize_focused_prelight" />
+	<button function="maximize" state="pressed" draw_ops="unmaximize_focused_pressed" />
 	<button function="minimize" state="normal" draw_ops="minimize_focused" />
 	<button function="minimize" state="prelight" draw_ops="minimize_focused_prelight" />
 	<button function="minimize" state="pressed" draw_ops="minimize_focused_pressed" />
@@ -977,9 +929,9 @@
 	<button function="close" state="normal" draw_ops="close_unfocused" />
 	<button function="close" state="prelight" draw_ops="close_unfocused_prelight" />
 	<button function="close" state="pressed" draw_ops="close_unfocused_pressed" />
-	<button function="maximize" state="normal" draw_ops="maximize_unfocused" />
-	<button function="maximize" state="prelight" draw_ops="maximize_unfocused_prelight" />
-	<button function="maximize" state="pressed" draw_ops="maximize_unfocused_pressed" />
+	<button function="maximize" state="normal" draw_ops="unmaximize_unfocused" />
+	<button function="maximize" state="prelight" draw_ops="unmaximize_unfocused_prelight" />
+	<button function="maximize" state="pressed" draw_ops="unmaximize_unfocused_pressed" />
 	<button function="minimize" state="normal" draw_ops="minimize_unfocused" />
 	<button function="minimize" state="prelight" draw_ops="minimize_unfocused_prelight" />
 	<button function="minimize" state="pressed" draw_ops="minimize_unfocused_pressed" />
