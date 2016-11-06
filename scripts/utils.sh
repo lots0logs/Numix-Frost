@@ -5,6 +5,7 @@ do_install() {
 	INSTALL_DIR="$1"
 	GTKDIR="${INSTALL_DIR}/gtk-3.0"
 	GTK320DIR="${INSTALL_DIR}/gtk-3.20"
+	PIXMAPS_DIR="${INSTALL_DIR}/../../pixmaps"
 
 	install -dm755 "${INSTALL_DIR}"
 
@@ -14,6 +15,9 @@ do_install() {
 
 	cp -rt "${INSTALL_DIR}" \
 			assets gtk-2.0 metacity-1 openbox-3 xfce-notify-4.0 xfwm4
+
+	mkdir -p "${PIXMAPS_DIR}"
+	cp assets/nfl-***.svg "${PIXMAPS_DIR}"
 
 	for _DIR in "${GTKDIR}" "${GTK320DIR}"
 	do
