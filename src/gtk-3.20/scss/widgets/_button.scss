@@ -43,7 +43,7 @@
     }
 
     %button {
-        padding: $spacing ($spacing + 2px);
+        padding: $spacing ($spacing * 1.2);
         border-width: 1px;
         border-style: solid;
         border-radius: $roundness;
@@ -179,11 +179,11 @@
 
     @extend %linked_button;
 
-    box-shadow: inset -1px 0 border_normal(rgba(0, 0, 0, .12 + $border_strength)),
+    box-shadow: inset -1px 0 border_normal(rgba(0, 0, 0, .10 + $border_strength)),
     0 1px 2px -1px alpha($dark_shadow, .12 + $shadow_strength);
 
     &:focus, &:hover {
-        box-shadow: inset -1px 0 border_focus(rgba(0, 0, 0, .12 + $border_strength)),
+        box-shadow: inset -1px 0 border_focus(rgba(0, 0, 0, .10 + $border_strength)),
         0 1px 2px -1px alpha($dark_shadow, .32 + $shadow_strength);
     }
 
@@ -191,14 +191,14 @@
     &:active:focus, &:active:hover:focus,
     &:checked, &:checked:hover,
     &:checked:focus, &:checked:hover:focus {
-        box-shadow: inset -1px 0 border_active(rgba(0, 0, 0, .12 + $border_strength)),
+        box-shadow: inset -1px 0 border_active(rgba(0, 0, 0, .10 + $border_strength)),
         inset 0 1px alpha($dark_shadow, .07),
         inset 0 -1px alpha($dark_shadow, .05);
     }
 
     &:disabled { box-shadow: inset -1px 0 shade($bg, .8); }
 
-    &:last-child, &:only-child { box-shadow: 0 1px 2px -1px alpha($dark_shadow, .12 + $shadow_strength); }
+    &:last-child, &:only-child { box-shadow: 0 1px 2px -1px alpha($dark_shadow, .10 + $shadow_strength); }
 
     &:last-child:hover, &:only-child:hover { box-shadow: 0 1px 2px -1px alpha($dark_shadow, .32 + $shadow_strength); }
 
@@ -226,11 +226,11 @@
 
     @extend %linked_vertical_button;
 
-    box-shadow: inset 0 -1px border_normal(rgba(0, 0, 0, .12 + $border_strength)),
+    box-shadow: inset 0 -1px border_normal(rgba(0, 0, 0, .10 + $border_strength)),
     0 1px 2px -1px alpha($dark_shadow, .12 + $shadow_strength);
 
     &:focus, &:hover {
-        box-shadow: inset 0 -1px border_focus(rgba(0, 0, 0, .12 + $border_strength)),
+        box-shadow: inset 0 -1px border_focus(rgba(0, 0, 0, .10 + $border_strength)),
         0 1px 2px -1px alpha($dark_shadow, .32 + $shadow_strength);
     }
 
@@ -238,14 +238,14 @@
     &:active:focus, &:active:hover:focus,
     &:checked, &:checked:hover,
     &:checked:focus, &:checked:hover:focus {
-        box-shadow: inset 0 -1px border_active(rgba(0, 0, 0, .12 + $border_strength)),
+        box-shadow: inset 0 -1px border_active(rgba(0, 0, 0, .10 + $border_strength)),
         inset 1px 0 alpha($dark_shadow, .07),
         inset -1px 0 alpha($dark_shadow, .05);
     }
 
     &:disabled { box-shadow: inset 0 -1px shade($bg, .8); }
 
-    &:last-child, &:only-child { box-shadow: 0 1px 2px -1px alpha($dark_shadow, .12 + $shadow_strength); }
+    &:last-child, &:only-child { box-shadow: 0 1px 2px -1px alpha($dark_shadow, .10 + $shadow_strength); }
 
     &:last-child:hover, &:only-child:hover { box-shadow: 0 1px 2px -1px alpha($dark_shadow, .32 + $shadow_strength); }
 
@@ -278,7 +278,7 @@
     @include border(rgba(0, 0, 0, .12 + $border_strength));
 
     color: $fg;
-    box-shadow: 0 1px 2px -1px alpha($dark_shadow, .12 + $shadow_strength);
+    box-shadow: 0 1px 2px -1px alpha($dark_shadow, .10 + $shadow_strength);
 
     &.flat {
         border-color: alpha($button_bg, 0);
@@ -487,19 +487,19 @@
         button.combo {
             // otherwise the arrow placement is not symmetric
             min-width: 0;
-            padding-left: 8px;
-            padding-right: 8px;
+            padding-left: $spacing * 1.6;
+            padding-right: $spacing * 1.6;
         }
 
         arrow {
             -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
-            min-height: 16px;
-            min-width: 16px;
+            min-height: $spacing * 3.2;
+            min-width: $spacing * 3.2;
         }
 
         box button, box entry {
             @extend %linked_button;
-            padding: ($spacing - 2px) ($spacing + 1px);
+            padding: ($spacing * .6) ($spacing * 1.2);
         }
 
         .linked:not(.vertical) > & > box > button.combo {
