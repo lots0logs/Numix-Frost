@@ -50,7 +50,7 @@
         }
 
         row {
-            padding: $spacing * 2 $spacing;
+            padding: ($spacing * 2) $spacing;
 
             > label {
                 padding-left: $spacing;
@@ -60,7 +60,7 @@
             &.needs-attention > label {
                 @extend %needs_attention;
 
-                background-size: 6px 6px, 0 0;
+                background-size: ($spacing * 1.2) ($spacing * 1.2), 0 0;
             }
         }
     }
@@ -72,12 +72,12 @@
 
         row {
             // Needs overriding of the GtkListBoxRow padding
-            min-height: 36px;
-            padding: 0px;
+            min-height: $spacing * 7;
+            padding: 0;
 
             // Using margins/padding directly in the SidebarRow
             // will make the animation of the new bookmark row jump
-            > revealer { padding: 0 14px; }
+            > revealer { padding: 0 ($spacing * 2.8); }
 
             &:selected { color: $selected_fg_color; }
 
@@ -94,13 +94,13 @@
             image.sidebar-icon {
                 opacity: $_placesidebar_icons_opacity; // dim the device icons
 
-                &:dir(ltr) { padding-right: 8px; }
-                &:dir(rtl) { padding-left: 8px; }
+                &:dir(ltr) { padding-right: $spacing * 1.6; }
+                &:dir(rtl) { padding-left: $spacing * 1.6; }
             }
 
             label.sidebar-label {
-                &:dir(ltr) { padding-right: 2px; }
-                &:dir(rtl) { padding-left: 2px; }
+                &:dir(ltr) { padding-right: $spacing * .4; }
+                &:dir(rtl) { padding-left: $spacing * .4; }
             }
 
             @at-root button.sidebar-button {
@@ -108,10 +108,10 @@
 
                 //@extend %button_selected.flat;
 
-                min-height: 26px;
-                min-width: 26px;
-                margin-top: 3px;
-                margin-bottom: 3px;
+                min-height: $spacing * 5.2;
+                min-width: $spacing * 5.2;
+                margin-top: $spacing * .6;
+                margin-bottom: $spacing * .6;
                 padding: 0;
                 border-radius: 100%;
                 -gtk-outline-radius: 100%;
@@ -126,8 +126,8 @@
             &:selected:active { box-shadow: none; }
 
             &.sidebar-placeholder-row {
-                padding: 0 8px;
-                min-height: 2px;
+                padding: 0 $spacing * 1.6;
+                min-height: $spacing * .4;
                 background-image: image($drop_target_color);
                 background-clip: content-box;
             }
@@ -187,8 +187,8 @@
 
         &.horizontal > separator {
             background-repeat: repeat-y;
-            padding: 0 2px;
-            margin: 0 -2px;
+            padding: 0 ($spacing * .4);
+            margin: 0 -($spacing * .4);
 
             &.wide {
                 margin: 0;
@@ -200,8 +200,8 @@
 
         &.vertical > separator {
             background-repeat: repeat-x;
-            padding: 2px 0;
-            margin: -2px 0;
+            padding: ($spacing * .4) 0;
+            margin: -($spacing * .4) 0;
 
             &.wide {
                 margin: 0;
