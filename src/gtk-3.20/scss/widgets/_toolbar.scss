@@ -33,11 +33,11 @@
     .linked > button { @include linked_button($bg); }
 
     combobox, button {
-        padding: $spacing - 1px;
+        padding: $spacing ($spacing * 1.6);
 
-        &.text-button { padding: $spacing; }
+        &.text-button { padding: $spacing ($spacing * 1.6); }
 
-        &.image-button { padding: ($spacing + 1px) ($spacing - 1px) ($spacing + 1px) $spacing; }
+        &.image-button { padding: $spacing ($spacing * 1.6); }
     }
 
     // toolbar separators
