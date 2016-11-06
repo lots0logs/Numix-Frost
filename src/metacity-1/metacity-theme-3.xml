@@ -225,8 +225,7 @@
 		x="(width-object_width)/2"
 		y="(height-object_height)/2"
 		width="object_width"
-		height="object_height"
-		colorize="C_icons_focused_prelight" />
+		height="object_height" />
 </draw_ops>
 
 <draw_ops name="close_focused_pressed">
@@ -277,8 +276,7 @@
 		x="(width-object_width)/2"
 		y="(height-object_height)/2"
 		width="object_width"
-		height="object_height"
-		colorize="C_icons_focused_prelight" />
+		height="object_height" />
 </draw_ops>
 
 <draw_ops name="maximize_focused_pressed">
@@ -329,8 +327,7 @@
 		x="(width-object_width)/2"
 		y="(height-object_height)/2"
 		width="object_width"
-		height="object_height"
-		colorize="C_icons_focused_prelight" />
+		height="object_height" />
 </draw_ops>
 
 <draw_ops name="unmaximize_focused_pressed">
@@ -381,8 +378,7 @@
 		x="(width-object_width)/2"
 		y="(height-object_height)/2"
 		width="object_width"
-		height="object_height"
-		colorize="C_icons_focused_prelight" />
+		height="object_height" />
 </draw_ops>
 
 <draw_ops name="minimize_focused_pressed">
