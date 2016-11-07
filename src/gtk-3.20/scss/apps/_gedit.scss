@@ -137,7 +137,19 @@
         margin-right: 0px;
      }
 
-    .gedit-bottom-panel-paned notebook {
-        border-top: none;
+    .gedit-bottom-panel-paned {
+        notebook {
+            border-top: none;
+
+            /* Source Map */
+            .gedit-map-frame {
+                min-width: $spacing * 22.8;
+
+                border {
+                    border: none;
+                    border-left: 1px solid shade($osd_borders_color, .6);
+                }
+            }
+        }
      }
 }
