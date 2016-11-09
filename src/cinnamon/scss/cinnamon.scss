@@ -1,7 +1,6 @@
 // Base
-@import "base/tools";
-@import "base/colors";
-@import "base/font";
+@import "_functions";
+@import "_global";
 
 // Main modules
 @import "main-modules/tooltips";
