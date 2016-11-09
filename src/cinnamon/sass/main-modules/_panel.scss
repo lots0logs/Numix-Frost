@@ -1,0 +1,161 @@
+/* ===================================================================
+   ! Panel
+   ===================================================================*/
+
+//
+// Panel
+//
+#panel {
+    font-weight: bold;
+    height: 2.1em;
+    min-height: 30px;
+
+    &Left {
+        spacing: 4px;
+
+        &:dnd {
+            background-gradient-direction: vertical;
+            background-gradient-start: rgba(255, 0, 0, 0.05);
+            background-gradient-end: rgba(255, 40, 79, 0.42);
+        }
+        &:ltr {
+            padding-right: 4px;
+        }
+        &:rtl {
+            padding-left: 4px;
+        }
+    }
+
+    &Right {
+
+        &:dnd {
+            background-gradient-direction: vertical;
+            background-gradient-start: rgba(0, 0, 255, 0.05);
+            background-gradient-end: rgba(18, 21, 255, 0.42);
+        }
+        &:ltr {
+            padding-left: 4px;
+            spacing: 0px;
+        }
+        &:rtl {
+            padding-right: 4px;
+            spacing: 0px;
+        }
+    }
+
+    &Center {
+        spacing: 4px;
+
+        &:dnd {
+            background-gradient-direction: vertical;
+            background-gradient-start: rgba(0, 255, 0, 0.05);
+            background-gradient-end: rgba(0, 255, 0, 0.42);
+        }
+    }
+}
+
+.panel {
+
+    &-top, &-bottom {
+        color: $panel_fg_color;
+        font-size: 1em;
+        padding: 2px;
+        background-color: $panel_bg_color;
+    }
+
+    &-top {
+        box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.85);
+    }
+    &-bottom {
+        box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.85);
+    }
+
+    &-status-button {
+        border-widht: 0;
+        -natural-hpadding: 3px;
+        -minimum-hpadding: 3px;
+        font-weight: bold;
+        color: white;
+        height: 22px;
+
+        &:hover {
+        }
+    }
+
+    &-button {
+        -natural-hpadding: 6px;
+        -minimum-hpadding: 2px;
+        font-weight: bold;
+        transition-duration: 100;
+
+        &:hover {
+            background-color: mix($panel_bg_color, $panel_fg_color, .21);
+            color: shade($panel_fg_color, 1.08);
+        }
+    }
+}
+.panel-dummy {
+    background-color: alpha($accent-primary, .8);
+
+    &:entered { background-color: $accent-primary; }
+}
+
+/* This styles the systray items */
+.panel-status-button {
+    -natural-hpadding: 4px;
+    -minimum-hpadding: 4px;
+    padding: 0 2px;
+    font-weight: bold;
+    color: $icon-primary;
+    height: 25px;
+}
+
+.panel-top .panel-status-button:hover {
+    border-image: url("panel-assets/panel-top-item-hover.svg") 4;
+}
+
+.panel-bottom .panel-status-button:hover {
+    border-image: url("panel-assets/panel-bottom-item-hover.svg") 4;
+}
+
+.system-status-icon {
+    icon-size: 16px;
+    padding-left: 0;
+    padding-right: 0;
+    spacing: 0;
+    margin: 0;
+}
+
+/* Items in the bottom panel are shifted down by 1px.
+   This fixes it. */
+.panel-bottom {
+    .system-status-icon,
+    #appMenuIcon {
+        padding-top: 1px;
+    }
+}
+
+#iconLabelButton {
+    color: $text-primary;
+    padding: 0;
+}
+
+.panel-button {
+    -natural-hpadding: 6px;
+    -minimum-hpadding: 2px;
+    font-weight: bold;
+    color: $icon-primary;
+
+    & #appMenuIcon,
+    &:active > #appMenuIcon,
+    &:checked > #appMenuIcon,
+    &:focus > #appMenuIcon { app-icon-bottom-clip: 0; }
+
+    &:active > .system-status-icon,
+    &:checked > .system-status-icon,
+    &:focus > .system-status-icon { icon-shadow: rgba(0, 0, 0, 0) 0; }
+}
+
+#appMenu,
+#appMenuIcon,
+.panel-menu {}
