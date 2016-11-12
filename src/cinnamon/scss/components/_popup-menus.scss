@@ -3,18 +3,8 @@
    ===================================================================*/
 
 @include exports('popup_menu') {
-    .popup-menu-content {
-        @include linear-gradient(transparentize($base_color, .20));
-
-        padding: $spacing;
-        color: $dark_fg_color;
-        border: none;
-    }
 
     .popup-menu {
-        @include linear-gradient(transparentize($base_color, .20));
-
-        min-width: $spacing * 20;
 
         &-icon,
         StIcon {
@@ -29,14 +19,19 @@
 
     .popup-menu,
     .popup-sub-menu {
+        @include linear-gradient(transparentize($dark_bg_color, .10));
+
+        padding: $spacing ($spacing * 2);
 
         &-item {
+            @include linear-gradient(transparentize($dark_bg_color, .10));
+
             padding: $spacing ($spacing * 2);
 
             &:active,
             &:hover {
                 color: $selected_fg_color;
-                background-color: $selected_bg_color;
+                background-color: transparentize($selected_bg_color, .10);
 
                 .popup-menu-icon, StIcon {
                     color: $selected_fg_color;
@@ -69,30 +64,18 @@
     }
 
     .popup-sub-menu {
-        border-image: url("assets/cinnamon/generated/submenu-bg.svg") 9;
-        box-shadow: none;
-        background-gradient-direction: none;
-        padding: 12px 0;
-        color: $dark_fg_color;
+        @include linear-gradient(transparentize($base_color, .10));
 
-        .popup-menu-item:active {
-            border-image: url("assets/cinnamon/generated/hover.svg") 9;
-            color: $selected_bg_color;
-        }
-
-        // FIX for strange padding in "StDrawingArea"
-        .popup-slider-menu-item {
-            border-image: url("assets/cinnamon/generated/slider--submenu.svg") 9 32 8 8;
+        &-item {
+            @include linear-gradient(transparentize($base_color, .10));
         }
     }
 
     .popup-submenu-menu-item:open {
-        background-color: rgba(0, 0, 0, 0);
+        @include linear-gradient(transparentize($base_color, .10));
     }
 
     .popup-combo-menu {
-        border-image: url("assets/cinnamon/generated/popup.svg") 9;
-        padding: .8em .2em;
         color: $dark_fg_color;
     }
 

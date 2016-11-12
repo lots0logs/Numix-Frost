@@ -53,7 +53,7 @@
 .panel {
 
     &-top, &-bottom {
-        @include linear-gradient(transparentize(shade($dark_bg_color, .8), .20));
+        @include linear-gradient(transparentize(shade($dark_bg_color, .9), .10));
 
         color: $fg_color;
         font-size: 1em;
@@ -80,20 +80,20 @@
         color: $fg_color;
 
         &:hover {
-            @include linear-gradient(transparentize(shade($dark_bg_color, 1), .20));
+            @include linear-gradient(transparentize($dark_bg_color, .10));
 
             border-color: mix($bg_color, $fg_color, .11);
             color: shade($fg_color, 1.08);
         }
 
         &:active, &:checked {
-            @include linear-gradient(transparentize(shade($dark_bg_color, 1), .20));
+            @include linear-gradient(transparentize($dark_bg_color, .10));
 
             border-color: mix($bg_color, $fg_color, .21);
             color: shade($fg_color, 1.08);
 
             &:hover {
-                @include linear-gradient(transparentize(shade($dark_bg_color, 1), .20));
+                @include linear-gradient(transparentize($dark_bg_color, .10));
 
                 border-color: mix($bg_color, $fg_color, .31);
             }
