@@ -2,144 +2,143 @@
    ! Popup Menus
    ===================================================================*/
 
-.popup-menu {
-    min-width: 100px;
-
-    &-boxpointer {
-        padding: 0;
-        -arrow-background-color: #444444;
-        -arrow-border-width: 1px;
-        -arrow-border-color: #515151;
-        -arrow-border-radius: 2px;
-        -arrow-base: 16px;
-        -arrow-rise: 8px;
-        -boxpointer-gap: 2px;
-    }
-
+@include exports('popup_menu') {
     .popup-menu-content {
-        border-image: url("assets/cinnamon/generated/popup-inside.svg") 9;
-        padding: .7em 0;
+        @include linear-gradient(transparentize($base_color, .20));
+
+        padding: $spacing;
         color: $dark_fg_color;
+        border: none;
     }
 
-    &-icon,  StIcon {
-        icon-size: 16px;
+    .popup-menu {
+        @include linear-gradient(transparentize($base_color, .20));
+
+        min-width: $spacing * 20;
+
+        &-icon,
+        StIcon {
+            icon-size: $spacing * 3.2;
+            color: $dark_fg_color;
+        }
+
+        &-arrow {
+            icon-size: $spacing * 3;
+        }
+    }
+
+    .popup-menu,
+    .popup-sub-menu {
+
+        &-item {
+            padding: $spacing ($spacing * 2);
+
+            &:active,
+            &:hover {
+                color: $selected_fg_color;
+                background-color: $selected_bg_color;
+
+                .popup-menu-icon, StIcon {
+                    color: $selected_fg_color;
+                }
+
+                .popup-menu-item-dot {
+                    background-color: $selected_fg_color;
+                    width: $spacing * 2;
+                    height: $spacing * 2;
+                    border-radius: 100%;
+                }
+            }
+
+            &:insensitive {
+                font-weight: normal;
+                color: $osd_insensitive_fg_color;
+
+                .popup-menu-icon, StIcon {
+                    color: $osd_insensitive_fg_color;
+                }
+            }
+        }
+
+        &-item-dot {
+            background-color: $dark_fg_color;
+            width: $spacing * 2;
+            height: $spacing * 2;
+            border-radius: 100%;
+        }
+    }
+
+    .popup-sub-menu {
+        border-image: url("assets/cinnamon/generated/submenu-bg.svg") 9;
+        box-shadow: none;
+        background-gradient-direction: none;
+        padding: 12px 0;
         color: $dark_fg_color;
-    }
 
-    &-arrow {
-        width: 10px;
-    height: 10px;
-
-        padding:0;
-    }
-
-    &-item {
-        padding: .4em 1.3em;
-        spacing: .8em;
-
-        &:active {
+        .popup-menu-item:active {
             border-image: url("assets/cinnamon/generated/hover.svg") 9;
             color: $selected_bg_color;
-
-            .popup-menu-icon, StIcon {
-                color: $selected_bg_color;
-            }
-
-            .popup-menu-item-dot {
-                background-image: url("assets/cinnamon/generated/check-dot-hover.svg");
-                background-size: 10px;
-                color: rgba(0, 0, 0, 0);
-            }
         }
 
-        &:insensitive {
-            font-weight: normal;
-            color: $osd_insensitive_fg_color;
-
-            .popup-menu-icon, StIcon {
-                color: $osd_insensitive_fg_color;
-            }
+        // FIX for strange padding in "StDrawingArea"
+        .popup-slider-menu-item {
+            border-image: url("assets/cinnamon/generated/slider--submenu.svg") 9 32 8 8;
         }
     }
 
-    &-item-dot {
-        background-image: url("assets/cinnamon/generated/check-dot.svg");
-        background-size: 10px;
-        color: rgba(0, 0, 0, 0);
-    }
-}
-
-.popup-sub-menu {
-    border-image: url("assets/cinnamon/generated/submenu-bg.svg") 9;
-    box-shadow: none;
-    background-gradient-direction: none;
-    padding: 12px 0;
-    color: $dark_fg_color;
-
-    .popup-menu-item:active {
-        border-image: url("assets/cinnamon/generated/hover.svg") 9;
-        color: $selected_bg_color;
+    .popup-submenu-menu-item:open {
+        background-color: rgba(0, 0, 0, 0);
     }
 
-    // FIX for strange padding in "StDrawingArea"
+    .popup-combo-menu {
+        border-image: url("assets/cinnamon/generated/popup.svg") 9;
+        padding: .8em .2em;
+        color: $dark_fg_color;
+    }
+
+    .popup-separator-menu-item {
+        background-color: rgba(255, 255, 255, .1);
+        height: 1px;
+    }
+
     .popup-slider-menu-item {
-        border-image: url("assets/cinnamon/generated/slider--submenu.svg") 9 32 8 8;
+        -slider-height: 2px;
+        -slider-background-color: rgba(0, 0, 0, 0);
+        -slider-border-color: rgba(0, 0, 0, 0);
+        -slider-active-background-color: $selected_bg_color;
+        -slider-active-border-color: rgba(0, 0, 0, 0);
+        -slider-border-width: 2px;
+        -slider-handle-radius: 4px;
+        color: $dark_fg_color;
+
+        border-image: url("assets/cinnamon/generated/slider.svg") 9 6 8 8;
+        border: 0 solid transparent;
+        min-width: 15em;
+        height: 16px;
+
+        .popup-menu-item:active & {
+            -slider-handle-radius: 5px;
+            color: $selected_bg_color;
+        }
     }
-}
-
-.popup-submenu-menu-item:open {
-    background-color: rgba(0, 0, 0, 0);
-}
-
-
-.popup-combo-menu {
-    border-image: url("assets/cinnamon/generated/popup.svg") 9;
-    padding: .8em .2em;
-    color: $dark_fg_color;
-}
-
-.popup-separator-menu-item {
-    background-color: rgba(255, 255, 255, .1);
-    height: 1px;
-}
-
-.popup-slider-menu-item {
-    -slider-height: 2px;
-    -slider-background-color: rgba(0, 0, 0, 0);
-    -slider-border-color: rgba(0, 0, 0, 0);
-    -slider-active-background-color: $selected_bg_color;
-    -slider-active-border-color: rgba(0, 0, 0, 0);
-    -slider-border-width: 2px;
-    -slider-handle-radius: 4px;
-    color: $dark_fg_color;
-
-    border-image: url("assets/cinnamon/generated/slider.svg") 9 6 8 8;
-    border: 0 solid transparent;
-    min-width: 15em;
-    height: 16px;
-
-    .popup-menu-item:active & {
-        -slider-handle-radius: 5px;
-        color: $selected_bg_color;
-    }
-}
-
-.popup-inactive-menu-item {
-    color: shade($dark_fg_color, .2);
-}
-
-/* used mainly for the notif-applet */
-.popup-menu-item .popup-subtitle-menu-item {
-    font-weight: bold;
-    color: $selected_bg_color;
-}
-
-.popup-device-menu-item {
-    spacing: .5em;
 
     .popup-inactive-menu-item {
-        color: $info_fg_color;
+        color: shade($dark_fg_color, .2);
+    }
+
+    /* used mainly for the notif-applet */
+    .popup-menu-item .popup-subtitle-menu-item {
+        font-weight: bold;
+        color: $selected_bg_color;
+    }
+
+    .popup-device-menu-item {
+        spacing: .5em;
+
+        .popup-inactive-menu-item {
+            color: $info_fg_color;
+        }
     }
 }
+
 

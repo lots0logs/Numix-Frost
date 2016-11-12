@@ -23,13 +23,13 @@
         transition-duration: 100s;
 
         &:hover {
-            @include linear-gradient(transparentize(shade($base_color, 1), .15));
+            @include linear-gradient(transparentize(shade($dark_bg_color, 1.05), .20));
         }
 
         &:active,
         &:checked,
         &:focus {
-            @include linear-gradient(transparentize(shade($base_color, 1.2), .15));
+            @include linear-gradient(transparentize(shade($dark_bg_color, 1.1), .20));
 
             color: $dark_fg_color;
             font-weight: bold;
@@ -49,6 +49,16 @@
             .panel-right & {
                 box-shadow: inset -2px 0px 0px 0px $selected_bg_color;
             }
+        }
+
+        .panel-top &,
+        .panel-bottom & {
+            padding: 0 ($spacing * 1.2);
+        }
+
+        .panel-left &,
+        .panel-right & {
+            padding: ($spacing * 1.2) 0;
         }
     }
 
