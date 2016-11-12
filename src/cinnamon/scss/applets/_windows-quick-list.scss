@@ -3,10 +3,10 @@
    ===================================================================*/
 
 .window-sticky {
-    color: $text-info;
+    color: $info_fg_color;
     font-weight: bold;
 
     .popup-menu-item:active & {
-        color: $text-active;
+        color: $selected_bg_color;
     }
 }

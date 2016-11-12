@@ -3,9 +3,9 @@
    ===================================================================*/
 
 #overview-corner {
-    background-image: url("widget-assets/hotcorner-icon.svg");
+    background-image: url("assets/cinnamon/generated/hotcorner-icon.svg");
 
-    &:hover { background-image: url("widget-assets/hotcorner-icon-hover.svg"); }
+    &:hover { background-image: url("assets/cinnamon/generated/hotcorner-icon-hover.svg"); }
 }
 
 /* ===================================================================
@@ -15,5 +15,5 @@
 .ripple-box {
     width: 24px;
     height: 24px;
-    background-image: url("misc-assets/corner-ripple.svg");
+    background-image: url("assets/cinnamon/generated/corner-ripple.svg");
 }

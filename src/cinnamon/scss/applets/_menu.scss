@@ -4,7 +4,7 @@
 
 /* Favourites */
 .menu-favorites-box {
-    border-image: url("background-assets/dark-bg.svg") 7;
+    border-image: url("assets/cinnamon/generated/dark-bg.svg") 7;
     padding: 0.5em;
 }
 
@@ -12,8 +12,8 @@
     padding: 10px 12px;
 
     &:hover {
-        border-image: url("background-assets/hover.svg") 9;
-        color: $text-active;
+        border-image: url("assets/cinnamon/generated/hover.svg") 9;
+        color: $selected_bg_color;
     }
 }
 
@@ -22,7 +22,7 @@
 .menu-places-box {
     margin: auto;
     padding: 8px;
-    border: 0 solid $icon-primary;
+    border: 0 solid $dark_fg_color;
 }
 
 .menu-places-button {
@@ -38,18 +38,18 @@
 
 .menu-category-button {
     padding: 7px;
-    color: $text-secondary;
+    color: shade($dark_fg_color, .2);
 
     &-greyed {
         padding: 7px;
-        color: $text-disabled;
+        color: $osd_insensitive_fg_color;
         font-style: normal;
     }
 
     &-selected {
         padding: 7px;
-        border-image: url("background-assets/hover.svg") 7;
-        color: $text-active;
+        border-image: url("assets/cinnamon/generated/hover.svg") 7;
+        color: $selected_bg_color;
     }
 
     &-label:ltr { padding-left: 5px; }
@@ -73,17 +73,17 @@
 
     &-selected {
         padding: 7px;
-        border-image: url("background-assets/hover.svg") 7;
-        color: $text-active;
+        border-image: url("assets/cinnamon/generated/hover.svg") 7;
+        color: $selected_bg_color;
     }
 
     &:highlighted {
-        border-image: url("misc-assets/highlighted.svg") 6;
+        border-image: url("assets/cinnamon/generated/highlighted.svg") 6;
     }
 
     &-selected:highlighted {
-        border-image: url("background-assets/hover.svg") 7;
-        color: $text-primary;
+        border-image: url("assets/cinnamon/generated/hover.svg") 7;
+        color: $dark_fg_color;
     }
 
     &-label:ltr { padding-left: 5px; }
@@ -116,6 +116,6 @@
 
 /* Right-click menu */
 .menu-applications-inner-box StScrollView {
-    border-image: url("background-assets/dark-bg.svg") 7;
+    border-image: url("assets/cinnamon/generated/dark-bg.svg") 7;
     padding: .5em .1em;
 }

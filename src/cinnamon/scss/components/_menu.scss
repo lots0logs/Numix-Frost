@@ -6,9 +6,9 @@
     .menu {
         background-color: $menu_bg_color;
         color: $menu_fg_color;
-        border: 1px solid shade($menu_bg_color, 10%);
+        border: 1px solid shade($menu_bg_color, .1);
         border-radius: $roundness;
-        font-size: $font-size;
+        font-size: 1em;
         min-width: 100px;
 
         &.top {

@@ -8,11 +8,11 @@
     Tweak default $link color to fix
 */
 .url-highlighter {
-    link-color: saturate(lighten($link, 12%), 55%);
+    link-color: saturate(lighten($link_color, 12%), 55%);
 }
 
 #notification {
-    border-image: url("background-assets/popup.svg") 7;
+    border-image: url("assets/cinnamon/generated/popup.svg") 7;
     padding: 1.3em;
     spacing-rows: .5em;
     spacing-columns: 10px;
@@ -20,23 +20,23 @@
     margin-from-right-edge-of-screen: 6px;
     font-weight: bold;
     font-size: 10pt;
-    color: $text-primary;
+    color: $dark_fg_color;
 
     CinnamonGenericContainer * {
         font-weight: normal;
         font-size: 9pt;
-        color: $text-info;
+        color: $info_fg_color;
 
         &:first-child {
             font-weight: bold;
             font-size: 10pt;
             padding: .2em 0;
-            color: $text-primary;
+            color: $dark_fg_color;
         }
 
         &:last-child {
             padding: .3em 0;
-            color: $text-primary;
+            color: $dark_fg_color;
         }
     }
 
@@ -92,15 +92,15 @@
 /* Notifs look inside the notification applet & other popups. */
 .popup-menu-content {
     #notification {
-        border-image: url("background-assets/dark-bg-marked-orange.svg") 7;
+        border-image: url("assets/cinnamon/generated/dark-bg-marked-orange.svg") 7;
         padding: .8em .8em .6em 1em;
 
         &.multi-line-notification {
-            border-image: url("background-assets/dark-bg-marked-blue.svg") 7;
+            border-image: url("assets/cinnamon/generated/dark-bg-marked-blue.svg") 7;
         }
 
         &.notification-with-image {
-            border-image: url("background-assets/dark-bg-marked-green.svg") 7;
+            border-image: url("assets/cinnamon/generated/dark-bg-marked-green.svg") 7;
             padding-bottom: .8em;
         }
     }

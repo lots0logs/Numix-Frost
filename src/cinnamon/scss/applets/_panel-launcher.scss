@@ -12,6 +12,6 @@
 /* Different images used in top & bottom panels. */
 @each $v in panel-top, panel-bottom {
     .#{$v} .panel-launcher:hover {
-        border-image: url("panel-assets/#{$v}-item-hover.svg") 4;
+        border-image: url("assets/cinnamon/generated/#{$v}-item-hover.svg") 4;
     }
 }

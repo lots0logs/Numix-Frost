@@ -1,19 +1,25 @@
 #!/bin/bash
 
 do_install() {
-	local GTKDIR GTK320DIR GTKVER INSTALL_DIR
+	local GTKDIR GTK320DIR GTKVER INSTALL_DIR CINNAMON_DIR
 	INSTALL_DIR="$1"
 	GTKDIR="${INSTALL_DIR}/gtk-3.0"
 	GTK320DIR="${INSTALL_DIR}/gtk-3.20"
+	CINNAMON_DIR="${INSTALL_DIR}/cinnamon"
 
-	install -dm755 "${INSTALL_DIR}"
+	install -dm755 "${INSTALL_DIR}" "${CINNAMON_DIR}"
 
 	cd src
 
 	cp index.theme "${INSTALL_DIR}"
 
 	cp -rt "${INSTALL_DIR}" \
-			assets gtk-2.0 metacity-1 openbox-3 xfce-notify-4.0 xfwm4
+		assets gtk-2.0 metacity-1 openbox-3 xfce-notify-4.0 xfwm4
+
+	( cd cinnamon/dist \
+		&& cp -t "${CINNAMON_DIR}" * \
+		&& cd "${CINNAMON_DIR}" \
+		&& ln -sr ../assets; )
 
 	for _DIR in "${GTKDIR}" "${GTK320DIR}"
 	do

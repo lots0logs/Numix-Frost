@@ -13,7 +13,7 @@
 }
 
 .window-list-item-box {
-    color: $text-secondary;
+    color: shade($dark_fg_color, .2);
     font-weight: bold;
     padding-left: 4px;
     padding-right: 4px;
@@ -23,31 +23,31 @@
 @each $v in panel-top, panel-bottom {
     .#{$v} {
         .window-list-item-box:hover  {
-            border-image: url("panel-assets/#{$v}-item-hover.svg") 4;
-            color: $text-primary;
+            border-image: url("assets/cinnamon/generated/#{$v}-item-hover.svg") 4;
+            color: $dark_fg_color;
         }
 
         .window-list-item-box:active,
         .window-list-item-box:checked,
         .window-list-item-box:focus  {
-            border-image: url("panel-assets/#{$v}-item-active.svg") 4;
-            color: $text-active;
+            border-image: url("assets/cinnamon/generated/#{$v}-item-active.svg") 4;
+            color: $selected_bg_color;
         }
 
         .window-list-item-box:checked:hover,
         .window-list-item-box:focus:hover,
         .window-list-item-box:active:hover  {
-            border-image: url("panel-assets/#{$v}-item-active-hover.svg") 4;
+            border-image: url("assets/cinnamon/generated/#{$v}-item-active-hover.svg") 4;
         }
 
         .window-list-item-demands-attention {
-            border-image: url("panel-assets/#{$v}-item-attention.svg") 4;
-            color: $text-active;
+            border-image: url("assets/cinnamon/generated/#{$v}-item-attention.svg") 4;
+            color: $selected_bg_color;
         }
 
         .window-list-item-demands-attention:hover {
-            border-image: url("panel-assets/#{$v}-item-attention-hover.svg") 4;
-            color: $text-active;
+            border-image: url("assets/cinnamon/generated/#{$v}-item-attention-hover.svg") 4;
+            color: $selected_bg_color;
         }
     }
 }
@@ -55,8 +55,8 @@
 /* This styles the window-list preview and window name
    in "cover" and "timeline" alt-tab modes */
 .switcher-list {
-    border-image: url("background-assets/tooltip.svg") 7;
-    color: $text-primary;
+    border-image: url("assets/cinnamon/generated/tooltip.svg") 7;
+    color: $dark_fg_color;
     padding: 0 3px;
     font-weight: bold;
 

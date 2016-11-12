@@ -8,29 +8,29 @@
     spacing: .4em;
     padding: 1.4em;
     font-size: 14pt;
-    color: $text-primary;
-    border-image: url("background-assets/popup.svg") 7;
+    color: $dark_fg_color;
+    border-image: url("assets/cinnamon/generated/popup.svg") 7;
 }
 
 .osd-window {
     spacing: .4em;
     padding: 1.4em;
-    color: $text-primary;
-    border-image: url("background-assets/popup.svg") 10;
+    color: $dark_fg_color;
+    border-image: url("assets/cinnamon/generated/popup.svg") 10;
     font-size: 20pt;
 
-    StIcon { color: $icon-primary; }
+    StIcon { color: $dark_fg_color; }
 
     .level {
         height: 5px;
-        color: $accent-primary;
+        color: $selected_bg_color;
     }
 }
 
 .workspace-osd {
-    border-image: url("background-assets/popup.svg") 7;
+    border-image: url("assets/cinnamon/generated/popup.svg") 7;
     padding: 12px 17px;
-    color: $text-primary;
+    color: $dark_fg_color;
     font-weight: bold;
     font-size: 18pt;
 }
@@ -40,10 +40,10 @@
    ===================================================================*/
 
 #LookingGlassDialog {
-    border-image: url("background-assets/popup.svg") 7;
+    border-image: url("assets/cinnamon/generated/popup.svg") 7;
     padding: 1.4em;
     spacing: .4em;
-    color: $text-primary;
+    color: $dark_fg_color;
 
     StLabel:first-child  {
         font-weight: bold;
@@ -52,7 +52,7 @@
 
     StLabel:last-child  {
         padding-top: .4em;
-        color: $text-secondary;
+        color: shade($dark_fg_color, .2);
         font-size: 12pt;
     }
 }

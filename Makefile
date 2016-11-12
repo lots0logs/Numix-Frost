@@ -20,6 +20,7 @@ all: clean gresource
 css:
 	$(SASS) --update $(SASSFLAGS) $(SCSS_DIR):$(DIST_DIR)
 	$(SASS) --update $(SASSFLAGS) $(SCSS_DIR320):$(DIST_DIR320)
+	$(SASS) --update $(SASSFLAGS) $(CN_SCSS_DIR):$(CN_DIST_DIR)
 
 gresource: css
 	$(GLIB_COMPILE_RESOURCES) --sourcedir=$(RES_DIR) $(RES_DIR)/gtk.gresource.xml

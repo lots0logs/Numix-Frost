@@ -17,18 +17,20 @@
     }
 
     .popup-menu-content {
-        border-image: url("background-assets/popup-inside.svg") 9;
+        border-image: url("assets/cinnamon/generated/popup-inside.svg") 9;
         padding: .7em 0;
-        color: $text-primary;
+        color: $dark_fg_color;
     }
 
     &-icon,  StIcon {
         icon-size: 16px;
-        color: $icon-primary;
+        color: $dark_fg_color;
     }
 
     &-arrow {
-        @include size(10px);
+        width: 10px;
+    height: 10px;
+
         padding:0;
     }
 
@@ -37,15 +39,15 @@
         spacing: .8em;
 
         &:active {
-            border-image: url("background-assets/hover.svg") 9;
-            color: $text-active;
+            border-image: url("assets/cinnamon/generated/hover.svg") 9;
+            color: $selected_bg_color;
 
             .popup-menu-icon, StIcon {
-                color: $icon-active;
+                color: $selected_bg_color;
             }
 
             .popup-menu-item-dot {
-                background-image: url("widget-assets/check-dot-hover.svg");
+                background-image: url("assets/cinnamon/generated/check-dot-hover.svg");
                 background-size: 10px;
                 color: rgba(0, 0, 0, 0);
             }
@@ -53,36 +55,36 @@
 
         &:insensitive {
             font-weight: normal;
-            color: $text-disabled;
+            color: $osd_insensitive_fg_color;
 
             .popup-menu-icon, StIcon {
-                color: $icon-disabled;
+                color: $osd_insensitive_fg_color;
             }
         }
     }
 
     &-item-dot {
-        background-image: url("widget-assets/check-dot.svg");
+        background-image: url("assets/cinnamon/generated/check-dot.svg");
         background-size: 10px;
         color: rgba(0, 0, 0, 0);
     }
 }
 
 .popup-sub-menu {
-    border-image: url("background-assets/submenu-bg.svg") 9;
+    border-image: url("assets/cinnamon/generated/submenu-bg.svg") 9;
     box-shadow: none;
     background-gradient-direction: none;
     padding: 12px 0;
-    color: $text-primary;
+    color: $dark_fg_color;
 
     .popup-menu-item:active {
-        border-image: url("background-assets/hover.svg") 9;
-        color: $text-active;
+        border-image: url("assets/cinnamon/generated/hover.svg") 9;
+        color: $selected_bg_color;
     }
 
     // FIX for strange padding in "StDrawingArea"
     .popup-slider-menu-item {
-        border-image: url("widget-assets/slider--submenu.svg") 9 32 8 8;
+        border-image: url("assets/cinnamon/generated/slider--submenu.svg") 9 32 8 8;
     }
 }
 
@@ -92,9 +94,9 @@
 
 
 .popup-combo-menu {
-    border-image: url("background-assets/popup.svg") 9;
+    border-image: url("assets/cinnamon/generated/popup.svg") 9;
     padding: .8em .2em;
-    color: $text-primary;
+    color: $dark_fg_color;
 }
 
 .popup-separator-menu-item {
@@ -106,38 +108,38 @@
     -slider-height: 2px;
     -slider-background-color: rgba(0, 0, 0, 0);
     -slider-border-color: rgba(0, 0, 0, 0);
-    -slider-active-background-color: $accent-primary;
+    -slider-active-background-color: $selected_bg_color;
     -slider-active-border-color: rgba(0, 0, 0, 0);
     -slider-border-width: 2px;
     -slider-handle-radius: 4px;
-    color: $icon-primary;
+    color: $dark_fg_color;
 
-    border-image: url("widget-assets/slider.svg") 9 6 8 8;
+    border-image: url("assets/cinnamon/generated/slider.svg") 9 6 8 8;
     border: 0 solid transparent;
     min-width: 15em;
     height: 16px;
 
     .popup-menu-item:active & {
         -slider-handle-radius: 5px;
-        color: $text-active;
+        color: $selected_bg_color;
     }
 }
 
 .popup-inactive-menu-item {
-    color: $text-secondary;
+    color: shade($dark_fg_color, .2);
 }
 
 /* used mainly for the notif-applet */
 .popup-menu-item .popup-subtitle-menu-item {
     font-weight: bold;
-    color: $text-active;
+    color: $selected_bg_color;
 }
 
 .popup-device-menu-item {
     spacing: .5em;
 
     .popup-inactive-menu-item {
-        color: $text-info;
+        color: $info_fg_color;
     }
 }
 

@@ -13,10 +13,10 @@
    ===================================================================*/
 
 .modal-dialog {
-    border-image: url("background-assets/popup.svg") 9;
+    border-image: url("assets/cinnamon/generated/popup.svg") 9;
     border-radius: 0;
     padding: 0;
-    color: $text-primary;
+    color: $dark_fg_color;
 
     > * {
         padding: 24px;
@@ -24,7 +24,7 @@
     }
 
     > .modal-dialog-button-box {
-        border-image: url("background-assets/buttonbox-bg.svg") 8;
+        border-image: url("assets/cinnamon/generated/buttonbox-bg.svg") 8;
         spacing: 0;
         margin: 0;
         padding: 5px 8px 6px 8px;
@@ -55,12 +55,14 @@
     &-error-box {
         padding: 12px 4px 6px 4px;
         spacing: 1em;
-        color: $text-danger;
+        color: $error_fg_color;
         font-weight: bold;
 
         StIcon {
-            @include size(16px);
-            color: $accent-danger;
+            width: 16px;
+    height: 16px;
+
+            color: $error_bg_color;
         }
     }
 
@@ -90,7 +92,7 @@
 
 .about-uuid {
     font-size: 9pt;
-    color: $text-secondary;
+    color: shade($dark_fg_color, .2);
 }
 
 .about-description {
@@ -101,17 +103,17 @@
 .about-version {
     padding-left: 7px;
     font-size: 9pt;
-    color: $text-info;
+    color: $info_fg_color;
 }
 
 .about-icon {
     padding-right: 20px;
     padding-bottom: 14px;
-    color: $icon-primary;
+    color: $dark_fg_color;
 }
 
 .about-scrollBox {
-    border-image: url("background-assets/dark-bg.svg") 7;
+    border-image: url("assets/cinnamon/generated/dark-bg.svg") 7;
     padding: 4px;
     padding-right: 0;
     border-radius: 0;
@@ -126,7 +128,7 @@
    ===================================================================*/
 
 #LookingGlassDialog {
-    border-image: url("background-assets/popup.svg") 7;
+    border-image: url("assets/cinnamon/generated/popup.svg") 7;
     padding: 14px;
-    color: $text-primary;
+    color: $dark_fg_color;
 }

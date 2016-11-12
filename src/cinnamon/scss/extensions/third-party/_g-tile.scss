@@ -3,7 +3,7 @@
    ===================================================================*/
 
 .grid-panel {
-    border-image: url("background-assets/popup.svg") 7;
+    border-image: url("assets/cinnamon/generated/popup.svg") 7;
     width: 220px;
     padding: 4px;
     spacing: 0;
@@ -13,7 +13,7 @@
     padding: 4px;
     font-size: 12px;
     font-weight: bold;
-    color: $text-primary;
+    color: $dark_fg_color;
     text-align: center;
 }
 
@@ -21,18 +21,18 @@
     padding: 6px;
 
     &-element {
-        border-image: url("misc-assets/calendar-work-day.svg") 7;
+        border-image: url("assets/cinnamon/generated/calendar-work-day.svg") 7;
     }
 
     &-element:hover,
     &-element:activate {
-        border-image: url("misc-assets/calendar-today.svg") 7;
+        border-image: url("assets/cinnamon/generated/calendar-today.svg") 7;
     }
 }
 
 
 .top-box {
-    border-image: url("background-assets/sub.svg") 7;
+    border-image: url("assets/cinnamon/generated/sub.svg") 7;
     padding: 8px;
     padding-bottom: 12px;
 }
@@ -58,7 +58,7 @@
      border-color: rgba(0, 0, 0, 0);
 
     &:activate {
-        background-color: alpha($accent-primary, .5);
+        background-color: alpha($selected_bg_color, .5);
         border: 1px solid alpha(#000, .45);
         border-radius: 2px;
     }
@@ -67,34 +67,34 @@
 
 /* buttons */
 .settings-button {
-    border-image: url("button-assets//button.svg") 7;
+    border-image: url("assets/cinnamon/generated//button.svg") 7;
     padding: 3px;
     width: 46px;
     height: 34px;
-    color: $text-primary;
+    color: $dark_fg_color;
 
     &:activate {
-        border-image: url("button-assets//button-focused-pressed.svg") 7;
-        color: $text-primary;
+        border-image: url("assets/cinnamon/generated//button-focused-pressed.svg") 7;
+        color: $dark_fg_color;
     }
 
     &:activate:hover {
-        border-image: url("button-assets//button-focused-pressed.svg") 7;
-        color: $text-primary;
+        border-image: url("assets/cinnamon/generated//button-focused-pressed.svg") 7;
+        color: $dark_fg_color;
     }
 
     &:hover {
-        border-image: url("button-assets//button-hover.svg") 7;
-        color: $text-primary;
+        border-image: url("assets/cinnamon/generated//button-hover.svg") 7;
+        color: $dark_fg_color;
     }
 }
 
 .close-button {
-    background-image: url("misc-assets/auto-close.svg");
+    background-image: url("assets/cinnamon/generated/auto-close.svg");
     width: 24px;
     height: 24px;
 
-    &:hover { background-image: url("misc-assets/auto-close.svg"); }
+    &:hover { background-image: url("assets/cinnamon/generated/auto-close.svg"); }
 }
 
 
@@ -105,25 +105,25 @@
 }
 
 .animation-icon {
-    background-image: url("misc-assets/animation.svg");
+    background-image: url("assets/cinnamon/generated/animation.svg");
     width: 24px;
     height: 24px;
 }
 
 .auto-close-icon {
-    background-image: url("misc-assets/auto-close.svg");
+    background-image: url("assets/cinnamon/generated/auto-close.svg");
     width: 24px;
     height: 24px;
 }
 
 .action-main-list {
-    background-image: url("misc-assets/auto-tile-1.svg");
+    background-image: url("assets/cinnamon/generated/auto-tile-1.svg");
     width: 24px;
     height: 24px;
 }
 
 .action-two-list {
-    background-image: url("misc-assets/auto-tile-2.svg");
+    background-image: url("assets/cinnamon/generated/auto-tile-2.svg");
     width: 24px;
     height: 24px;
 }

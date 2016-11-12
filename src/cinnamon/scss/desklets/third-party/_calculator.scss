@@ -11,13 +11,13 @@
 }
 
 .calc-displayWindow {
-    border-image: url("widget-assets/entry-focused.svg") 7;;
+    border-image: url("assets/cinnamon/generated/entry-focused.svg") 7;;
     padding: 8px;
     padding-top: 4px;
     padding-bottom: 2.4em;
 
     &-rpn {
-        border-image: url("widget-assets/entry-focused.svg") 7;
+        border-image: url("assets/cinnamon/generated/entry-focused.svg") 7;
         padding: 8px;
         padding-top: 4px;
     }
@@ -25,28 +25,28 @@
 
 .calc-displayText-primary {
     font-size: 32pt;
-    color: $text-primary;
+    color: $dark_fg_color;
     text-align: right;
 }
 
 .calc-displayText-secondary {
     font-size: 10pt;
-    color: $text-info;
+    color: $info_fg_color;
     text-align: right;
     padding-bottom: 8px;
 }
 
 .calc-displayText-operation {
-    color: $text-info;
+    color: $info_fg_color;
 }
 
 .calc-displayText-status {
     font-size: 10pt;
-    color: $text-secondary;
+    color: shade($dark_fg_color, .2);
 }
 
 .calc-displayText-rpn {
-    color: $text-primary;
+    color: $dark_fg_color;
     font-size: 10pt;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .calc-navigation-icon {
-    color: $icon-primary;
+    color: $dark_fg_color;
     icon-size: 16px;
 }
 
@@ -71,13 +71,15 @@
     border: none;
 
     &:hover .calc-navigation-icon {
-        color: $accent-primary;
+        color: $selected_bg_color;
     }
 }
 
 .calc-button {
     @include btn-primary;
-    @include size(3.4em, 2.8em);
+    width: 3.4em, 2.8em;
+    height: 3.4em, 2.8em;
+
 
     &-padding {
         padding: .2em;

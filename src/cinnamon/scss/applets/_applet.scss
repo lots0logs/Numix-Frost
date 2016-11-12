@@ -3,7 +3,7 @@
    ===================================================================*/
 
 .applet-separator {
-    background-image: url("panel-assets/panel-separator.svg");
+    background-image: url("assets/cinnamon/generated/panel-separator.svg");
     background-repeat: repeat;
     width: 9px;
     padding: 0;
@@ -13,7 +13,7 @@
 
 .applet-label {
     font-weight: bold;
-    color: $text-primary;
+    color: $dark_fg_color;
 }
 
 .applet-icon { icon-size: 16px; }
@@ -23,12 +23,12 @@
     padding-left: 4px;
     padding-right: 4px;
     font-weight: bold;
-    color: $icon-primary;
+    color: $dark_fg_color;
 }
 
 /* Different images used in top & bottom panels. */
 @each $v in panel-top, panel-bottom {
     .#{$v} .applet-box:hover {
-        border-image: url("panel-assets/#{$v}-item-hover.svg") 4;
+        border-image: url("assets/cinnamon/generated/#{$v}-item-hover.svg") 4;
     }
 }

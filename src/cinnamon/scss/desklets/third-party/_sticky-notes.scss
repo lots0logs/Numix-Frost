@@ -18,7 +18,7 @@
         width: 24px;
     }
 
-    &-selected * { color: $accent-primary; }
+    &-selected * { color: $selected_bg_color; }
 
     &-box {
         padding: 0;
@@ -29,7 +29,7 @@
 
 
 .sticky-main-box-staples {
-    border-image: url("background-assets/popup.svg") 7;
+    border-image: url("assets/cinnamon/generated/popup.svg") 7;
     background-color: rgba(0, 0, 0, 0);
     border-radius: 0;
     text-shadow: none;
@@ -37,11 +37,11 @@
     padding: 4px 10px;
     padding-top: 0;
     font-weight: bold;
-    color: $text-primary;
+    color: $dark_fg_color;
 }
 
 .sticky-main-box-none {
-    border-image: url("background-assets/popup.svg") 7;
+    border-image: url("assets/cinnamon/generated/popup.svg") 7;
     background-color: rgba(0, 0, 0, 0);
     border-radius: 0;
     text-shadow: none;
@@ -49,18 +49,18 @@
     padding: 4px 10px;
     padding-top: 0;
     font-weight: bold;
-    color: $text-primary;
+    color: $dark_fg_color;
 }
 
 
 .sticky-top-box {
     font-weight: bold;
-    color: $text-primary;
+    color: $dark_fg_color;
 }
 
 .sticky-bottom-box {
     font-weight: bold;
-    color: $text-primary;
+    color: $dark_fg_color;
 }
 
 .sticky-title-label {
@@ -95,9 +95,9 @@
 }
 
 #sticky-note-entry {
-    color: $text-primary;
-    selected-color: $text-primary;
-    caret-color: $text-primary;
+    color: $dark_fg_color;
+    selected-color: $dark_fg_color;
+    caret-color: $dark_fg_color;
     caret-size: 1px;
-    selection-background-color: $accent-primary;
+    selection-background-color: $selected_bg_color;
 }

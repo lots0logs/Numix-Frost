@@ -65,8 +65,8 @@
 }
 
 .window-caption {
-    border-image: url("expo-scale-assets/window-name.svg") 6;
-    color: $text-primary;
+    border-image: url("assets/cinnamon/generated/window-name.svg") 6;
+    color: $dark_fg_color;
     font-size: 9pt;
     font-weight: bold;
     padding: 6px 8px;
@@ -74,15 +74,17 @@
     -cinnamon-caption-spacing: 10px;
 
     &#selected {
-        border-image: url("expo-scale-assets/window-name-focused.svg") 6;
-        color: $text-active;
+        border-image: url("assets/cinnamon/generated/window-name-focused.svg") 6;
+        color: $selected_bg_color;
     }
 }
 
 .window-close {
-    background-image: url("widget-assets/close.svg");
+    background-image: url("assets/cinnamon/generated/close.svg");
     background-size: 41px 61px;
-    @include size(41px, 45px);
+    width: 41px, 45px;
+    height: 41px, 45px;
+
     -cinnamon-close-overlap: 24px;
 }
 

@@ -8,7 +8,7 @@
 .popup-menu-content {
     spacing: 0;
     padding: 0;
-    border-image: url("background-assets/tooltip--window-app-grouping.svg") 6;
+    border-image: url("assets/cinnamon/generated/tooltip--window-app-grouping.svg") 6;
 
     .switcher-list {
         spacing: 0;
@@ -19,11 +19,11 @@
             padding: 0;
             spacing: 0;
             border-image: none;
-            color: $text-primary;
+            color: $dark_fg_color;
 
             &:selected {
                 border-image: none;
-                color: $text-primary;
+                color: $dark_fg_color;
             }
 
             .thumbnail-iconLabel {
@@ -33,7 +33,7 @@
             }
 
             .window-close {
-                background-image: url("widget-assets/close-2.svg");
+                background-image: url("assets/cinnamon/generated/close-2.svg");
                 background-size: 20px;
             }
         }

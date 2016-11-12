@@ -13,7 +13,7 @@
         padding: .4em 1.3em;
 
         &:hover {
-            border-image: url("background-assets/hover.svg") 7;
+            border-image: url("assets/cinnamon/generated/hover.svg") 7;
         }
     }
 }
@@ -21,7 +21,7 @@
 .xCenter-mainBox {}
 
 .xCenter-mainBox StIcon {
-    color: $icon-primary;
+    color: $dark_fg_color;
     padding-bottom: 1px;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .xCenter-pane {
-    border-image: url("misc-assets/separator-vertical.svg") 11;
+    border-image: url("assets/cinnamon/generated/separator-vertical.svg") 11;
     padding: 7px 0;
     padding-right: 1px;
 
