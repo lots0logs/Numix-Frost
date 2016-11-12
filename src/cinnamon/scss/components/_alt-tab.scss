@@ -6,43 +6,39 @@
 
 #altTabPopup {
     padding: 0;
-    spacing: 4px;
+    spacing: $spacing;
 
     // Thumbnails box in "icons & thumbnails" mode
     .switcher-list:last-child {
-        color: $text-primary;
+        color: $dark_fg_color;
         padding: 0;
-        font-size: 10pt;
+        font-size: 12px;
         font-weight: bold;
 
         .item-box {
-            padding: 10px;
+            padding: $spacing * 2;
 
             &:selected {
                 border-image: none;
-                color: $text-primary;
+                color: $selected_fg_color;
             }
-
-            StLabel { padding-top: .8em; }
         }
     }
 
     // Icons box in classical alt-tab mode
     .switcher-list:first-child:last-child,
     .switcher-list:first-child {
-        color: $text-primary;
-        padding: 2px;
-        font-size: 10pt;
-        font-weight: bold;
+        color: $dark_fg_color;
+        padding: $spacing * .4;
+        font-size: 12px;
+        font-weight: 700;
 
         .item-box {
-            padding: 10px;
+            padding: $spacing * 2;
 
             &:selected {
-                color: $text-active;
+                color: $selected_fg_color;
             }
-
-            StLabel { padding-top: .4em; }
         }
     }
 
@@ -51,7 +47,7 @@
     }
 
     .thumbnail {
-        width: 256px;
+        max-width: $spacing * 51.2;
     }
 
     .alt-tab-app {}
