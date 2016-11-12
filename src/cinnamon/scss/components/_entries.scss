@@ -1,40 +1,28 @@
 @mixin entry($height: 22px, $width: 220px) {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(0, 0, 0, 0);
-    background-gradient-end: rgba(0, 0, 0, 0);
-    border: 0;
-    border-width: 0;
-    box-shadow: 0 0 rgba(0, 0, 0, 0);
-    border-radius: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: $roundness;
+    transition: border 150ms ease;
+    box-shadow: inset 1px 1px alpha($dark_shadow, .06),
+                inset -1px 0 alpha($dark_shadow, .06);
 
-    border-image: url("widget-assets/entry.svg") 6;
-    padding: 4px 8px 3px 8px;
-    height: $height;
-    width: $width;
-    font-size: 10pt;
-    font-weight: normal;
-    color: $text-secondary;
+    &:disabled { box-shadow: none; }
 
     &:focus,
     &:active,
     &:pressed {
-        border-image: url("widget-assets/entry-focused.svg") 6;
-        font-weight: bold;
-        color: $text-primary;
-        caret-color: $text-primary;
-        caret-size: 1px;
-        selected-color: $text-active;
-        selection-background-color: $accent-primary;
+        background-color: $selected_bg_color;
+        color: $selected_fg_color;
     }
 
     StIcon {
-        color: $icon-secondary;
+        color: $dark_fg_color;
     }
 
     &:focus > StIcon,
     &:active > StIcon,
     &:pressed > StIcon {
-        color: $icon-primary;
+        color: $dark_fg_color;
     }
 }
 
