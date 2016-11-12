@@ -2,31 +2,38 @@
    ! Checkboxes + Radio buttons
    ===================================================================*/
 
-@each $v in check-box, radiobutton {
-    .#{$v} {
-        CinnamonGenericContainer {
-            spacing: .2em;
-            min-height: 16px;
-        }
+@mixin toggle($type) {
+    StBin {
+        background-image: url("resource:///org/numixproject/frost/gtk-3.20/assets/#{$type}-unchecked-dark.png");
+        width: 16px;
+        height: 16px;
+    }
 
-        StLabel { padding-top: 1px; }
+    CinnamonGenericContainer {
+        spacing: .2em;
+    }
 
-        StBin {
-            width: 16px;
-            height: 16px;
-            background-image: url("widget-assets/#{$v}.svg");
-        }
+    &:checked StBin,
+    &:focus:checked StBin {
+        background-image: url("resource:///org/numixproject/frost/gtk-3.20/assets/#{$type}-checked-dark.png");
 
-        &:focus StBin {
-            background-image: url("widget-assets/#{$v}-focused.svg");
+        &:disabled {
+            background-image: url("resource:///org/numixproject/frost/gtk-3.20/assets/#{$type}-checked-insensitive-dark.png");
         }
+    }
 
-        &:checked StBin {
-            background-image: url("widget-assets/#{$v}-checked.svg");
-        }
+    StLabel {
+        font-weight: normal;
+    }
+}
 
-        &:focus:checked {
-            background-image: url("widget-assets/#{$v}-focused-checked.svg");
-        }
+
+@include exports('checkradio') {
+    .radiobutton {
+        @include toggle("radio");
+    }
+
+    .check-box {
+        @include toggle("checkbox");
     }
 }
