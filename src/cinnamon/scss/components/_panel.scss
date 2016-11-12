@@ -3,7 +3,7 @@
 *************/
 
 #panel {
-    font-weight: 400;
+    font-weight: normal;
     min-height: 32px;
 
     &Left {
@@ -53,11 +53,11 @@
 .panel {
 
     &-top, &-bottom {
-        @include linear-gradient($panel_bg_color);
+        @include linear-gradient(transparentize(shade($base_color, .9), .15));
 
-        color: $panel_fg_color;
+        color: $fg_color;
         font-size: 1em;
-        padding: 2px;
+        padding: 0;
     }
 
     &-top {
@@ -70,32 +70,40 @@
 
     &-button,
     &-status-button {
-        border-width: 0 1px;
+        -natural-hpadding: 3px;
+        -minimum-hpadding: 3px;
+        border-width: 0;
         border-radius: 0;
         border-color: transparent;
         background-color: transparent;
         background-image: none;
-        color: $panel_fg_color;
+        color: $fg_color;
 
         &:hover {
-            @include linear-gradient(mix($panel_bg_color, $panel_fg_color, .11));
+            @include linear-gradient(mix($bg_color, $fg_color, .11));
 
-            border-color: mix($panel_bg_color, $panel_fg_color, .11);
-            color: shade($panel_fg_color, 1.08);
+            border-color: mix($bg_color, $fg_color, .11);
+            color: shade($fg_color, 1.08);
         }
 
         &:active, &:checked {
-            @include linear-gradient(mix($panel_bg_color, $panel_fg_color, .21), to top);
+            @include linear-gradient(mix($bg_color, $fg_color, .21), to top);
 
-            border-color: mix($panel_bg_color, $panel_fg_color, .21);
-            color: shade($panel_fg_color, 1.08);
+            border-color: mix($bg_color, $fg_color, .21);
+            color: shade($fg_color, 1.08);
 
             &:hover {
-                @include linear-gradient(mix($panel_bg_color, $panel_fg_color, .31), to top);
+                @include linear-gradient(mix($bg_color, $fg_color, .31), to top);
 
-                border-color: mix($panel_bg_color, $panel_fg_color, .31);
+                border-color: mix($bg_color, $fg_color, .31);
             }
         }
+    }
+
+    &-button {
+        -natural-hpadding: 6px;
+        -minimum-hpadding: 2px;
+        font-weight: normal;
     }
 
     &-dummy {
@@ -109,13 +117,13 @@
 
 .system-status-icon {
     icon-size: 16px;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 8px 0;
     spacing: 0;
     margin: 0;
 }
 
 #iconLabelButton {
-    color: $panel_fg_color;
-    padding: 0;
+    color: $fg_color;
+    font-weight: normal;
+    padding: 1px;
 }

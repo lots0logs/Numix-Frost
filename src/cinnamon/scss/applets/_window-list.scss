@@ -8,46 +8,46 @@
 }
 
 .window-list-item-label {
-    width: 15em;
     min-width: 5px;
 }
 
 .window-list-item-box {
-    color: shade($dark_fg_color, .2);
-    font-weight: bold;
-    padding-left: 4px;
-    padding-right: 4px;
+    color: shade($dark_fg_color, .8);
+    font-weight: normal;
+    padding: 0 $spacing;
 }
 
 /* Different images used in top & bottom panels. */
 @each $v in panel-top, panel-bottom {
     .#{$v} {
         .window-list-item-box:hover  {
-            border-image: url("assets/cinnamon/generated/#{$v}-item-hover.svg") 4;
-            color: $dark_fg_color;
+            color: $selected_bg_color;
         }
 
         .window-list-item-box:active,
         .window-list-item-box:checked,
-        .window-list-item-box:focus  {
-            border-image: url("assets/cinnamon/generated/#{$v}-item-active.svg") 4;
-            color: $selected_bg_color;
+        .window-list-item-box:focus {
+            @include linear-gradient(transparentize(shade($base_color, 1.2), .15));
+
+            color: $dark_fg_color;
+            font-weight: bold;
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            border-bottom-color: $selected_bg_color;
         }
 
         .window-list-item-box:checked:hover,
         .window-list-item-box:focus:hover,
         .window-list-item-box:active:hover  {
-            border-image: url("assets/cinnamon/generated/#{$v}-item-active-hover.svg") 4;
+
         }
 
-        .window-list-item-demands-attention {
-            border-image: url("assets/cinnamon/generated/#{$v}-item-attention.svg") 4;
-            color: $selected_bg_color;
-        }
-
+        .window-list-item-demands-attention,
         .window-list-item-demands-attention:hover {
-            border-image: url("assets/cinnamon/generated/#{$v}-item-attention-hover.svg") 4;
+            @include linear-gradient(transparentize(shade($base_color, 1.2), .15));
+
             color: $selected_bg_color;
+            font-weight: bold;
         }
     }
 }
@@ -55,10 +55,12 @@
 /* This styles the window-list preview and window name
    in "cover" and "timeline" alt-tab modes */
 .switcher-list {
-    border-image: url("assets/cinnamon/generated/tooltip.svg") 7;
+    @include linear-gradient(shade($base_color, 1.2));
+    @include border($borders_color);
+
     color: $dark_fg_color;
-    padding: 0 3px;
-    font-weight: bold;
+    padding: $spacing * .6;
+    font-weight: normal;
 
     > StBoxLayout {
         spacing: .4em;

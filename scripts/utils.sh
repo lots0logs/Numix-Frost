@@ -19,7 +19,7 @@ do_install() {
 	( cd cinnamon/dist \
 		&& cp -t "${CINNAMON_DIR}" * \
 		&& cd "${CINNAMON_DIR}" \
-		&& ln -sr ../assets; )
+		&& { [[ -h assets ]] || ln -sr ../assets; } )
 
 	for _DIR in "${GTKDIR}" "${GTK320DIR}"
 	do
