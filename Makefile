@@ -11,6 +11,10 @@ INSTALL_DIR=$(DESTDIR)/usr/share/themes/Numix-Frost
 ROOT_DIR=${PWD}
 UTILS=scripts/utils.sh
 
+CN_RES_DIR=src/cinnamon
+CN_SCSS_DIR=$(CN_RES_DIR)/scss
+CN_DIST_DIR=$(CN_RES_DIR)/dist
+
 all: clean gresource
 
 css:
