@@ -1,42 +1,46 @@
 #!/bin/bash
 
+THEME_PARTS=()
+
+
+_set_theme_parts_array() {
+	gtk2=('-r' "${SRC_DIR}/toolkits/gtk-2.0" "${DIST_DIR}")
+
+	metacity=('-r' "${SRC_DIR}/window-managers/metacity" "${DIST_DIR}/metacity-1")
+
+	openbox=('-r' "${SRC_DIR}/window-managers/openbox" "${DIST_DIR}/openbox-3")
+
+	theme_index=("${SRC_DIR_GTK320}/index.theme" "${DIST_DIR_GTK320}")
+
+	theme_thumbnail=("${SRC_DIR_GTK320}/thumbnail.png" "${DIST_DIR_GTK320}")
+
+	xfce_notify=('-r' "${SRC_DIR}/xfce-notify-4.0" "${DIST_DIR}")
+
+	xfwm=('-r' "${SRC_DIR}/window-managers/xfwm" "${DIST_DIR}/xfwm-4")
+
+	THEME_PARTS=("${gtk2[*]}"             "${metacity[*]}"
+				 "${openbox[*]}"          "${theme_index[*]}"
+				 "${theme_thumbnail[*]}"  "${xfce_notify[*]}"  "${xfwm[*]}")
+}
+
+
 do_install() {
-	local GTKDIR GTK320DIR GTKVER INSTALL_DIR CINNAMON_DIR
-	INSTALL_DIR="$1"
-	GTKDIR="${INSTALL_DIR}/gtk-3.0"
-	GTK320DIR="${INSTALL_DIR}/gtk-3.20"
-	CINNAMON_DIR="${INSTALL_DIR}/cinnamon"
-
-	install -dm755 "${INSTALL_DIR}" "${CINNAMON_DIR}"
-
-	cd src
-
-	cp index.theme "${INSTALL_DIR}"
-
-	cp -rt "${INSTALL_DIR}" \
-		assets gtk-2.0 metacity-1 openbox-3 xfce-notify-4.0 xfwm4
-
-	( cd cinnamon/dist \
-		&& cp -t "${CINNAMON_DIR}" * \
-		&& cd "${CINNAMON_DIR}" \
-		&& { [[ -h assets ]] || ln -sr ../assets; } )
-
-	for _DIR in "${GTKDIR}" "${GTK320DIR}"
+	for cp_command_args in "${THEME_PARTS[@]}"
 	do
-		GTKVER="${_DIR##*/}"
-
-		mkdir -p "${_DIR}"
-
-		cp -t "${_DIR}" \
-			"${GTKVER}/gtk.css" \
-			"${GTKVER}/gtk-dark.css" \
-			"${GTKVER}/gtk.gresource" \
-			"${GTKVER}/thumbnail.png"
-
-		cd "${_DIR}"
-		ln -srf ../assets assets
-		cd -
+		cp_command_args=(${cp_command_args})
+		cp "${cp_command_args[@]}"
 	done
+
+	install -dm755 "${INSTALL_DIR}"/../
+
+	cp -r "${DIST_DIR}" "${INSTALL_DIR}"
+
+	cp "${SRC_DIR}"/{CREDITS,CHANGES,LICENSE,README.md} "${INSTALL_DIR}"
+
+	cd "${INSTALL_DIR}/gtk-3.0" && {
+		ln -sr ../gtk-3.20/index.theme
+		ln -sr ../gtk-3.20/thumbnail.png
+	}
 }
 
 
@@ -63,15 +67,15 @@ update_changes_file() {
 
 	case "${PWD##*/}" in
 		Numix)
-			NEXT_PATCH=$(($LAST_PATCH + 1))
+			NEXT_PATCH=$((LAST_PATCH + 1))
 
 			NEXT_STABLE_RELEASE="${LAST_MAJOR_MINOR}.${NEXT_PATCH}"
 		;;
 
 		Numix-Frost)
-			LAST_MAJOR=$(($LAST_MAJOR + 1))
+			LAST_MAJOR=$((LAST_MAJOR + 1))
 			NEXT_STABLE_RELEASE="${LAST_MAJOR}.${LAST_MINOR}.${LAST_PATCH}"
-			LAST_PATCH=$(($LAST_PATCH - 1))
+			LAST_PATCH=$((LAST_PATCH - 1))
 
 			LAST_STABLE_RELEASE="${LAST_MAJOR}.${LAST_MINOR}.${LAST_PATCH}"
 		;;

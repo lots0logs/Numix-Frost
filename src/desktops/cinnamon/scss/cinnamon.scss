@@ -1,8 +1,8 @@
 $variant: 'dark';
 
 /* Base */
-@import "_functions";
-@import "_global";
+@import "functions";
+@import "global";
 
 /* Main Components */
 @import 'components/all-components';

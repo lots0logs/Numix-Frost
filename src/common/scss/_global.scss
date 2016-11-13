@@ -1,6 +1,6 @@
 // scss-lint:disable ColorVariable
 
-@import "functions";
+@import "./functions";
 
 // default color scheme
 $bg_color: if($variant == "dark", #333, #f0f0f0);
