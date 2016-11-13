@@ -4,43 +4,48 @@ THEME_PARTS=()
 
 
 _set_theme_parts_array() {
-	gtk2=('-r' "${SRC_DIR}/toolkits/gtk-2.0" "${DIST_DIR}")
+	GTK2=('-r' "${SRC_DIR}/toolkits/gtk-2.0" "${DIST_DIR}")
 
-	metacity=('-r' "${SRC_DIR}/window-managers/metacity" "${DIST_DIR}/metacity-1")
+	METACITY=('-r' "${SRC_DIR}/window-managers/metacity" "${DIST_DIR}/metacity-1")
 
-	openbox=('-r' "${SRC_DIR}/window-managers/openbox" "${DIST_DIR}/openbox-3")
+	OPENBOX=('-r' "${SRC_DIR}/window-managers/openbox" "${DIST_DIR}/openbox-3")
 
-	theme_index=("${SRC_DIR_GTK320}/index.theme" "${DIST_DIR_GTK320}")
+	THEME_INDEX=("${SRC_DIR_GTK320}/index.theme" "${DIST_DIR_GTK320}")
 
-	theme_thumbnail=("${SRC_DIR_GTK320}/thumbnail.png" "${DIST_DIR_GTK320}")
+	THEME_THUMBNAIL=("${SRC_DIR_GTK320}/thumbnail.png" "${DIST_DIR_GTK320}")
 
-	xfce_notify=('-r' "${SRC_DIR}/xfce-notify-4.0" "${DIST_DIR}")
+	XFCE_NOTIFY=('-r' "${SRC_DIR}/xfce-notify-4.0" "${DIST_DIR}")
 
-	xfwm=('-r' "${SRC_DIR}/window-managers/xfwm" "${DIST_DIR}/xfwm-4")
+	XFWM=('-r' "${SRC_DIR}/window-managers/xfwm" "${DIST_DIR}/xfwm-4")
 
-	THEME_PARTS=("${gtk2[*]}"             "${metacity[*]}"
-				 "${openbox[*]}"          "${theme_index[*]}"
-				 "${theme_thumbnail[*]}"  "${xfce_notify[*]}"  "${xfwm[*]}")
+	THEME_PARTS=("${GTK2[*]}"             "${METACITY[*]}"
+				 "${OPENBOX[*]}"          "${THEME_INDEX[*]}"
+				 "${THEME_THUMBNAIL[*]}"  "${XFCE_NOTIFY[*]}"  "${XFWM[*]}")
 }
 
 
 do_install() {
+	# Copy non-compiled files into DIST_DIR
 	for cp_command_args in "${THEME_PARTS[@]}"
 	do
 		cp_command_args=(${cp_command_args})
-		cp "${cp_command_args[@]}"
+		cp "${cp_command_args[@]}" >> /tmp/OUTPUT 2>&1
 	done
 
-	install -dm755 "${INSTALL_DIR}"/../
+	# Remove previous install if one exists.
+	[[ -d "${INSTALL_DIR}" ]] && rm -rf "${INSTALL_DIR}"
 
+	# Create INSTALL_DIR path except for the last directory in path.
+	install -dm755 "$(dirname ${INSTALL_DIR})"
+
+	# Copy DIST_DIR as INSTALL_DIR
 	cp -r "${DIST_DIR}" "${INSTALL_DIR}"
 
-	cp "${SRC_DIR}"/{CREDITS,CHANGES,LICENSE,README.md} "${INSTALL_DIR}"
+	# Copy changes, credits, & license to INSTALL_DIR.
+	cp "${ROOT_DIR}"/{CREDITS,CHANGES,LICENSE} "${INSTALL_DIR}"
 
-	cd "${INSTALL_DIR}/gtk-3.0" && {
-		ln -sr ../gtk-3.20/index.theme
-		ln -sr ../gtk-3.20/thumbnail.png
-	}
+	# Create symlink for index.theme in INSTALL_DIR/gtk-3.0
+	( cd "${INSTALL_DIR}/gtk-3.0" && ln -srf ../gtk-3.20/index.theme )
 }
 
 
@@ -110,7 +115,8 @@ case $1 in
 	;;
 
 	install)
-		do_install "$2"
+		_set_theme_parts_array
+		do_install
 	;;
 
 	*)

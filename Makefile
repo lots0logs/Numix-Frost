@@ -1,4 +1,5 @@
-ROOT_DIRNAME=$$(basename $${PWD})
+ROOT_DIR=${PWD}
+ROOT_DIRNAME=$(shell basename $(ROOT_DIR))
 DIST_DIR=dist/$(ROOT_DIRNAME)
 SRC_DIR=src
 
@@ -45,8 +46,8 @@ css: clean create-dist
 	$(SASS) --update $(SASSFLAGS) $(SRC_DIR_GTK)/scss:$(SRC_DIR_GTK)/dist
 	$(SASS) --update $(SASSFLAGS) $(SRC_DIR_GTK320)/scss:$(SRC_DIR_GTK320)/dist
 	$(SASS) --update $(SASSFLAGS) $(SRC_DIR_CINNAMON)/scss:$(SRC_DIR_CINNAMON)/dist
-	cp -t $(DIST_DIR_GTK) $(SRC_DIR_GTK)/*.css
-	cp -t $(DIST_DIR_GTK320) $(SRC_DIR_GTK320)/*.css
+	cp -t $(DIST_DIR_GTK) $(SRC_DIR_GTK)/{*.css,*.png}
+	cp -t $(DIST_DIR_GTK320) $(SRC_DIR_GTK320)/{*.css,*.png,*.theme}
 	cp -t $(DIST_DIR_CINNAMON) $(SRC_DIR_CINNAMON)/dist/*.css $(SRC_DIR_CINNAMON)/{*.json,*.png}
 	cp -t $(DIST_DIR_GNOME) $(SRC_DIR_GNOME)/*.*
 
@@ -62,7 +63,7 @@ gresource: _gresource remove-scss-dist
 
 
 install: all
-	$(SHELL_EXPORT) $(UTILS) install
+	@$(SHELL_EXPORT) $(UTILS) install
 
 
 remove-scss-dist:
