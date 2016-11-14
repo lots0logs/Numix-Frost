@@ -1,3 +1,56 @@
+-------------->>>> 3.6.6 <<<<-------------------------->>>> 3.6.6 <<<<-------------------------->>>> 3.6.6 <<<<--------------
+[2016-11-14 16:31:24 -0600]  update makefile. cherry-pick commit from main repo.                    Dustin Falgout  {17e8fc6}
+[2016-11-14 16:22:11 -0600]  update utils.sh script                                                 Dustin Falgout  {51c114b}
+[2016-11-14 16:17:59 -0600]  sync local with github                                                 Dustin Falgout  {1873222}
+[2016-11-14 00:09:10 -0600]  remove debug code from utils.sh script                                 Dustin Falgout  {8ae9f27}
+[2016-11-13 17:21:49 -0600]  finish updating Makefile and utilis.sh script to support new direct..  Dustin Falgout  {a030754}
+[2016-11-13 16:10:07 -0600]  fix cinnamon assets                                                    Dustin Falgout  {8b1c29b}
+[2016-11-13 04:10:48 -0600]  restructure directory layout to make it easier to share resources b..  Dustin Falgout  {3a036f5}
+[2016-11-12 17:18:49 -0600]  cinnamon :: still tweaking panel/window-list styles                    Dustin Falgout  {064471d}
+[2016-11-12 17:04:43 -0600]  cinnamon :: still tweaking panel/window-list styles                    Dustin Falgout  {b567d4c}
+[2016-11-12 14:49:59 -0600]  cinnamon :: improve panel/window-list styles                           Dustin Falgout  {9da241f}
+[2016-11-12 06:16:47 -0600]  cinnamon :: stopping point                                             Dustin Falgout  {2162e9a}
+[2016-11-12 04:49:57 -0600]  cinnamon :: theme builds again.                                        Dustin Falgout  {e4068cb}
+[2016-11-12 04:07:19 -0600]  cinnamon :: fixing assets to get theme back in buildable state         Dustin Falgout  {30207b2}
+[2016-11-12 02:36:26 -0600]  cinnamon :: fixing imports to get theme back in buildable state        Dustin Falgout  {fa60687}
+[2016-11-12 00:59:56 -0600]  entries for cinnamon                                                   Dustin Falgout  {195362f}
+[2016-11-12 00:55:26 -0600]  checkboxes and radios for cinnamon                                     Dustin Falgout  {eb5b361}
+[2016-11-12 00:17:48 -0600]  working on cinnamon theme                                              Dustin Falgout  {d577704}
+[2016-11-09 00:40:37 -0600]  more work on cinnamon theme refresh                                    Dustin Falgout  {0f2c2cb}
+[2016-11-09 00:17:40 -0600]  add menu styles for cinnamon                                           Dustin Falgout  {f2d69b0}
+[2016-11-08 23:49:25 -0600]  still organizing cinnamon theme files                                  Dustin Falgout  {d533070}
+[2016-11-08 23:48:02 -0600]  still organizing cinnamon theme files                                  Dustin Falgout  {388842e}
+[2016-11-08 23:41:54 -0600]  use sass functions from gtk theme                                      Dustin Falgout  {70f90f5}
+[2016-11-08 23:26:13 -0600]  ause gtk theme color scheme as base for cinnamon theme                 Dustin Falgout  {26b6bf2}
+[2016-11-08 23:22:32 -0600]  update .gitignore                                                      Dustin Falgout  {7e18ae5}
+[2016-11-08 23:21:10 -0600]  reorganizing cinnamon files                                            Dustin Falgout  {462201b}
+[2016-11-08 23:18:41 -0600]  rename cinnamon source files directory                                 Dustin Falgout  {27b9b77}
+[2016-11-08 23:17:46 -0600]  combine cinnamon assets into a single file                             Dustin Falgout  {981dcb9}
+[2016-11-08 23:17:24 -0600]  combine cinnamon assets into a single file                             Dustin Falgout  {6f62b1e}
+[2016-11-08 23:16:39 -0600]  combine cinnamon assets into a single file                             Dustin Falgout  {6b813a8}
+[2016-11-08 22:18:33 -0600]  move cinnamon theme into numix frost repo instead of a separate repo.  Dustin Falgout  {6132189}
+[2016-11-06 20:07:15 -0600]  fix a few issues with gedit styles                                     Dustin Falgout  {9687266}
+[2016-11-06 17:40:19 -0600]  code cleanup                                                           Dustin Falgout  {f90e98f}
+[2016-11-06 17:17:16 -0600]  further optimize margin/padding in _toolbar.scss and _button.scss      Dustin Falgout  {9e4eb2c}
+[2016-11-06 17:35:05 -0600]  update metacity theme to use icons from icon theme instead of drawi..  Dustin Falgout  {bb21f3e}
+[2016-11-05 20:40:31 -0500]  optimize margin/padding in _toolbar.scss                               Dustin Falgout  {447b76c}
+[2016-11-01 12:10:06 -0500]  Disable box-shadow for osd button in fine-tune mode. Fixes #561.        Csaba Jakosa   {40e8547}
+[2016-11-01 12:08:14 -0500]  [Gtk-3.20] Fix for volume OSD slider. Fixes #623                       Nazar Mokrynskyi {7854d17}
+[2016-11-01 03:21:28 -0500]  * Fixed code.                                                               Megax      {a40965e}
+[2016-11-01 03:18:25 -0500]  * Create global OSD file.                                                   Megax      {da76b2c}
+[2016-11-01 03:18:18 -0500]  [Gtk-3.20] Fixed xfce4 code.                                            Csaba Jakosa   {4ee1f23}
+[2016-10-31 12:58:14 -0500]  [GTK-3.20] Code Cleanup                                                 Csaba Jakosa   {fec96d9}
+[2016-10-30 11:30:58 -0500]  [GTK-3.20] Added styling to Raven components of Budgie panel. Fixes..  Nazar Mokrynskyi {b65ef7f}
+[2016-11-05 20:23:31 -0500]  update _sidebar.scss to make margin/padding values relative to $spa..  Dustin Falgout  {0f05ac0}
+[2016-10-27 10:43:29 -0500]  Fix syntax in previous commit                                           Khurshid Alam  {13f4d34}
+[2016-10-27 10:39:47 -0500]  Fix discrete filled block inside levelbar. Fixes #619                   Khurshid Alam  {4217d12}
+[2016-10-27 10:05:00 -0500]  Tweak do_install in utils.sh                                            Khurshid Alam  {afcba50}
+[2016-11-05 20:10:00 -0500]  adjusted notebook tabs  usage of $spacing to replace instances of s..  Dustin Falgout  {68f9403}
+[2016-11-05 19:57:00 -0500]  Revert: [Gtk-3.20] Optimized notebook padding                          Dustin Falgout  {6cc924f}
+[2016-10-24 01:39:15 -0500]  [Gtk-3.20] Optimized notebook padding                                   Csaba Jakosa   {119acdb}
+[2016-10-23 16:33:14 -0500]  fix notebook tab padding issues for some applications. Fixes #588      Dustin Falgout  {d1fc882}
+[2016-10-23 10:15:11 -0500]  * Nemo statusbar button padding fix. (#611)                             Csaba Jakosa   {c135734}
+[2016-10-23 05:22:06 -0500]  Revert 234125c89aa5ac482368bc8871827a7f3a2b862f as it caused header..  Dustin Falgout  {c21a63a}
 -------------->>>> 3.6.5 <<<<-------------------------->>>> 3.6.5 <<<<-------------------------->>>> 3.6.5 <<<<--------------
 [2016-10-23 02:14:28 -0500]  also support Numix-Frost-Light                                         Dustin Falgout  {0213de0}
 [2016-10-23 02:11:45 -0500]  update zip task in Makefile to support both Numix and Numix-Frost      Dustin Falgout  {b7e9781}
