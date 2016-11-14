@@ -42,7 +42,7 @@ do_install() {
 	cp -r "${DIST_DIR}" "${INSTALL_DIR}"
 
 	# Copy changes, credits, & license to INSTALL_DIR.
-	cp "${ROOT_DIR}"/{CREDITS,CHANGES,LICENSE} "${INSTALL_DIR}"
+	cp "${REPO_ROOT_DIR}"/{CREDITS,CHANGES,LICENSE} "${INSTALL_DIR}"
 
 	# Create symlink for index.theme in INSTALL_DIR/gtk-3.0
 	( cd "${INSTALL_DIR}/gtk-3.0" && ln -srf ../gtk-3.20/index.theme )

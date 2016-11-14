@@ -6,28 +6,43 @@
     .menu {
         background-color: $menu_bg_color;
         color: $menu_fg_color;
-        border: 1px solid shade($menu_bg_color, .1);
+        border: 1px solid shade($menu_bg_color, .8);
         border-radius: $roundness;
-        font-size: 1em;
-        min-width: 100px;
+        font-size: 1.1em;
+        min-width: 120px;
+        padding: $spacing ($spacing * 2);
+
+        .popup-menu-icon {
+            icon-size: $spacing * 3.2;
+            color: $dark_fg_color;
+        }
+
+        .popup-menu-arrow {
+            icon-size: $spacing * 3;
+        }
+
+        .popup-sub-menu-item:open {
+            @include linear-gradient(transparentize($dark_bg_color, 1));
+        }
+
 
         &.top {
-            border-radius: 0 0 4px 4px;
+            border-radius: 0 0 $roundness $roundness;
             border-top-width: 0;
         }
 
         &.bottom {
-            border-radius: 4px 4px 0 0;
+            border-radius: $roundness $roundness 0 0;
             border-bottom-width: 0;
         }
 
         &.left {
-            border-radius: 0 4px 4px 0;
+            border-radius: 0 $roundness $roundness 0;
             border-left-width: 0;
         }
 
         &.right {
-            border-radius: 4px 0 0 4px;
+            border-radius: $roundness 0 0 $roundness;
             border-right-width: 0;
         }
     }

@@ -1,6 +1,6 @@
-ROOT_DIR=${PWD}
-ROOT_DIRNAME=$(shell basename $(ROOT_DIR))
-DIST_DIR=dist/$(ROOT_DIRNAME)
+REPO_ROOT_DIR=$(shell pwd)
+REPO_DIRNAME=$(shell basename $(REPO_ROOT_DIR))
+DIST_DIR=dist/$(REPO_DIRNAME)
 SRC_DIR=src
 
 SRC_DIR_GTK=$(SRC_DIR)/toolkits/gtk-3.0

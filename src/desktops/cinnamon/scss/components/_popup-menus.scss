@@ -4,19 +4,6 @@
 
 @include exports('popup_menu') {
 
-    .popup-menu {
-
-        &-icon,
-        StIcon {
-            icon-size: $spacing * 3.2;
-            color: $dark_fg_color;
-        }
-
-        &-arrow {
-            icon-size: $spacing * 3;
-        }
-    }
-
     .popup-menu,
     .popup-sub-menu {
         @include linear-gradient(transparentize($dark_bg_color, .10));
@@ -63,16 +50,11 @@
         }
     }
 
-    .popup-sub-menu {
-        @include linear-gradient(transparentize($base_color, .10));
+    .popup-sub-menu:open {
 
-        &-item {
+        .popup-menu-item {
             @include linear-gradient(transparentize($base_color, .10));
         }
-    }
-
-    .popup-submenu-menu-item:open {
-        @include linear-gradient(transparentize($base_color, .10));
     }
 
     .popup-combo-menu {
