@@ -29,7 +29,7 @@ do_install() {
 	for cp_command_args in "${THEME_PARTS[@]}"
 	do
 		cp_command_args=(${cp_command_args})
-		cp "${cp_command_args[@]}" >> /tmp/OUTPUT 2>&1
+		cp "${cp_command_args[@]}"
 	done
 
 	# Remove previous install if one exists.
