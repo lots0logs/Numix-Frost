@@ -53,7 +53,7 @@
 .panel {
 
     &-top, &-bottom {
-        @include linear-gradient(transparentize(shade($dark_bg_color, .9), .10));
+        @include linear-gradient($panel_bg_color);
 
         color: $fg_color;
         font-size: 1em;

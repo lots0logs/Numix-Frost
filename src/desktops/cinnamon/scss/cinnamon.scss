@@ -4,6 +4,10 @@ $variant: 'dark';
 @import "functions";
 @import "global";
 
+/* Custom Variables */
+$panel_bg_color: transparentize(shade($dark_bg_color, .9), .10);
+$menu_bg_color: transparentize(shade($dark_bg_color, .9), .01);
+
 /* Main Components */
 @import 'components/all-components';
 
