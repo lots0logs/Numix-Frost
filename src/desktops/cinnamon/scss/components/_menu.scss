@@ -10,7 +10,7 @@
         border-radius: $roundness;
         font-size: 1.05em;
         font-weight: 400;
-        min-width: 120px;
+        min-width: 150px;
         padding: 0;
 
         &.top {
@@ -37,7 +37,7 @@
 
         .popup-menu-item {
             background-color: transparent;
-            padding: ($spacing * 1.2) ($spacing * 1.6);
+            padding: ($spacing * 1.2) ($spacing * 2);
             spacing: $spacing * 1.4;
             border: none;
 
@@ -60,7 +60,7 @@
             StBoxLayout { padding: ($spacing * 2) 0; }
 
             .popup-menu-item *:first-child {
-                padding-left: ($spacing * 3);
+                padding-left: ($spacing * 3.4);
             }
         }
 
