@@ -1,0 +1,109 @@
+/* ===================================================================
+   ! Popup Menus
+   ===================================================================*/
+
+@include exports('popup_menu') {
+
+    .popup-menu,
+    .popup-sub-menu {
+        @include linear-gradient(transparentize($dark_bg_color, .10));
+
+        padding: $spacing ($spacing * 2);
+
+        &-item {
+            @include linear-gradient(transparentize($dark_bg_color, .10));
+
+            padding: $spacing ($spacing * 2);
+
+            &:active,
+            &:hover {
+                color: $selected_fg_color;
+                background-color: transparentize($selected_bg_color, .10);
+
+                .popup-menu-icon, StIcon {
+                    color: $selected_fg_color;
+                }
+
+                .popup-menu-item-dot {
+                    background-color: $selected_fg_color;
+                    width: $spacing * 2;
+                    height: $spacing * 2;
+                    border-radius: 100%;
+                }
+            }
+
+            &:insensitive {
+                font-weight: normal;
+                color: $osd_insensitive_fg_color;
+
+                .popup-menu-icon, StIcon {
+                    color: $osd_insensitive_fg_color;
+                }
+            }
+        }
+
+        &-item-dot {
+            background-color: $dark_fg_color;
+            width: $spacing * 2;
+            height: $spacing * 2;
+            border-radius: 100%;
+        }
+    }
+
+    .popup-sub-menu:open {
+
+        .popup-menu-item {
+            @include linear-gradient(transparentize($base_color, .10));
+        }
+    }
+
+    .popup-combo-menu {
+        color: $dark_fg_color;
+    }
+
+    .popup-separator-menu-item {
+        background-color: rgba(255, 255, 255, .1);
+        height: 1px;
+    }
+
+    .popup-slider-menu-item {
+        -slider-height: 2px;
+        -slider-background-color: rgba(0, 0, 0, 0);
+        -slider-border-color: rgba(0, 0, 0, 0);
+        -slider-active-background-color: $selected_bg_color;
+        -slider-active-border-color: rgba(0, 0, 0, 0);
+        -slider-border-width: 2px;
+        -slider-handle-radius: 4px;
+        color: $dark_fg_color;
+
+        border-image: url("assets/cinnamon/generated/slider.svg") 9 6 8 8;
+        border: 0 solid transparent;
+        min-width: 15em;
+        height: 16px;
+
+        .popup-menu-item:active & {
+            -slider-handle-radius: 5px;
+            color: $selected_bg_color;
+        }
+    }
+
+    .popup-inactive-menu-item {
+        color: shade($dark_fg_color, .2);
+    }
+
+    /* used mainly for the notif-applet */
+    .popup-menu-item .popup-subtitle-menu-item {
+        font-weight: bold;
+        color: $selected_bg_color;
+    }
+
+    .popup-device-menu-item {
+        spacing: .5em;
+
+        .popup-inactive-menu-item {
+            color: $info_fg_color;
+        }
+    }
+}
+
+

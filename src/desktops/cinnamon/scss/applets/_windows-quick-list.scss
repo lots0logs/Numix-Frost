@@ -1,0 +1,12 @@
+/* ===================================================================
+   ! Window Quicky List applet
+   ===================================================================*/
+
+.window-sticky {
+    color: $info_fg_color;
+    font-weight: bold;
+
+    .popup-menu-item:active & {
+        color: $selected_bg_color;
+    }
+}

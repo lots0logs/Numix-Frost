@@ -1,0 +1,121 @@
+/* ===================================================================
+   ! Menu applet
+   ===================================================================*/
+
+/* Favourites */
+.menu-favorites-box {
+    border-image: url("assets/cinnamon/generated/dark-bg.svg") 7;
+    padding: 0.5em;
+}
+
+.menu-favorites-button {
+    padding: 10px 12px;
+
+    &:hover {
+        border-image: url("assets/cinnamon/generated/hover.svg") 9;
+        color: $selected_bg_color;
+    }
+}
+
+
+/* Places */
+.menu-places-box {
+    margin: auto;
+    padding: 8px;
+    border: 0 solid $dark_fg_color;
+}
+
+.menu-places-button {
+    padding: 10px;
+}
+
+
+/* Categories */
+.menu-categories-box {
+    padding: 10px 30px;
+    font-weight: bold;
+}
+
+.menu-category-button {
+    padding: 7px;
+    color: shade($dark_fg_color, .2);
+
+    &-greyed {
+        padding: 7px;
+        color: $osd_insensitive_fg_color;
+        font-style: normal;
+    }
+
+    &-selected {
+        padding: 7px;
+        border-image: url("assets/cinnamon/generated/hover.svg") 7;
+        color: $selected_bg_color;
+    }
+
+    &-label:ltr { padding-left: 5px; }
+
+    &-label:rtl { padding-right: 5px; }
+
+    &-button:hover {}
+}
+
+
+/* Applications */
+.menu-applications-inner-box,
+.menu-applications-outer-box {
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+.menu-application-button {
+    padding: 7px;
+    max-width: 10px;
+
+    &-selected {
+        padding: 7px;
+        border-image: url("assets/cinnamon/generated/hover.svg") 7;
+        color: $selected_bg_color;
+    }
+
+    &:highlighted {
+        border-image: url("assets/cinnamon/generated/highlighted.svg") 6;
+    }
+
+    &-selected:highlighted {
+        border-image: url("assets/cinnamon/generated/hover.svg") 7;
+        color: $dark_fg_color;
+    }
+
+    &-label:ltr { padding-left: 5px; }
+
+    &-label:rtl { padding-right: 5px; }
+}
+
+
+/* Application hover description */
+.menu-selected-app-box {
+    padding-right: 30px;
+    padding-left: 30px;
+    text-align: right;
+}
+
+.menu-selected-app-title {
+    font-weight: bold;
+}
+
+.menu-selected-app-description {
+    max-width: 150px;
+}
+
+
+/* Menu search box */
+.menu-search-box {
+    padding-left: 30px;
+}
+
+
+/* Right-click menu */
+.menu-applications-inner-box StScrollView {
+    border-image: url("assets/cinnamon/generated/dark-bg.svg") 7;
+    padding: .5em .1em;
+}

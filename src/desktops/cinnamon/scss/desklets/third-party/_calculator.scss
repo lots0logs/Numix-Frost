@@ -1,0 +1,87 @@
+/* ===================================================================
+   ! Calculator
+   ===================================================================*/
+
+.calc-mainBox {
+    padding: 0;
+}
+
+.calc-displayArea {
+    padding: 0;
+}
+
+.calc-displayWindow {
+    border-image: url("assets/cinnamon/generated/entry-focused.svg") 7;;
+    padding: 8px;
+    padding-top: 4px;
+    padding-bottom: 2.4em;
+
+    &-rpn {
+        border-image: url("assets/cinnamon/generated/entry-focused.svg") 7;
+        padding: 8px;
+        padding-top: 4px;
+    }
+}
+
+.calc-displayText-primary {
+    font-size: 32pt;
+    color: $dark_fg_color;
+    text-align: right;
+}
+
+.calc-displayText-secondary {
+    font-size: 10pt;
+    color: $info_fg_color;
+    text-align: right;
+    padding-bottom: 8px;
+}
+
+.calc-displayText-operation {
+    color: $info_fg_color;
+}
+
+.calc-displayText-status {
+    font-size: 10pt;
+    color: shade($dark_fg_color, .2);
+}
+
+.calc-displayText-rpn {
+    color: $dark_fg_color;
+    font-size: 10pt;
+}
+
+.calc-stackArea {
+    height: 85px;
+    padding-top: .8em;
+    padding-bottom: 0;
+}
+
+.calc-navigation-box {
+    padding: 0 0 0 8px;
+    width: 16px;
+    border: none;
+}
+
+.calc-navigation-icon {
+    color: $dark_fg_color;
+    icon-size: 16px;
+}
+
+.calc-navigation-button {
+    border: none;
+
+    &:hover .calc-navigation-icon {
+        color: $selected_bg_color;
+    }
+}
+
+.calc-button {
+    @include btn-primary;
+    width: 3.4em, 2.8em;
+    height: 3.4em, 2.8em;
+
+
+    &-padding {
+        padding: .2em;
+    }
+}

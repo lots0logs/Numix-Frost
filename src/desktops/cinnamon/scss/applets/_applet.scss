@@ -1,0 +1,34 @@
+/* ===================================================================
+   ! Applets
+   ===================================================================*/
+
+.applet-separator {
+    background-image: url("assets/cinnamon/generated/panel-separator.svg");
+    background-repeat: repeat;
+    width: 9px;
+    padding: 0;
+
+    &-line {/*!*/}
+}
+
+.applet-label {
+    font-weight: bold;
+    color: $dark_fg_color;
+}
+
+.applet-icon { icon-size: 16px; }
+
+
+.applet-box {
+    padding-left: 4px;
+    padding-right: 4px;
+    font-weight: bold;
+    color: $dark_fg_color;
+}
+
+/* Different images used in top & bottom panels. */
+@each $v in panel-top, panel-bottom {
+    .#{$v} .applet-box:hover {
+        border-image: url("assets/cinnamon/generated/#{$v}-item-hover.svg") 4;
+    }
+}

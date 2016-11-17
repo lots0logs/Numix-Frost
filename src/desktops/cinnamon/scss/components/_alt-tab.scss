@@ -1,0 +1,54 @@
+/* ===================================================================
+   ! Alt Tab
+
+   * The styles are namespaced under the "#altTabPopup" selector
+   ===================================================================*/
+
+#altTabPopup {
+    padding: 0;
+    spacing: $spacing;
+
+    // Thumbnails box in "icons & thumbnails" mode
+    .switcher-list:last-child {
+        color: $dark_fg_color;
+        padding: 0;
+        font-size: 12px;
+        font-weight: bold;
+
+        .item-box {
+            padding: $spacing * 2;
+
+            &:selected {
+                border-image: none;
+                color: $selected_fg_color;
+            }
+        }
+    }
+
+    // Icons box in classical alt-tab mode
+    .switcher-list:first-child:last-child,
+    .switcher-list:first-child {
+        color: $dark_fg_color;
+        padding: $spacing * .4;
+        font-size: 12px;
+        font-weight: 700;
+
+        .item-box {
+            padding: $spacing * 2;
+
+            &:selected {
+                color: $selected_fg_color;
+            }
+        }
+    }
+
+    .switcher-list-item-container {
+        spacing: 0;
+    }
+
+    .thumbnail {
+        max-width: $spacing * 51.2;
+    }
+
+    .alt-tab-app {}
+}

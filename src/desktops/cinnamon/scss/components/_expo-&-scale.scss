@@ -1,0 +1,91 @@
+/* ===================================================================
+   ! Expo view
+   ===================================================================*/
+
+.expo-background {
+    background-color: alpha($dark_bg_color, .85);
+    background-repeat: repeat;
+}
+
+.expo-workspace-thumbnail-frame {
+    border: 0;
+
+    &#active {
+        box-shadow: 1px -1px $selected_bg_color,
+                    -1px 1px $selected_bg_color;
+    }
+}
+
+.workspace-thumbnails {
+    padding: $spacing * 2;
+
+    .workspace-overview-background-shade {
+        background-color: transparentize($selected_bg_color, .8);
+    }
+}
+
+.expo-workspaces-name-entry {
+    @include entry;
+}
+
+.workspace-close-button {
+    background-image: url("");
+    background-size: 100%;
+    width: 20px;
+    height: 20px;
+    -cinnamon-close-overlap: 28px;
+}
+
+.workspace-add-button {
+    background-image: url("");
+    background-size: contain;
+    background-position: center center;
+    height: 200px;
+    width: 35px;
+
+    &:hover {
+        border-image: url("") 6;
+        background-image: url("");
+    }
+}
+
+.window-close-area {
+    border-image: url("") 9;
+    background-image: url("");
+    height: 100px;
+    width: 350px;
+}
+/* ===================================================================
+   ! Scale
+   ===================================================================*/
+
+/* The background for the scale view */
+.workspace-overview-background-shade {
+    background-color: alpha(#000, .65);
+}
+
+.window-caption {
+    border-image: url("assets/cinnamon/generated/window-name.svg") 6;
+    color: $dark_fg_color;
+    font-size: 9pt;
+    font-weight: bold;
+    padding: 6px 8px;
+    spacing: 25px;
+    -cinnamon-caption-spacing: 10px;
+
+    &#selected {
+        border-image: url("assets/cinnamon/generated/window-name-focused.svg") 6;
+        color: $selected_bg_color;
+    }
+}
+
+.window-close {
+    background-image: url("assets/cinnamon/generated/close.svg");
+    background-size: 41px 61px;
+    width: 41px, 45px;
+    height: 41px, 45px;
+
+    -cinnamon-close-overlap: 24px;
+}
+
+.window-iconbox {}

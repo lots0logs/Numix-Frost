@@ -1,0 +1,39 @@
+/* ===================================================================
+   ! Checkboxes + Radio buttons
+   ===================================================================*/
+
+@mixin toggle($type) {
+    StBin {
+        background-image: url("resource:///org/numixproject/frost/gtk-3.20/assets/#{$type}-unchecked-dark.png");
+        width: 16px;
+        height: 16px;
+    }
+
+    CinnamonGenericContainer {
+        spacing: .2em;
+    }
+
+    &:checked StBin,
+    &:focus:checked StBin {
+        background-image: url("resource:///org/numixproject/frost/gtk-3.20/assets/#{$type}-checked-dark.png");
+
+        &:disabled {
+            background-image: url("resource:///org/numixproject/frost/gtk-3.20/assets/#{$type}-checked-insensitive-dark.png");
+        }
+    }
+
+    StLabel {
+        font-weight: normal;
+    }
+}
+
+
+@include exports('checkradio') {
+    .radiobutton {
+        @include toggle("radio");
+    }
+
+    .check-box {
+        @include toggle("checkbox");
+    }
+}

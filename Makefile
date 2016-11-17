@@ -1,25 +1,74 @@
+REPO_ROOT_DIR=$(shell pwd)
+REPO_DIRNAME=$(shell basename $(REPO_ROOT_DIR))
+DIST_DIR=dist/$(REPO_DIRNAME)
+SRC_DIR=src
+
+SRC_DIR_GTK=$(SRC_DIR)/toolkits/gtk-3.0
+SRC_DIR_GTK320=$(SRC_DIR)/toolkits/gtk-3.20
+SRC_DIR_CINNAMON=$(SRC_DIR)/desktops/cinnamon
+SRC_DIR_GNOME=$(SRC_DIR)/desktops/gnome-shell
+
+DIST_DIR_GTK=$(DIST_DIR)/gtk-3.0
+DIST_DIR_GTK320=$(DIST_DIR)/gtk-3.20
+DIST_DIR_CINNAMON=$(DIST_DIR)/cinnamon
+DIST_DIR_GNOME=$(DIST_DIR)/gnome-shell
+
+INSTALL_DIR=$(DESTDIR)/usr/share/themes/Numix-Frost
+
+COMPILE_RESOURCES=glib-compile-resources
 SASS=scss
 SASSFLAGS=--sourcemap=none
-GLIB_COMPILE_RESOURCES=glib-compile-resources
-RES_DIR=src/gtk-3.0
-SCSS_DIR=$(RES_DIR)/scss
-DIST_DIR=$(RES_DIR)/dist
-RES_DIR320=src/gtk-3.20
-SCSS_DIR320=$(RES_DIR320)/scss
-DIST_DIR320=$(RES_DIR320)/dist
-INSTALL_DIR=$(DESTDIR)/usr/share/themes/Numix-Frost
-ROOT_DIR=${PWD}
 UTILS=scripts/utils.sh
 
-all: clean gresource
+# Hack to make our variables available in utils script without passing them individually.
+MAKE_ENV := $(shell echo '$(.VARIABLES)' | awk -v RS=' ' '/^[a-zA-Z0-9_]+$$/')
+SHELL_EXPORT := $(foreach v,$(MAKE_ENV),$(v)='$($(v))')
 
-css:
-	$(SASS) --update $(SASSFLAGS) $(SCSS_DIR):$(DIST_DIR)
-	$(SASS) --update $(SASSFLAGS) $(SCSS_DIR320):$(DIST_DIR320)
 
-gresource: css
-	$(GLIB_COMPILE_RESOURCES) --sourcedir=$(RES_DIR) $(RES_DIR)/gtk.gresource.xml
-	$(GLIB_COMPILE_RESOURCES) --sourcedir=$(RES_DIR320) $(RES_DIR320)/gtk.gresource.xml
+all: gresource
+
+
+changes:
+	$(UTILS) changes
+
+
+clean:
+	rm -rf $(DIST_DIR)
+	rm -f $(SRC_DIR_GTK)/gtk.gresource $(SRC_DIR_GTK320)/gtk.gresource
+	rm -f $(SRC_DIR_GNOME)/gnome-shell.gresource
+
+
+create-dist:
+	mkdir -p $(DIST_DIR_GTK) $(DIST_DIR_GTK320) $(DIST_DIR_CINNAMON) $(DIST_DIR_GNOME)
+
+
+css: clean create-dist
+	$(SASS) --update $(SASSFLAGS) $(SRC_DIR_GTK)/scss:$(SRC_DIR_GTK)/dist
+	$(SASS) --update $(SASSFLAGS) $(SRC_DIR_GTK320)/scss:$(SRC_DIR_GTK320)/dist
+	$(SASS) --update $(SASSFLAGS) $(SRC_DIR_CINNAMON)/scss:$(SRC_DIR_CINNAMON)/dist
+	cp -t $(DIST_DIR_GTK) $(SRC_DIR_GTK)/{*.css,*.png}
+	cp -t $(DIST_DIR_GTK320) $(SRC_DIR_GTK320)/{*.css,*.png,*.theme}
+	cp -t $(DIST_DIR_CINNAMON) $(SRC_DIR_CINNAMON)/dist/*.css $(SRC_DIR_CINNAMON)/{*.json,*.png}
+	cp -t $(DIST_DIR_GNOME) $(SRC_DIR_GNOME)/*.*
+
+
+_gresource: css
+	$(COMPILE_RESOURCES) --sourcedir=$(SRC_DIR_GTK) $(SRC_DIR_GTK)/gtk.gresource.xml
+	$(COMPILE_RESOURCES) --sourcedir=$(SRC_DIR_GTK320) $(SRC_DIR_GTK320)/gtk.gresource.xml
+	mv $(SRC_DIR_GTK)/gtk.gresource $(DIST_DIR_GTK)
+	mv $(SRC_DIR_GTK320)/gtk.gresource $(DIST_DIR_GTK320)
+
+
+gresource: _gresource remove-scss-dist
+
+
+install: all
+	@$(SHELL_EXPORT) $(UTILS) install
+
+
+remove-scss-dist:
+	rm -rf $(SRC_DIR_GTK)/dist $(SRC_DIR_GTK320)/dist $(SRC_DIR_CINNAMON)/dist
+
 
 watch: clean
 	while true; do \
@@ -27,36 +76,20 @@ watch: clean
 		inotifywait @gtk.gresource -qr -e modify -e create -e delete $(RES_DIR); \
 	done
 
-clean:
-	rm -rf $(DIST_DIR)
-	rm -f $(RES_DIR)/gtk.gresource
-	rm -rf $(DIST_DIR320)
-	rm -f $(RES_DIR320)/gtk.gresource
-	rm -rf $(ROOT_DIR)/dist
-
-install: all
-	$(UTILS) install $(INSTALL_DIR)
 
 uninstall:
 	rm -rf $(INSTALL_DIR)
 
-changes:
-	$(UTILS) changes
 
 zip: all
-	mkdir $(ROOT_DIR)/dist
-	$(UTILS) install $(ROOT_DIR)/dist/$$(basename $(INSTALL_DIR))
-	cd $(ROOT_DIR)/dist && zip --symlinks -rq $$(basename $(INSTALL_DIR)) $$(basename $(INSTALL_DIR))
+	mkdir $(REPO_ROOT_DIR)/dist
+	$(UTILS) install $(REPO_ROOT_DIR)/dist/$$(basename $(INSTALL_DIR))
+	cd $(REPO_ROOT_DIR)/dist && zip --symlinks -rq $$(basename $(INSTALL_DIR)) $$(basename $(INSTALL_DIR))
 
 
-.PHONY: all
-.PHONY: css
-.PHONY: watch
-.PHONY: gresource
-.PHONY: clean
-.PHONY: install
-.PHONY: uninstall
-.PHONY: changes
+
+.PHONY: all changes clean create-dist css _gresource gresource
+.PHONY: install remove-scss-dist watch uninstall zip
 
 .DEFAULT_GOAL := all
 

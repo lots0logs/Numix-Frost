@@ -1,0 +1,129 @@
+/************
+ ! Panel
+*************/
+
+#panel {
+    font-weight: normal;
+    min-height: 32px;
+
+    &Left {
+        spacing: 4px;
+
+        &:dnd {
+            background-gradient-direction: vertical;
+            background-gradient-start: rgba(255, 0, 0, 0.05);
+            background-gradient-end: rgba(255, 40, 79, 0.42);
+        }
+        &:ltr {
+            padding-right: 4px;
+        }
+        &:rtl {
+            padding-left: 4px;
+        }
+    }
+
+    &Right {
+
+        &:dnd {
+            background-gradient-direction: vertical;
+            background-gradient-start: rgba(0, 0, 255, 0.05);
+            background-gradient-end: rgba(18, 21, 255, 0.42);
+        }
+        &:ltr {
+            padding-left: 4px;
+            spacing: 0px;
+        }
+        &:rtl {
+            padding-right: 4px;
+            spacing: 0px;
+        }
+    }
+
+    &Center {
+        spacing: 4px;
+
+        &:dnd {
+            background-gradient-direction: vertical;
+            background-gradient-start: rgba(0, 255, 0, 0.05);
+            background-gradient-end: rgba(0, 255, 0, 0.42);
+        }
+    }
+}
+
+.panel {
+
+    &-top, &-bottom {
+        @include linear-gradient($panel_bg_color);
+
+        color: $fg_color;
+        font-size: 1em;
+        padding: 0;
+    }
+
+    &-top {
+        box-shadow: -1px 0px 5px 0px rgba($dark_shadow, 0.65);
+    }
+
+    &-bottom {
+        box-shadow: 0px -1px 5px 0px rgba($dark_shadow, 0.65);
+    }
+
+    &-button,
+    &-status-button {
+        -natural-hpadding: 3px;
+        -minimum-hpadding: 3px;
+        border-width: 0;
+        border-radius: 0;
+        border-color: transparent;
+        background-color: transparent;
+        background-image: none;
+        color: $fg_color;
+
+        &:hover {
+            @include linear-gradient(transparentize($dark_bg_color, .10));
+
+            border-color: mix($bg_color, $fg_color, .11);
+            color: shade($fg_color, 1.08);
+        }
+
+        &:active, &:checked {
+            @include linear-gradient(transparentize($dark_bg_color, .10));
+
+            border-color: mix($bg_color, $fg_color, .21);
+            color: shade($fg_color, 1.08);
+
+            &:hover {
+                @include linear-gradient(transparentize($dark_bg_color, .10));
+
+                border-color: mix($bg_color, $fg_color, .31);
+            }
+        }
+    }
+
+    &-button {
+        -natural-hpadding: 6px;
+        -minimum-hpadding: 2px;
+        font-weight: normal;
+    }
+
+    &-dummy {
+        background-color: alpha($selected_bg_color, .8);
+
+        &:entered {
+            background-color: $selected_bg_color;
+        }
+    }
+}
+
+.system-status-icon {
+    icon-size: 16px;
+    padding: 8px 0;
+    spacing: 0;
+    margin: 0;
+}
+
+#iconLabelButton {
+    color: $fg_color;
+    font-weight: normal;
+    padding: 1px;
+}

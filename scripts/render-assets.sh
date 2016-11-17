@@ -1,38 +1,35 @@
 #! /bin/bash
 
-INKSCAPE="/usr/bin/inkscape"
-OPTIPNG="/usr/bin/optipng"
+INKSCAPE='/usr/bin/inkscape'
+OPTIPNG='/usr/bin/optipng'
+TYPE="${1:-gtk}"
 
-SRC_FILE="../src/assets/all-assets.svg"
-ASSETS_DIR="../src/assets"
-INDEX="../src/assets/all-assets.txt"
+SRC_FILE="../src/assets/${TYPE}/all-assets.svg"
+ASSETS_DIR="../src/assets/${TYPE}"
+ASSETS_LIST="../src/assets/${TYPE}/all-assets.txt"
 
-for i in `cat $INDEX`
-do 
-	if [[ -f $ASSETS_DIR/$i.png ]]; then
-		rm $ASSETS_DIR/$i.png
-	fi
+[[ -d "${ASSETS_DIR}/generated" ]] || mkdir -p "${ASSETS_DIR}/generated"
+
+while read asset 
+do
 
 	echo
-	echo Rendering $ASSETS_DIR/$i.png
-	$INKSCAPE \
-		--export-id=$i \
+	echo Rendering "${ASSETS_DIR}/generated/${asset}.png"
+	"${INKSCAPE}" \
+		--export-id="${asset}" \
 		--export-id-only \
-		--export-png=$ASSETS_DIR/$i.png \
-		$SRC_FILE >/dev/null
-
-	if [[ -f $ASSETS_DIR/$i@2.png ]]; then
-		rm $ASSETS_DIR/$i@2.png
-	fi
+		--export-png="${ASSETS_DIR}/generated/${asset}.svg" \
+		"${SRC_FILE}" >/dev/null
 
 	echo
-	echo Rendering $ASSETS_DIR/$i@2.png
-	$INKSCAPE \
-		--export-id=$i \
+	echo Rendering "${ASSETS_DIR}/generated/${asset}@2.png"
+	"${INKSCAPE}" \
+		--export-id="${asset}" \
 		--export-dpi=180 \
 		--export-id-only \
-		--export-png=$ASSETS_DIR/$i@2.png \
-		$SRC_FILE >/dev/null
-done
+		--export-png="${ASSETS_DIR}/generated/${asset}@2.png" \
+		"${SRC_FILE}" >/dev/null
+
+done < "${ASSETS_LIST}"
 
 exit 0

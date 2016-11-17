@@ -1,0 +1,94 @@
+/*********
+ ! Menu
+**********/
+
+@include exports('menu') {
+    .menu {
+        background-color: $menu_bg_color;
+        color: $menu_fg_color;
+        border: border_normal($menu_bg_color);
+        box-shadow: 0 2px 7px 3px alpha($black, .5);
+        border-radius: $roundness;
+        font-size: 1.05em;
+        font-weight: 400;
+        min-width: $spacing * 40;
+        max-width: $spacing * 40;
+        padding: 0;
+
+        &.top {
+            border-radius: 0 0 $roundness $roundness;
+        }
+
+        &.bottom {
+            border-radius: $roundness $roundness 0 0;
+        }
+
+        &.left {
+            border-radius: 0 $roundness $roundness 0;
+        }
+
+        &.right {
+            border-radius: $roundness 0 0 $roundness;
+        }
+
+        .popup-menu-icon, .popup-menu-arrow {  icon-size: 16px;  }
+
+        .popup-menu-content {
+            padding: ($spacing * 2.2) 0;
+        }
+
+        .popup-menu-item {
+            background-color: transparent;
+            padding: ($spacing * 1.2) ($spacing * 2);
+            spacing: $spacing * 1.4;
+            border: none;
+
+            // This is :active and :hover, :face_with_rolling_eyes:
+            &:active {
+                color: $selected_fg_color;
+                background-color: $selected_bg_color;
+            }
+
+            &:insensitive {
+                color: transparentize($dark_fg_color, 0.5);
+                background: none;
+            }
+        }
+
+        .popup-sub-menu {
+            background-color: shade($menu_bg_color, .8);
+            padding: ($spacing * 1.2) 0;
+
+            StBoxLayout { padding: ($spacing * 2) 0; }
+
+            .popup-menu-item *:first-child {
+                padding-left: ($spacing * 3.4);
+            }
+        }
+
+        // All icons and other graphical elements
+        .popup-inactive-menu-item {
+            color: $dark_fg_color;
+
+            &:insensitive { color: $insensitive_fg_color; }
+        }
+
+        .popup-separator-menu-item {
+            -gradient-height: $spacing * .2;
+            -gradient-start: shade($menu_bg_color, ($contrast + .1));
+            -gradient-end: shade($menu_bg_color, ($contrast + .1));
+            -margin-horizontal: $spacing * .2;
+            height: $spacing * .2;
+        }
+
+        .popup-alternating-menu-item:alternate {
+            font-weight: normal;
+        }
+
+        .popup-device-menu-item { spacing: .5em; }
+
+        .popup-subtitle-menu-item { font-weight: normal; }
+
+        .nm-menu-item-icons { spacing: .5em; }
+    }
+}

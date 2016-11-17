@@ -1,6 +1,0 @@
-[submodule "includes/gtk"]
-	path = src/includes/gtk
-	url = git@github.com:GNOME/gtk.git
-[submodule "src/includes/gnome-shell"]
-	path = src/includes/gnome-shell
-	url = git@github.com:GNOME/gnome-shell.git

@@ -1,0 +1,99 @@
+/* ===================================================================
+   ! Window list
+   ===================================================================*/
+
+@include exports('window_list') {
+
+    .window-list-box {
+        padding: 0;
+
+        &.vertical {
+            padding: 0;
+        }
+    }
+
+
+    .window-list-item-label { // Cinnamon < 3.2
+        min-width: $spacing * 28;
+    }
+
+    .window-list-item-box {
+        color: shade($dark_fg_color, .8);
+        font-weight: normal;
+        padding: 0 $spacing;
+        transition-duration: 100s;
+        min-width: $spacing * 20;
+        max-width: 100%;
+
+        &:hover {
+            @include linear-gradient(transparentize(shade($dark_bg_color, 1.05), .20));
+        }
+
+        &:active,
+        &:checked,
+        &:focus {
+            @include linear-gradient(transparentize(shade($dark_bg_color, 1.1), .20));
+
+            color: $dark_fg_color;
+            font-weight: bold;
+
+            .panel-top & {
+                box-shadow: inset 0px 2px 0px 0px $selected_bg_color;
+            }
+
+            .panel-bottom & {
+                box-shadow: inset 0px -2px 0px 0px $selected_bg_color;
+            }
+
+            .panel-left & {
+                box-shadow: inset 2px 0px 0px 0px $selected_bg_color;
+            }
+
+            .panel-right & {
+                box-shadow: inset -2px 0px 0px 0px $selected_bg_color;
+            }
+        }
+
+        .panel-top &,
+        .panel-bottom & {
+            padding: 0 ($spacing * 1.2);
+        }
+
+        .panel-left &,
+        .panel-right & {
+            padding: ($spacing * 1.2) 0;
+        }
+
+        StLabel {
+            max-width: $spacing * 25;
+        }
+    }
+
+    .window-list-item-demands-attention,
+    .window-list-item-demands-attention:hover {
+        @include linear-gradient(transparentize(shade($base_color, 1.2), .15));
+
+        color: $selected_bg_color;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    /* This styles the window-list preview and window name
+       in "cover" and "timeline" alt-tab modes */
+    .switcher-list {
+        @include linear-gradient(shade($base_color, 1.2));
+        @include border($borders_color);
+
+        color: $dark_fg_color;
+        padding: $spacing * .6;
+        font-weight: normal;
+
+        > StBoxLayout {
+            spacing: .4em;
+
+            > StBoxLayout {
+                spacing: .4em;
+            }
+        }
+    }
+}

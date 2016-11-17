@@ -1,0 +1,36 @@
+/* ===================================================================
+   ! Desklets
+   ===================================================================*/
+
+.desklet {
+    color: $dark_fg_color;
+
+    &-with-borders {
+        border-image: url("assets/cinnamon/generated/popup.svg") 9;
+        color: $dark_fg_color;
+        font-weight: bold;
+        padding: 5px;
+    }
+
+    &-with-borders-and-header {
+        border-image: url("assets/cinnamon/generated/desklet-body.svg") 9;
+        color: $dark_fg_color;
+        font-weight: bold;
+        padding: 5px;
+    }
+
+    &-header {
+        border-image: url("assets/cinnamon/generated/desklet-header.svg") 11;
+        font-size: 10pt;
+        font-weight: bold;
+        text-shadow: none;
+        color: $dark_fg_color;
+        padding: 8px 5px;
+    }
+
+    &-drag-placeholder {
+        border: 0 solid rgba(0, 0, 0, 0);
+        border-radius: 0;
+        background: none;
+    }
+}

@@ -1,0 +1,22 @@
+/* Official Applets */
+@import 'applet';
+@import 'calendar';
+@import 'menu';
+@import 'panel-launcher';
+@import 'sound';
+@import 'user-applet';
+@import 'window-list';
+@import 'windows-quick-list';
+@import 'workspace-switcher';
+
+/* 3rd-Party Applets */
+@import 'third-party/color-picker';
+@import 'third-party/configurable-menu';
+@import 'third-party/desktop-capture';
+@import 'third-party/slingshot';
+@import 'third-party/stopwatch';
+@import 'third-party/system-tray-collapsible';
+@import 'third-party/weather';
+@import 'third-party/window-app-grouping';
+@import 'third-party/xcenter';
+

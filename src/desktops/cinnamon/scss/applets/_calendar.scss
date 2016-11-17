@@ -1,0 +1,110 @@
+/* ===================================================================
+   ! Calendar
+   ===================================================================*/
+
+.datemenu-date-label {
+    padding: .7em 1.3em .4em 1.3em;
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: center;
+    color: $dark_fg_color;
+}
+
+.calendar {
+    padding: .8em 1.3em .6em 1.3em;
+    spacing-rows: 2px;
+    spacing-columns: 2px;
+}
+
+.calendar-month-label {
+    padding-top: 2px;
+    font-size: 9pt;
+    font-weight: bold;
+    color: shade($dark_fg_color, .2);
+}
+
+.calendar-change-month-back,
+.calendar-change-month-forward:rtl {
+    background-image: url("assets/cinnamon/generated/calendar-arrow-left.svg");
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+
+
+    &:hover {
+        background-image: url("assets/cinnamon/generated/calendar-arrow-left-hover.svg");
+    }
+}
+
+.calendar-change-month-forward,
+.calendar-change-month-back:rtl {
+    background-image: url("assets/cinnamon/generated/calendar-arrow-right.svg");
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+
+
+    &:hover {
+        background-image: url("assets/cinnamon/generated/calendar-arrow-right-hover.svg");
+    }
+}
+
+
+.calendar-day {/* ! */}
+
+
+.calendar-day-top {/* ! */}
+
+
+.calendar-day-left {/* ! */}
+
+
+.calendar-day-base {
+    font-size: 9pt;
+    font-weight: bold;
+    text-align: center;
+    width: 2.3em, 2.5em;
+    height: 2.3em, 2.5em;
+
+}
+
+.calendar-day-heading {
+    color: $dark_fg_color;
+    padding: 1.2em 0 .6em 0;
+    height: 1.5em;
+}
+
+.calendar-work-day {
+    border-image: url("assets/cinnamon/generated/calendar-work-day.svg") 6;
+    border: none;
+    color: $dark_fg_color;
+}
+
+.calendar-nonwork-day {
+    border-image: url("assets/cinnamon/generated/calendar-nonwork-day.svg") 6;
+    border: none;
+    color: shade($dark_fg_color, .2);
+}
+
+.calendar-today {
+    border-image: url("assets/cinnamon/generated/calendar-today.svg") 6;
+    color: $selected_bg_color;
+    font-weight: bold;
+}
+
+.calendar-other-month-day {
+    border-image: url("assets/cinnamon/generated/calendar-other-month-day.svg") 6;
+    color: $osd_insensitive_fg_color;
+    font-weight: normal;
+}
+
+.calendar-week-number {
+    color: shade($dark_fg_color, .2);
+    font-size: 9pt;
+    font-weight: normal;
+    width: 1.2em;
+    height: 1.2em;
+
+    padding-top: .7em;
+    padding-right: .6em;
+}

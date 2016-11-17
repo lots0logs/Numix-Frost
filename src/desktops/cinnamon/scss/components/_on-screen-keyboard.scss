@@ -1,0 +1,33 @@
+/* ===================================================================
+   ! On screen keyboard
+   ===================================================================*/
+
+#keyboard {
+    border-image: url("assets/cinnamon/generated/keyboard-bg.svg") 9;
+}
+
+.keyboard-layout {
+    spacing: 8px;
+    padding: 8px;
+}
+
+.keyboard-row {
+    spacing: 15px;
+}
+
+.keyboard-key {
+    @include btn-primary;
+    @include btn-width(small);
+    font-size: 12pt;
+}
+
+.keyboard-subkeys {
+    padding: 0;
+    -arrow-background-color: #444444;
+    -arrow-border-width: 1px;
+    -arrow-border-color: #515151;
+    -arrow-border-radius: 2px;
+    -arrow-base: 16px;
+    -arrow-rise: 8px;
+    -boxpointer-gap: 2px;
+}
