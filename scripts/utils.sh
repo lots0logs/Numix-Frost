@@ -24,15 +24,24 @@ _set_theme_parts_array() {
 }
 
 
+_remove_generated_css_files_and_finalize_dist_dir() {
+	rm -f "${DIST_DIR_GTK}"/*.css "${DIST_DIR_GTK320}"/*.css "${DIST_DIR_CINNAMON}"/*.css
+
+	cp -t "${DIST_DIR_GTK}"      "${SRC_DIR_GTK}"/{*.css,*.png}
+	cp -t "${DIST_DIR_GTK320}"   "${SRC_DIR_GTK320}"/{*.css,*.png,*.theme}
+	cp -t "${DIST_DIR_CINNAMON}" "${SRC_DIR_CINNAMON}"/{*.css,*.json,*.png}
+	cp -t "${DIST_DIR_GNOME}"    "${SRC_DIR_GNOME}"/*.css
+}
+
+
 do_clean() {
 	rm -rf "${DIST_DIR}"
 }
 
 
 do_create_dist() {
-	mkdir -p "${DIST_DIR_GTK}" "${DIST_DIR_GTK320}" "${DIST_DIR_CINNAMON}"
+	mkdir -p "${DIST_DIR_GTK}" "${DIST_DIR_GTK320}" "${DIST_DIR_CINNAMON}" "${DIST_DIR_GNOME}"
 	ln -sf "${SRC_DIR}/common/assets/generated" "${DIST_DIR}/assets"
-	ln -sf "${SRC_DIR_GNOME}" "${DIST_DIR_GNOME}"
 }
 
 
@@ -40,16 +49,18 @@ do_css() {
 	"${SASS}" --update "${SASSFLAGS}" "${SRC_DIR_GTK}/scss":"${SRC_DIR_GTK}/dist"
 	"${SASS}" --update "${SASSFLAGS}" "${SRC_DIR_GTK320}/scss":"${SRC_DIR_GTK320}/dist"
 	"${SASS}" --update "${SASSFLAGS}" "${SRC_DIR_CINNAMON}/scss":"${SRC_DIR_CINNAMON}/dist"
-	cp -t "${DIST_DIR_GTK}" "${SRC_DIR_GTK}"/{*.css,*.png}
-	cp -t "${DIST_DIR_GTK320}" "${SRC_DIR_GTK320}"/{*.css,*.png,*.theme}
-	cp -t "${DIST_DIR_CINNAMON}" "${SRC_DIR_CINNAMON}"/dist/*.css "${SRC_DIR_CINNAMON}"/{*.json,*.png}
-	# cp -t "${DIST_DIR_GNOME}" "${SRC_DIR_GNOME}"/*.*
+	cp -t "${DIST_DIR_GTK}" "${SRC_DIR_GTK}"/dist/*.css
+	cp -t "${DIST_DIR_GTK320}" "${SRC_DIR_GTK320}"/dist/*.css
+	cp -t "${DIST_DIR_CINNAMON}" "${SRC_DIR_CINNAMON}"/dist/*.css
+	cp -t "${DIST_DIR_GNOME}" "${SRC_DIR_GNOME}"/scss/*.css
 }
 
 
 do__gresource() {
 	"${COMPILE_RESOURCES}" --sourcedir="${DIST_DIR}" "${SRC_DIR}/common/${REPO_DIRNAME,,}.gresource.xml"
 	mv "${SRC_DIR}/common/${REPO_DIRNAME,,}.gresource" "${DIST_DIR_GTK}"
+
+	_remove_generated_css_files_and_finalize_dist_dir
 }
 
 
@@ -66,6 +77,9 @@ do_install() {
 
 	# Create INSTALL_DIR path except for the last directory in path.
 	install -dm755 "$(dirname ${INSTALL_DIR})"
+
+	# Remove symlink to assets directory (assets are all in gresource bundle)
+	unlink "${DIST_DIR}/assets"
 
 	# Copy DIST_DIR as INSTALL_DIR
 	cp -r "${DIST_DIR}" "${INSTALL_DIR}"
