@@ -1,24 +1,25 @@
-REPO_ROOT_DIR=$(shell pwd)
-REPO_DIRNAME=$(shell basename $(REPO_ROOT_DIR))
-DIST_DIR=$(REPO_ROOT_DIR)/dist/$(REPO_DIRNAME)
-SRC_DIR=$(REPO_ROOT_DIR)/src
+THIS:=$(realpath $(lastword $(MAKEFILE_LIST)))
+REPO_ROOT_DIR:=$(dir $(THIS))
+REPO_DIR_NAME:=$(shell basename $(REPO_ROOT_DIR))
+DIST_DIR:=$(REPO_ROOT_DIR)dist/$(REPO_DIR_NAME)
+SRC_DIR:=$(REPO_ROOT_DIR)src
 
-SRC_DIR_GTK=$(SRC_DIR)/toolkits/gtk-3.0
-SRC_DIR_GTK320=$(SRC_DIR)/toolkits/gtk-3.20
-SRC_DIR_CINNAMON=$(SRC_DIR)/desktops/cinnamon
-SRC_DIR_GNOME=$(SRC_DIR)/desktops/gnome-shell
+SRC_DIR_GTK:=$(SRC_DIR)/toolkits/gtk-3.0
+SRC_DIR_GTK320:=$(SRC_DIR)/toolkits/gtk-3.20
+SRC_DIR_CINNAMON:=$(SRC_DIR)/desktops/cinnamon
+SRC_DIR_GNOME:=$(SRC_DIR)/desktops/gnome-shell
 
-DIST_DIR_GTK=$(DIST_DIR)/gtk-3.0
-DIST_DIR_GTK320=$(DIST_DIR)/gtk-3.20
-DIST_DIR_CINNAMON=$(DIST_DIR)/cinnamon
-DIST_DIR_GNOME=$(DIST_DIR)/gnome-shell
+DIST_DIR_GTK:=$(DIST_DIR)/gtk-3.0
+DIST_DIR_GTK320:=$(DIST_DIR)/gtk-3.20
+DIST_DIR_CINNAMON:=$(DIST_DIR)/cinnamon
+DIST_DIR_GNOME:=$(DIST_DIR)/gnome-shell
 
-INSTALL_DIR=$(DESTDIR)/usr/share/themes/Numix-Frost
+INSTALL_DIR:=$(DESTDIR)/usr/share/themes/$(REPO_DIR_NAME)
 
-COMPILE_RESOURCES=glib-compile-resources
-SASS=scss
-SASSFLAGS=--sourcemap=none
-UTILS=scripts/utils.sh
+COMPILE_RESOURCES:=glib-compile-resources
+SASS:=scss
+SASSFLAGS:=--sourcemap=none
+UTILS:=$(realpath $(REPO_ROOT_DIR)/scripts/utils.sh)
 
 # Hack to make our variables available in utils script without passing them individually.
 MAKE_ENV := $(shell echo '$(.VARIABLES)' | awk -v RS=' ' '/^[a-zA-Z0-9_]+$$/')
@@ -37,7 +38,7 @@ clean:
 
 
 create-dist:
-	@$(SHELL_EXPORT) $(UTILS) create-dist
+	$(SHELL_EXPORT) $(UTILS) create-dist
 
 
 css: clean create-dist
@@ -47,12 +48,13 @@ css: clean create-dist
 _gresource: css
 	@$(SHELL_EXPORT) $(UTILS) _gresource
 
-
 gresource: _gresource remove-scss-dist
 
 
-install: all
+_install:
 	@$(SHELL_EXPORT) $(UTILS) install
+
+install: all _install
 
 
 remove-scss-dist:
@@ -78,7 +80,7 @@ zip: all
 
 
 .PHONY: all changes clean create-dist css _gresource gresource
-.PHONY: install remove-scss-dist watch uninstall zip
+.PHONY: _install install remove-scss-dist watch uninstall zip
 
 .DEFAULT_GOAL := all
 

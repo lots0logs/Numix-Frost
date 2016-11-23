@@ -25,12 +25,11 @@ _set_theme_parts_array() {
 
 
 _remove_generated_css_files_and_finalize_dist_dir() {
-	rm -f "${DIST_DIR_GTK}"/*.css "${DIST_DIR_GTK320}"/*.css "${DIST_DIR_CINNAMON}"/*.css
-
-	cp -t "${DIST_DIR_GTK}"      "${SRC_DIR_GTK}"/{*.css,*.png}
-	cp -t "${DIST_DIR_GTK320}"   "${SRC_DIR_GTK320}"/{*.css,*.png,*.theme}
-	cp -t "${DIST_DIR_CINNAMON}" "${SRC_DIR_CINNAMON}"/{*.css,*.json,*.png}
-	cp -t "${DIST_DIR_GNOME}"    "${SRC_DIR_GNOME}"/*.css
+	{ rm -f "${DIST_DIR_GTK}"/*.css "${DIST_DIR_GTK320}"/*.css "${DIST_DIR_CINNAMON}"/*.css \
+		&& cp -t "${DIST_DIR_GTK}"      "${SRC_DIR_GTK}"/{*.css,*.png} \
+		&& cp -t "${DIST_DIR_GTK320}"   "${SRC_DIR_GTK320}"/{*.css,*.png,*.theme} \
+		&& cp -t "${DIST_DIR_CINNAMON}" "${SRC_DIR_CINNAMON}"/{*.css,*.json,*.png} \
+		&& cp -t "${DIST_DIR_GNOME}"    "${SRC_DIR_GNOME}"/*.css; }
 }
 
 
@@ -40,27 +39,27 @@ do_clean() {
 
 
 do_create_dist() {
-	mkdir -p "${DIST_DIR_GTK}" "${DIST_DIR_GTK320}" "${DIST_DIR_CINNAMON}" "${DIST_DIR_GNOME}"
-	ln -sf "${SRC_DIR}/common/assets/generated" "${DIST_DIR}/assets"
+	echo "${DIST_DIR_GTK}" "${DIST_DIR_GTK320}" "${DIST_DIR_CINNAMON}" "${DIST_DIR_GNOME}"
+	{ mkdir -p "${DIST_DIR_GTK}" "${DIST_DIR_GTK320}" "${DIST_DIR_CINNAMON}" "${DIST_DIR_GNOME}" \
+		&& ln -sf "${SRC_DIR}/common/assets/generated" "${DIST_DIR}/assets"; }
 }
 
 
 do_css() {
-	"${SASS}" --update "${SASSFLAGS}" "${SRC_DIR_GTK}/scss":"${SRC_DIR_GTK}/dist"
-	"${SASS}" --update "${SASSFLAGS}" "${SRC_DIR_GTK320}/scss":"${SRC_DIR_GTK320}/dist"
-	"${SASS}" --update "${SASSFLAGS}" "${SRC_DIR_CINNAMON}/scss":"${SRC_DIR_CINNAMON}/dist"
-	cp -t "${DIST_DIR_GTK}" "${SRC_DIR_GTK}"/dist/*.css
-	cp -t "${DIST_DIR_GTK320}" "${SRC_DIR_GTK320}"/dist/*.css
-	cp -t "${DIST_DIR_CINNAMON}" "${SRC_DIR_CINNAMON}"/dist/*.css
-	cp -t "${DIST_DIR_GNOME}" "${SRC_DIR_GNOME}"/scss/*.css
+	{ "${SASS}" --update "${SASSFLAGS}" "${SRC_DIR_GTK}/scss":"${SRC_DIR_GTK}/dist" \
+		&& "${SASS}" --update "${SASSFLAGS}" "${SRC_DIR_GTK320}/scss":"${SRC_DIR_GTK320}/dist" \
+		&& "${SASS}" --update "${SASSFLAGS}" "${SRC_DIR_CINNAMON}/scss":"${SRC_DIR_CINNAMON}/dist" \
+		&& cp -t "${DIST_DIR_GTK}" "${SRC_DIR_GTK}"/dist/*.css \
+		&& cp -t "${DIST_DIR_GTK320}" "${SRC_DIR_GTK320}"/dist/*.css \
+		&& cp -t "${DIST_DIR_CINNAMON}" "${SRC_DIR_CINNAMON}"/dist/*.css \
+		&& cp -t "${DIST_DIR_GNOME}" "${SRC_DIR_GNOME}"/scss/*.css; }
 }
 
 
 do__gresource() {
-	"${COMPILE_RESOURCES}" --sourcedir="${DIST_DIR}" "${SRC_DIR}/common/${REPO_DIRNAME,,}.gresource.xml"
-	mv "${SRC_DIR}/common/${REPO_DIRNAME,,}.gresource" "${DIST_DIR_GTK}"
-
-	_remove_generated_css_files_and_finalize_dist_dir
+	{ "${COMPILE_RESOURCES}" --sourcedir="${DIST_DIR}" "${SRC_DIR}/common/${REPO_DIRNAME,,}.gresource.xml" \
+		&& mv "${SRC_DIR}/common/${REPO_DIRNAME,,}.gresource" "${DIST_DIR_GTK}" \
+		&& _remove_generated_css_files_and_finalize_dist_dir; }
 }
 
 
@@ -69,7 +68,7 @@ do_install() {
 	for cp_command_args in "${THEME_PARTS[@]}"
 	do
 		cp_command_args=(${cp_command_args})
-		cp "${cp_command_args[@]}"
+		cp "${cp_command_args[@]}" || return 1
 	done
 
 	# Remove previous install if one exists.
