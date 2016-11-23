@@ -33,30 +33,19 @@ changes:
 
 
 clean:
-	rm -rf $(DIST_DIR)
-	rm -f $(SRC_DIR_GTK)/gtk.gresource $(SRC_DIR_GTK320)/gtk.gresource
-	rm -f $(SRC_DIR_GNOME)/gnome-shell.gresource
+	@$(SHELL_EXPORT) $(UTILS) clean
 
 
 create-dist:
-	mkdir -p $(DIST_DIR_GTK) $(DIST_DIR_GTK320) $(DIST_DIR_CINNAMON) $(DIST_DIR_GNOME)
+	$(UTILS) create-dist
 
 
 css: clean create-dist
-	$(SASS) --update $(SASSFLAGS) $(SRC_DIR_GTK)/scss:$(SRC_DIR_GTK)/dist
-	$(SASS) --update $(SASSFLAGS) $(SRC_DIR_GTK320)/scss:$(SRC_DIR_GTK320)/dist
-	$(SASS) --update $(SASSFLAGS) $(SRC_DIR_CINNAMON)/scss:$(SRC_DIR_CINNAMON)/dist
-	cp -t $(DIST_DIR_GTK) $(SRC_DIR_GTK)/{*.css,*.png}
-	cp -t $(DIST_DIR_GTK320) $(SRC_DIR_GTK320)/{*.css,*.png,*.theme}
-	cp -t $(DIST_DIR_CINNAMON) $(SRC_DIR_CINNAMON)/dist/*.css $(SRC_DIR_CINNAMON)/{*.json,*.png}
-	cp -t $(DIST_DIR_GNOME) $(SRC_DIR_GNOME)/*.*
+	@$(SHELL_EXPORT) $(UTILS) css
 
 
 _gresource: css
-	$(COMPILE_RESOURCES) --sourcedir=$(SRC_DIR_GTK) $(SRC_DIR_GTK)/gtk.gresource.xml
-	$(COMPILE_RESOURCES) --sourcedir=$(SRC_DIR_GTK320) $(SRC_DIR_GTK320)/gtk.gresource.xml
-	mv $(SRC_DIR_GTK)/gtk.gresource $(DIST_DIR_GTK)
-	mv $(SRC_DIR_GTK320)/gtk.gresource $(DIST_DIR_GTK320)
+	@$(SHELL_EXPORT) $(UTILS) _gresource
 
 
 gresource: _gresource remove-scss-dist
