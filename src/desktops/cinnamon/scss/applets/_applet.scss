@@ -3,7 +3,7 @@
    ===================================================================*/
 
 .applet-separator {
-    background-image: url("assets/cinnamon/generated/panel-separator.svg");
+    background-image: url("../assets/cinnamon/panel-separator.svg");
     background-repeat: repeat;
     width: 9px;
     padding: 0;
@@ -29,6 +29,6 @@
 /* Different images used in top & bottom panels. */
 @each $v in panel-top, panel-bottom {
     .#{$v} .applet-box:hover {
-        border-image: url("assets/cinnamon/generated/#{$v}-item-hover.svg") 4;
+        border-image: url("../assets/cinnamon/#{$v}-item-hover.svg") 4;
     }
 }

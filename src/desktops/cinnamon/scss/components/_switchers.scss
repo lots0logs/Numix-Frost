@@ -8,10 +8,10 @@
     background-size: contain;
 
     &-us, &-intl {
-        background-image: url("assets/cinnamon/generated/off.svg");
+        background-image: url("../assets/cinnamon/off.svg");
     }
 
     &-us:checked, &-intl:checked {
-        background-image: url("assets/cinnamon/generated/on.svg");
+        background-image: url("../assets/cinnamon/on.svg");
     }
 }

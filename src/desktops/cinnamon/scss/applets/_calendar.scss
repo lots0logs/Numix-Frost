@@ -25,27 +25,27 @@
 
 .calendar-change-month-back,
 .calendar-change-month-forward:rtl {
-    background-image: url("assets/cinnamon/generated/calendar-arrow-left.svg");
+    background-image: url("../assets/cinnamon/calendar-arrow-left.svg");
     background-size: 16px;
     width: 16px;
     height: 16px;
 
 
     &:hover {
-        background-image: url("assets/cinnamon/generated/calendar-arrow-left-hover.svg");
+        background-image: url("../assets/cinnamon/calendar-arrow-left-hover.svg");
     }
 }
 
 .calendar-change-month-forward,
 .calendar-change-month-back:rtl {
-    background-image: url("assets/cinnamon/generated/calendar-arrow-right.svg");
+    background-image: url("../assets/cinnamon/calendar-arrow-right.svg");
     background-size: 16px;
     width: 16px;
     height: 16px;
 
 
     &:hover {
-        background-image: url("assets/cinnamon/generated/calendar-arrow-right-hover.svg");
+        background-image: url("../assets/cinnamon/calendar-arrow-right-hover.svg");
     }
 }
 
@@ -75,25 +75,25 @@
 }
 
 .calendar-work-day {
-    border-image: url("assets/cinnamon/generated/calendar-work-day.svg") 6;
+    border-image: url("../assets/cinnamon/calendar-work-day.svg") 6;
     border: none;
     color: $dark_fg_color;
 }
 
 .calendar-nonwork-day {
-    border-image: url("assets/cinnamon/generated/calendar-nonwork-day.svg") 6;
+    border-image: url("../assets/cinnamon/calendar-nonwork-day.svg") 6;
     border: none;
     color: shade($dark_fg_color, .2);
 }
 
 .calendar-today {
-    border-image: url("assets/cinnamon/generated/calendar-today.svg") 6;
+    border-image: url("../assets/cinnamon/calendar-today.svg") 6;
     color: $selected_bg_color;
     font-weight: bold;
 }
 
 .calendar-other-month-day {
-    border-image: url("assets/cinnamon/generated/calendar-other-month-day.svg") 6;
+    border-image: url("../assets/cinnamon/calendar-other-month-day.svg") 6;
     color: $osd_insensitive_fg_color;
     font-weight: normal;
 }

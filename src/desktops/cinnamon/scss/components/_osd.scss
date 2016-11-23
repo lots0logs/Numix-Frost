@@ -9,14 +9,14 @@
     padding: 1.4em;
     font-size: 14pt;
     color: $dark_fg_color;
-    border-image: url("assets/cinnamon/generated/popup.svg") 7;
+    border-image: url("../assets/cinnamon/popup.svg") 7;
 }
 
 .osd-window {
     spacing: .4em;
     padding: 1.4em;
     color: $dark_fg_color;
-    border-image: url("assets/cinnamon/generated/popup.svg") 10;
+    border-image: url("../assets/cinnamon/popup.svg") 10;
     font-size: 20pt;
 
     StIcon { color: $dark_fg_color; }
@@ -28,7 +28,7 @@
 }
 
 .workspace-osd {
-    border-image: url("assets/cinnamon/generated/popup.svg") 7;
+    border-image: url("../assets/cinnamon/popup.svg") 7;
     padding: 12px 17px;
     color: $dark_fg_color;
     font-weight: bold;
@@ -40,7 +40,7 @@
    ===================================================================*/
 
 #LookingGlassDialog {
-    border-image: url("assets/cinnamon/generated/popup.svg") 7;
+    border-image: url("../assets/cinnamon/popup.svg") 7;
     padding: 1.4em;
     spacing: .4em;
     color: $dark_fg_color;

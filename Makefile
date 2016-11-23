@@ -1,7 +1,7 @@
 REPO_ROOT_DIR=$(shell pwd)
 REPO_DIRNAME=$(shell basename $(REPO_ROOT_DIR))
-DIST_DIR=dist/$(REPO_DIRNAME)
-SRC_DIR=src
+DIST_DIR=$(REPO_ROOT_DIR)/dist/$(REPO_DIRNAME)
+SRC_DIR=$(REPO_ROOT_DIR)/src
 
 SRC_DIR_GTK=$(SRC_DIR)/toolkits/gtk-3.0
 SRC_DIR_GTK320=$(SRC_DIR)/toolkits/gtk-3.20
@@ -37,7 +37,7 @@ clean:
 
 
 create-dist:
-	$(UTILS) create-dist
+	@$(SHELL_EXPORT) $(UTILS) create-dist
 
 
 css: clean create-dist

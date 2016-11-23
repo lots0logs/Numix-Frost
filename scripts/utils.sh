@@ -26,16 +26,13 @@ _set_theme_parts_array() {
 
 do_clean() {
 	rm -rf "${DIST_DIR}"
-	rm -f \
-		"${SRC_DIR_GTK}/gtk.gresource" \
-		"${SRC_DIR_GTK320}/gtk.gresource" \
-		"${SRC_DIR_GNOME}/gnome-shell.gresource" \
-		"${SRC_DIR_CINNAMON}/cinnamon.gresource"
 }
 
 
 do_create_dist() {
-	mkdir -p "${DIST_DIR_GTK}" "${DIST_DIR_GTK320}" "${DIST_DIR_CINNAMON}" "${DIST_DIR_GNOME}"
+	mkdir -p "${DIST_DIR_GTK}" "${DIST_DIR_GTK320}" "${DIST_DIR_CINNAMON}"
+	ln -sf "${SRC_DIR}/common/assets/generated" "${DIST_DIR}/assets"
+	ln -sf "${SRC_DIR_GNOME}" "${DIST_DIR_GNOME}"
 }
 
 
@@ -46,19 +43,13 @@ do_css() {
 	cp -t "${DIST_DIR_GTK}" "${SRC_DIR_GTK}"/{*.css,*.png}
 	cp -t "${DIST_DIR_GTK320}" "${SRC_DIR_GTK320}"/{*.css,*.png,*.theme}
 	cp -t "${DIST_DIR_CINNAMON}" "${SRC_DIR_CINNAMON}"/dist/*.css "${SRC_DIR_CINNAMON}"/{*.json,*.png}
-	cp -t "${DIST_DIR_GNOME}" "${SRC_DIR_GNOME}"/*.*
+	# cp -t "${DIST_DIR_GNOME}" "${SRC_DIR_GNOME}"/*.*
 }
 
 
 do__gresource() {
-	"${COMPILE_RESOURCES}" --sourcedir="${SRC_DIR_GTK}"      "${SRC_DIR_GTK}/gtk.gresource.xml"
-	"${COMPILE_RESOURCES}" --sourcedir="${SRC_DIR_GTK320}"   "${SRC_DIR_GTK320}/gtk.gresource.xml"
-	"${COMPILE_RESOURCES}" --sourcedir="${SRC_DIR_GNOME}"    "${SRC_DIR_GNOME}/gnome-shell.gresource.xml"
-	"${COMPILE_RESOURCES}" --sourcedir="${SRC_DIR_CINNAMON}" "${SRC_DIR_CINNAMON}/cinnamon.gresource.xml"
-	mv "${SRC_DIR_GTK}/gtk.gresource" "${DIST_DIR_GTK}"
-	mv "${SRC_DIR_GTK320}/gtk.gresource" "${DIST_DIR_GTK320}"
-	mv "${SRC_DIR_GNOME}/gnome-shell.gresource" "${DIST_DIR_GNOME}"
-	mv "${SRC_DIR_CINNAMON}/cinnamon.gresource" "${DIST_DIR_CINNAMON}"
+	"${COMPILE_RESOURCES}" --sourcedir="${DIST_DIR}" "${SRC_DIR}/common/${REPO_DIRNAME,,}.gresource.xml"
+	mv "${SRC_DIR}/common/${REPO_DIRNAME,,}.gresource" "${DIST_DIR_GTK}"
 }
 
 

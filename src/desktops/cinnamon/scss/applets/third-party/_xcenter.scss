@@ -13,7 +13,7 @@
         padding: .4em 1.3em;
 
         &:hover {
-            border-image: url("assets/cinnamon/generated/hover.svg") 7;
+            border-image: url("../assets/cinnamon/hover.svg") 7;
         }
     }
 }
@@ -33,7 +33,7 @@
 }
 
 .xCenter-pane {
-    border-image: url("assets/cinnamon/generated/separator-vertical.svg") 11;
+    border-image: url("../assets/cinnamon/separator-vertical.svg") 11;
     padding: 7px 0;
     padding-right: 1px;
 

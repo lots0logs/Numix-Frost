@@ -12,7 +12,7 @@
 }
 
 #notification {
-    border-image: url("assets/cinnamon/generated/popup.svg") 7;
+    border-image: url("../assets/cinnamon/popup.svg") 7;
     padding: 1.3em;
     spacing-rows: .5em;
     spacing-columns: 10px;
@@ -92,15 +92,15 @@
 /* Notifs look inside the notification applet & other popups. */
 .popup-menu-content {
     #notification {
-        border-image: url("assets/cinnamon/generated/dark-bg-marked-orange.svg") 7;
+        border-image: url("../assets/cinnamon/dark-bg-marked-orange.svg") 7;
         padding: .8em .8em .6em 1em;
 
         &.multi-line-notification {
-            border-image: url("assets/cinnamon/generated/dark-bg-marked-blue.svg") 7;
+            border-image: url("../assets/cinnamon/dark-bg-marked-blue.svg") 7;
         }
 
         &.notification-with-image {
-            border-image: url("assets/cinnamon/generated/dark-bg-marked-green.svg") 7;
+            border-image: url("../assets/cinnamon/dark-bg-marked-green.svg") 7;
             padding-bottom: .8em;
         }
     }

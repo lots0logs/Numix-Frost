@@ -40,7 +40,7 @@
 
 /* Paginator */
 .slingshot .button {
-    border-image: url("assets/cinnamon/generated//button.svg") 7;
+    border-image: url("../assets/cinnamon/button.svg") 7;
     background-gradient-direction: none;
     background-color: rgba(0, 0, 0, 0);
     border: none;
@@ -50,19 +50,19 @@
     padding: 8px 0;
 
     &:hover {
-        border-image: url("assets/cinnamon/generated//button-hover.svg") 7;
+        border-image: url("../assets/cinnamon/button-hover.svg") 7;
         background-gradient-direction: none;
         background-color: rgba(0, 0, 0, 0);
     }
 
     &:active {
-        border-image: url("assets/cinnamon/generated//button-pressed.svg") 7;
+        border-image: url("../assets/cinnamon/button-pressed.svg") 7;
         background-gradient-direction: none;
         background-color: rgba(0, 0, 0, 0);
     }
 
     &:checked {
-        border-image: url("assets/cinnamon/generated//button-focused.svg") 7;
+        border-image: url("../assets/cinnamon/button-focused.svg") 7;
         background-gradient-direction: none;
         background-color: rgba(0, 0, 0, 0);
         color: $selected_bg_color;
@@ -83,13 +83,13 @@
     padding: 0;
 
     &:hover {
-        border-image: url("assets/cinnamon/generated/hover.svg") 7;
+        border-image: url("../assets/cinnamon/hover.svg") 7;
         background-color: rgba(0, 0, 0, 0);
         color: $selected_bg_color;
     }
 
     &:focus {
-        border-image: url("assets/cinnamon/generated/hover.svg") 7;
+        border-image: url("../assets/cinnamon/hover.svg") 7;
         background-color: rgba(0, 0, 0, 0);
         color: $selected_bg_color;
     }
@@ -115,7 +115,7 @@
         font-weight: bold;
 
         &:hover {
-            border-image: url("assets/cinnamon/generated/hover.svg") 7;
+            border-image: url("../assets/cinnamon/hover.svg") 7;
             border-color: rgba(0, 0, 0, 0);
             background-color: rgba(0, 0, 0, 0);
             box-shadow: none;
@@ -131,7 +131,7 @@
         }
 
         &:checked {
-            border-image: url("assets/cinnamon/generated/highlighted-mirrored.svg") 7;
+            border-image: url("../assets/cinnamon/highlighted-mirrored.svg") 7;
             border-color: rgba(0, 0, 0, 0);
             background-color: rgba(0, 0, 0, 0);
             box-shadow: none;
@@ -139,7 +139,7 @@
         }
 
         &:hover:checked {
-            border-image: url("assets/cinnamon/generated/hover.svg") 7;
+            border-image: url("../assets/cinnamon/hover.svg") 7;
             color: $selected_bg_color;
         }
     }
@@ -149,7 +149,7 @@
 
 /* Middle button */
 .slingshot .linked .button {
-    border-image: url("assets/cinnamon/generated//linked-button-middle.svg") 9;
+    border-image: url("../assets/cinnamon/linked-button-middle.svg") 9;
     background-gradient-direction: none;
     background-color: rgba(0, 0, 0, 0);
     border: none;
@@ -158,22 +158,22 @@
     color: $dark_fg_color;
 
     &:hover {
-        border-image: url("assets/cinnamon/generated//linked-button-middle-hover.svg") 9;
+        border-image: url("../assets/cinnamon/linked-button-middle-hover.svg") 9;
     }
 
     &:active {
-        border-image: url("assets/cinnamon/generated//linked-button-middle-pressed.svg") 9;
+        border-image: url("../assets/cinnamon/linked-button-middle-pressed.svg") 9;
     }
 
     &:checked {
-        border-image: url("assets/cinnamon/generated//linked-button-middle-pressed.svg") 9;
+        border-image: url("../assets/cinnamon/linked-button-middle-pressed.svg") 9;
         color: $selected_bg_color;
     }
 }
 
 /* Leftmost button */
 .slingshot .linked .button:first-child {
-    border-image: url("assets/cinnamon/generated//linked-button-left.svg") 9;
+    border-image: url("../assets/cinnamon/linked-button-left.svg") 9;
     background-gradient-direction: none;
     background-color: rgba(0, 0, 0, 0);
     box-shadow: none;
@@ -182,22 +182,22 @@
     color: $dark_fg_color;
 
     &:hover {
-        border-image: url("assets/cinnamon/generated//linked-button-left-hover.svg") 9;
+        border-image: url("../assets/cinnamon/linked-button-left-hover.svg") 9;
     }
 
     &:active {
-        border-image: url("assets/cinnamon/generated//linked-button-left-pressed.svg") 9;
+        border-image: url("../assets/cinnamon/linked-button-left-pressed.svg") 9;
     }
 
     &:checked {
-        border-image: url("assets/cinnamon/generated//linked-button-left-checked.svg") 9;
+        border-image: url("../assets/cinnamon/linked-button-left-checked.svg") 9;
         color: $selected_bg_color;
     }
 }
 
 /* Rightmost button */
 .slingshot .linked .button:last-child {
-    border-image: url("assets/cinnamon/generated//linked-button-right.svg") 9;
+    border-image: url("../assets/cinnamon/linked-button-right.svg") 9;
     background-gradient-direction: none;
     background-color: rgba(0, 0, 0, 0);
     border-right-width: 0;
@@ -207,24 +207,24 @@
     color: $dark_fg_color;
 
     &:hover {
-        border-image: url("assets/cinnamon/generated//linked-button-right-hover.svg") 9;
+        border-image: url("../assets/cinnamon/linked-button-right-hover.svg") 9;
     }
 
     &:active,
     &:active:hover {
-        border-image: url("assets/cinnamon/generated//linked-button-right-pressed.svg") 9;
+        border-image: url("../assets/cinnamon/linked-button-right-pressed.svg") 9;
         border-right-width: 0;
     }
 
     &:checked {
-        border-image: url("assets/cinnamon/generated//linked-button-right-checked.svg") 9;
+        border-image: url("../assets/cinnamon/linked-button-right-checked.svg") 9;
         color: $selected_bg_color;
     }
 }
 
 /* Linked single button */
 .slingshot .linked .button:only-child {
-    border-image: url("assets/cinnamon/generated//button.svg") 9;
+    border-image: url("../assets/cinnamon/button.svg") 9;
     background-gradient-direction: none;
     background-color: rgba(0, 0, 0, 0);
     border-width: 0;
@@ -233,15 +233,15 @@
     color: $dark_fg_color;
 
     &:hover {
-        border-image: url("assets/cinnamon/generated//button-hover.svg") 9;
+        border-image: url("../assets/cinnamon/button-hover.svg") 9;
     }
 
     &:active {
-        border-image: url("assets/cinnamon/generated//button-pressed.svg") 9;
+        border-image: url("../assets/cinnamon/button-pressed.svg") 9;
     }
 
     &:checked {
-        border-image: url("assets/cinnamon/generated//button-pressed.svg") 9;
+        border-image: url("../assets/cinnamon/button-pressed.svg") 9;
         color: $selected_bg_color;
     }
 }

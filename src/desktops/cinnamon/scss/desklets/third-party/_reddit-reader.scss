@@ -3,7 +3,7 @@
    ===================================================================*/
 
 .reddit-reader {
-    border-image: url("assets/cinnamon/generated/popup.svg") 7;
+    border-image: url("../assets/cinnamon/popup.svg") 7;
     padding: 4px;
     color: $dark_fg_color;
 
@@ -14,7 +14,7 @@
 
 /* Title */
 .reddit-title-bar {
-    border-image: url("assets/cinnamon/generated/entry.svg") 7;
+    border-image: url("../assets/cinnamon/entry.svg") 7;
     padding: 10px;
     font-size: 10pt;
     font-weight: bold;
@@ -43,14 +43,14 @@
 }
 
 .reddit-post {
-    border-image: url("assets/cinnamon/generated/dark-bg-top.svg") 7;
+    border-image: url("../assets/cinnamon/dark-bg-top.svg") 7;
     padding: 10px;
     color: $dark_fg_color;
     font-size: 8pt;
 }
 
 .reddit-info-box {
-    border-image: url("assets/cinnamon/generated/dark-bg-bottom.svg") 7;
+    border-image: url("../assets/cinnamon/dark-bg-bottom.svg") 7;
     padding: 0 10px 10px 10px;
     spacing: 10px;
     font-size: 7pt;

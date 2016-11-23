@@ -19,7 +19,7 @@ StScrollBar {
 
     StButton#vhandle,
     StButton#hhandle {
-        border-image: url("assets/cinnamon/generated/scroll-handle.svg") 3;
+        border-image: url("../assets/cinnamon/scroll-handle.svg") 3;
     }
 
     StButton#vhandle:hover,
@@ -28,6 +28,6 @@ StScrollBar {
     StButton#hhandle:active,
     StButton#vhandle:focus,
     StButton#hhandle:focus {
-        border-image: url("assets/cinnamon/generated/scroll-handle-hover.svg") 3;
+        border-image: url("../assets/cinnamon/scroll-handle-hover.svg") 3;
     }
 }

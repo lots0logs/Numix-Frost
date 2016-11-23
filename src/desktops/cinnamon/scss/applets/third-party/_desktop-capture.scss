@@ -9,12 +9,12 @@ StBoxLayout.applet-box.desktop-capture StBin {
 
 /* Display of preview image in notifications */
 .screenshot-thumbnail {
-    border-image: url("assets/cinnamon/generated/dark-bg.svg") 7;
+    border-image: url("../assets/cinnamon/dark-bg.svg") 7;
     border: 0;
     padding: 4px;
 
     &-hover {
-        border-image: url("assets/cinnamon/generated/hover.svg") 7;
+        border-image: url("../assets/cinnamon/hover.svg") 7;
     }
 }
 
@@ -64,7 +64,7 @@ StBoxLayout.applet-box.desktop-capture StBin {
 }
 
 .capture-countdown-timer {
-    border-image: url("assets/cinnamon/generated/popup.svg") 7;
+    border-image: url("../assets/cinnamon/popup.svg") 7;
     width: 50px;
     padding: 14px 12px;
     font-size: 40px;
@@ -99,7 +99,7 @@ StBoxLayout.applet-box.desktop-capture StBin {
 
 /* Instructions dialog */
 .instructions-container {
-    border-image: url("assets/cinnamon/generated/popup.svg") 7;
+    border-image: url("../assets/cinnamon/popup.svg") 7;
 }
 
 .instructions-label-header {

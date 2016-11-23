@@ -13,7 +13,7 @@
    ===================================================================*/
 
 .modal-dialog {
-    border-image: url("assets/cinnamon/generated/popup.svg") 9;
+    border-image: url("../assets/cinnamon/popup.svg") 9;
     border-radius: 0;
     padding: 0;
     color: $dark_fg_color;
@@ -24,7 +24,7 @@
     }
 
     > .modal-dialog-button-box {
-        border-image: url("assets/cinnamon/generated/buttonbox-bg.svg") 8;
+        border-image: url("../assets/cinnamon/buttonbox-bg.svg") 8;
         spacing: 0;
         margin: 0;
         padding: 5px 8px 6px 8px;
@@ -113,7 +113,7 @@
 }
 
 .about-scrollBox {
-    border-image: url("assets/cinnamon/generated/dark-bg.svg") 7;
+    border-image: url("../assets/cinnamon/dark-bg.svg") 7;
     padding: 4px;
     padding-right: 0;
     border-radius: 0;
@@ -128,7 +128,7 @@
    ===================================================================*/
 
 #LookingGlassDialog {
-    border-image: url("assets/cinnamon/generated/popup.svg") 7;
+    border-image: url("../assets/cinnamon/popup.svg") 7;
     padding: 14px;
     color: $dark_fg_color;
 }

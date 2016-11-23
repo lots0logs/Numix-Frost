@@ -1,6 +1,6 @@
 /* Copyright 2009, Red Hat, Inc.
  *
- * Portions adapted from Mx's data/style/default.css
+ * Portions adapted from Mxurl('../assets/gnome-shell/s data/style/default.css
  *   Copyright 2009 Intel Corporation
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -146,19 +146,19 @@ StScrollBar StButton#hhandle:active {
 .check-box StBin {
     width: 24px;
     height: 22px;
-    background-image: url("checkbox-off.svg");
+    background-image: url('../assets/gnome-shell/checkbox-off.svg');
 }
 
 .check-box:focus StBin {
-    background-image: url("checkbox-off-focused.svg");
+    background-image: url('../assets/gnome-shell/checkbox-off-focused.svg');
 }
 
 .check-box:checked StBin {
-    background-image: url("checkbox.svg");
+    background-image: url('../assets/gnome-shell/checkbox.svg');
 }
 
 .check-box:focus:checked StBin {
-    background-image: url("checkbox-focused.svg");
+    background-image: url('../assets/gnome-shell/checkbox-focused.svg');
 }
 
 /* Slider */
@@ -379,7 +379,7 @@ StScrollBar StButton#hhandle:active {
 
 .toggle-switch-us,
 .toggle-switch-intl {
-    background-image: url("toggle-off.png");
+    background-image: url('../assets/gnome-shell/toggle-off.png');
     background-size: contain;
     background-color: rgba(233,233,233,1.0);
     border: 1px solid rgba(0,0,0,0.3);
@@ -388,7 +388,7 @@ StScrollBar StButton#hhandle:active {
 
 .toggle-switch-us:checked,
 .toggle-switch-intl:checked {
-    background-image: url("toggle-on.png");
+    background-image: url('../assets/gnome-shell/toggle-on.png');
     background-size: contain;
     background-color: rgba(26,128,182,1.0);
 }
@@ -803,7 +803,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 #appMenu {
-    spinner-image: url("process-working.svg");
+    spinner-image: url('../assets/gnome-shell/process-working.svg');
     spacing: 4px;
 }
 
@@ -1036,7 +1036,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 .window-close, .notification-close {
-    background-image: url("close-window.svg");
+    background-image: url('../assets/gnome-shell/close-window.svg');
     background-size: 28px;
     background-color: rgba(26,128,182,1.0);
     border: 2px solid rgba(255, 255, 255, 1);
@@ -1142,7 +1142,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 .placeholder {
-    background-image: url("dash-placeholder.svg");
+    background-image: url('../assets/gnome-shell/dash-placeholder.svg');
     background-size: contain;
     height: 24px;
 }
@@ -1258,7 +1258,7 @@ StScrollBar StButton#hhandle:active {
 .search-display > StBoxLayout,
 .all-apps,
 .frequent-apps > StBoxLayout {
-    /* horizontal padding to make sure scrollbars or dash don't overlap content */
+    /* horizontal padding to make sure scrollbars or dash donurl('../assets/gnome-shell/t overlap content */
     padding: 0 88px 10px 88px;
 }
 
@@ -1318,7 +1318,7 @@ StScrollBar StButton#hhandle:active {
 .search-provider-icon-more {
     width: 16px;
     height: 16px;
-    background-image: url("more-results.svg");
+    background-image: url('../assets/gnome-shell/more-results.svg');
 }
 
 .app-well-app > .overview-icon.overview-icon-with-label,
@@ -1623,43 +1623,43 @@ StScrollBar StButton#hhandle:active {
 .calendar-change-month-back {
     width: 18px;
     height: 12px;
-    background-image: url("calendar-arrow-left.svg");
+    background-image: url('../assets/gnome-shell/calendar-arrow-left.svg');
 }
 
 .calendar-change-month-back:rtl {
-    background-image: url("calendar-arrow-right.svg");
+    background-image: url('../assets/gnome-shell/calendar-arrow-right.svg');
 }
 
 .calendar-change-month-back:hover,
 .calendar-change-month-back:focus {
     background-color: transparent;
-    background-image: url("calendar-arrow-left-hover.svg");
+    background-image: url('../assets/gnome-shell/calendar-arrow-left-hover.svg');
 }
 
 .calendar-change-month-back:active {
     background-color: transparent;
-    background-image: url("calendar-arrow-left.svg");
+    background-image: url('../assets/gnome-shell/calendar-arrow-left.svg');
 }
 
 .calendar-change-month-forward {
     width: 18px;
     height: 12px;
-    background-image: url("calendar-arrow-right.svg");
+    background-image: url('../assets/gnome-shell/calendar-arrow-right.svg');
 }
 
 .calendar-change-month-forward:rtl {
-    background-image: url("calendar-arrow-left.svg");
+    background-image: url('../assets/gnome-shell/calendar-arrow-left.svg');
 }
 
 .calendar-change-month-forward:hover,
 .calendar-change-month-forward:focus {
     background-color: transparent;
-    background-image: url("calendar-arrow-right-hover.svg");
+    background-image: url('../assets/gnome-shell/calendar-arrow-right-hover.svg');
 }
 
 .calendar-change-month-forward:active {
     background-color: transparent;
-    background-image: url("calendar-arrow-right.svg");
+    background-image: url('../assets/gnome-shell/calendar-arrow-right.svg');
 }
 
 .datemenu-date-label {
@@ -2243,12 +2243,12 @@ StScrollBar StButton#hhandle:active {
 .ripple-box {
     width: 52px;
     height: 52px;
-    background-image: url("corner-ripple-ltr.png");
+    background-image: url('../assets/gnome-shell/corner-ripple-ltr.png');
     background-size: contain;
 }
 
 .ripple-box:rtl {
-    background-image: url("corner-ripple-rtl.png");
+    background-image: url('../assets/gnome-shell/corner-ripple-rtl.png');
 }
 
 .switcher-arrow {
@@ -2290,7 +2290,7 @@ StScrollBar StButton#hhandle:active {
     height: 100px;
     border: 0;
     background-color: rgba(26,128,182,1.0);
-    background-image: url("ws-switch-arrow-up.png");
+    background-image: url('../assets/gnome-shell/ws-switch-arrow-up.png');
     border-radius: 2px;
 }
 
@@ -2298,7 +2298,7 @@ StScrollBar StButton#hhandle:active {
     height: 100px;
     border: 0;
     background-color: rgba(26,128,182,1.0);
-    background-image: url("ws-switch-arrow-down.png");
+    background-image: url('../assets/gnome-shell/ws-switch-arrow-down.png');
     border-radius: 2px;
 }
 
@@ -2897,7 +2897,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 .login-dialog-user-list:expanded .login-dialog-user-list-item:logged-in {
-    background-image: url("logged-in-indicator.svg");
+    background-image: url('../assets/gnome-shell/logged-in-indicator.svg');
     background-size: contain;
 }
 

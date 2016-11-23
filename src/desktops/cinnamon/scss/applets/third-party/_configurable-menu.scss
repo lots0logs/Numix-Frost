@@ -10,21 +10,21 @@
 }
 
 .menu-control-button {
-    border-image: url("assets/cinnamon/generated//button.svg") 7;
+    border-image: url("../assets/cinnamon/button.svg") 7;
     padding: 8px;
 
     &-selected {
-        border-image: url("assets/cinnamon/generated//button-hover.svg") 7;
+        border-image: url("../assets/cinnamon/button-hover.svg") 7;
         padding: 8px;
     }
 
     &:open {
-        border-image: url("assets/cinnamon/generated//button-pressed.svg") 7;
+        border-image: url("../assets/cinnamon/button-pressed.svg") 7;
         padding: 8px;
     }
 
     &-selected:open {
-        border-image: url("assets/cinnamon/generated//button-pressed.svg") 7;
+        border-image: url("../assets/cinnamon/button-pressed.svg") 7;
         padding: 8px;
     }
 }
@@ -62,6 +62,6 @@
 /* Right-click menu box */
 .menu-main-box-stylized .menu-context-menu,
 .menu-main-box-claassic .menu-context-menu {
-    border-image: url("assets/cinnamon/generated/dark-bg.svg") 7;
+    border-image: url("../assets/cinnamon/dark-bg.svg") 7;
     padding: .5em .1em;
 }

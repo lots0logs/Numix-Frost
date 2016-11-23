@@ -4,7 +4,7 @@
 
 /* Favourites */
 .menu-favorites-box {
-    border-image: url("assets/cinnamon/generated/dark-bg.svg") 7;
+    border-image: url("../assets/cinnamon/dark-bg.svg") 7;
     padding: 0.5em;
 }
 
@@ -12,7 +12,7 @@
     padding: 10px 12px;
 
     &:hover {
-        border-image: url("assets/cinnamon/generated/hover.svg") 9;
+        border-image: url("../assets/cinnamon/hover.svg") 9;
         color: $selected_bg_color;
     }
 }
@@ -48,7 +48,7 @@
 
     &-selected {
         padding: 7px;
-        border-image: url("assets/cinnamon/generated/hover.svg") 7;
+        border-image: url("../assets/cinnamon/hover.svg") 7;
         color: $selected_bg_color;
     }
 
@@ -73,16 +73,16 @@
 
     &-selected {
         padding: 7px;
-        border-image: url("assets/cinnamon/generated/hover.svg") 7;
+        border-image: url("../assets/cinnamon/hover.svg") 7;
         color: $selected_bg_color;
     }
 
     &:highlighted {
-        border-image: url("assets/cinnamon/generated/highlighted.svg") 6;
+        border-image: url("../assets/cinnamon/highlighted.svg") 6;
     }
 
     &-selected:highlighted {
-        border-image: url("assets/cinnamon/generated/hover.svg") 7;
+        border-image: url("../assets/cinnamon/hover.svg") 7;
         color: $dark_fg_color;
     }
 
@@ -116,6 +116,6 @@
 
 /* Right-click menu */
 .menu-applications-inner-box StScrollView {
-    border-image: url("assets/cinnamon/generated/dark-bg.svg") 7;
+    border-image: url("../assets/cinnamon/dark-bg.svg") 7;
     padding: .5em .1em;
 }

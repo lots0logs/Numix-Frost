@@ -11,13 +11,13 @@
 }
 
 .calc-displayWindow {
-    border-image: url("assets/cinnamon/generated/entry-focused.svg") 7;;
+    border-image: url("../assets/cinnamon/entry-focused.svg") 7;;
     padding: 8px;
     padding-top: 4px;
     padding-bottom: 2.4em;
 
     &-rpn {
-        border-image: url("assets/cinnamon/generated/entry-focused.svg") 7;
+        border-image: url("../assets/cinnamon/entry-focused.svg") 7;
         padding: 8px;
         padding-top: 4px;
     }

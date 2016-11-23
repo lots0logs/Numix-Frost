@@ -8,7 +8,7 @@
 .popup-menu-content {
     spacing: 0;
     padding: 0;
-    border-image: url("assets/cinnamon/generated/tooltip--window-app-grouping.svg") 6;
+    border-image: url("../assets/cinnamon/tooltip--window-app-grouping.svg") 6;
 
     .switcher-list {
         spacing: 0;
@@ -33,7 +33,7 @@
             }
 
             .window-close {
-                background-image: url("assets/cinnamon/generated/close-2.svg");
+                background-image: url("../assets/cinnamon/close-2.svg");
                 background-size: 20px;
             }
         }
