@@ -62,10 +62,10 @@ _output_changes_file_version_marker() {
 
 
 _remove_generated_css_files_and_finalize_dist_dir() {
-	{ rm -f "${DIST_DIR_GTK}"/*.css "${DIST_DIR_GTK320}"/*.css "${DIST_DIR_CINNAMON}"/*.css \
+	{ rm -f "${DIST_DIR_GTK}"/*.css "${DIST_DIR_GTK320}"/*.css \
 		&& cp -t "${DIST_DIR_GTK}"      "${SRC_DIR_GTK}"/{*.css,*.png} \
 		&& cp -t "${DIST_DIR_GTK320}"   "${SRC_DIR_GTK320}"/{*.css,*.png,*.theme} \
-		&& cp -t "${DIST_DIR_CINNAMON}" "${SRC_DIR_CINNAMON}"/{*.css,*.json,*.png} \
+		&& cp -t "${DIST_DIR_CINNAMON}" "${SRC_DIR_CINNAMON}"/{*.json,*.png} \
 		&& cp -t "${DIST_DIR_GNOME}"    "${SRC_DIR_GNOME}"/*.css; }
 }
 
@@ -181,6 +181,9 @@ do_install() {
 
 	# Remove symlink to assets directory (assets are all in gresource bundle)
 	unlink "${DIST_DIR}/assets"
+
+	# Cinnamon doesn't support GResources for themes yet so we must include its assets.
+	cp -r "${SRC_DIR}/common/assets/generated/cinnamon" "${DIST_DIR}/assets"
 
 	# Copy DIST_DIR as INSTALL_DIR
 	cp -r "${DIST_DIR}" "${INSTALL_DIR}"
