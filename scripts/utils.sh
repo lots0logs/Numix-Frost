@@ -160,7 +160,7 @@ do_css() {
 
 do_gresource() {
 	{ glib-compile-resources --sourcedir="${DIST_DIR}" "${SRC_DIR}/common/${REPO_NAME,,}.gresource.xml" \
-		&& mv "${SRC_DIR}/common/${REPO_NAME,,}.gresource" "${DIST_DIR_GTK}" \
+		&& mv "${SRC_DIR}/common/${REPO_NAME,,}.gresource" "${DIST_DIR_GTK320}/gtk.gresource" \
 		&& _remove_generated_css_files_and_finalize_dist_dir; }
 }
 
@@ -191,8 +191,10 @@ do_install() {
 	# Copy changes, credits, & license to INSTALL_DIR.
 	cp "${REPO_ROOT}"/{CREDITS,CHANGES,LICENSE} "${INSTALL_DIR}"
 
-	# Create symlink for index.theme in INSTALL_DIR/gtk-3.0
-	( cd "${INSTALL_DIR}/gtk-3.0" && ln -srf ../gtk-3.20/index.theme )
+	# Create symlink for gtk.gresource and index.theme in INSTALL_DIR/gtk-3.0
+	( cd "${INSTALL_DIR}/gtk-3.0" \
+		&& ln -srf ../gtk-3.20/index.theme \
+		&& ln -srf ../gtk-3.20/gtk.gresource; )
 }
 
 
