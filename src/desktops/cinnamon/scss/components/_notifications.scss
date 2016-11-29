@@ -8,70 +8,48 @@
     Tweak default $link color to fix
 */
 .url-highlighter {
-    link-color: saturate(lighten($link_color, 12%), 55%);
+    link-color: $link_color;
 }
 
 #notification {
-    border-image: url("../assets/cinnamon/popup.svg") 7;
-    padding: 1.3em;
-    spacing-rows: .5em;
-    spacing-columns: 10px;
-    width: 34em;
-    margin-from-right-edge-of-screen: 6px;
-    font-weight: bold;
-    font-size: 10pt;
+    padding: $spacing * 3;
+    spacing-columns: $spacing * 2;
+    width: $spacing * 100;
+    margin-from-right-edge-of-screen: $spacing * 2;
+    font-weight: normal;
+    font-size: 1em;
     color: $dark_fg_color;
+    background-color: $dark_bg_color;
 
-    CinnamonGenericContainer * {
-        font-weight: normal;
-        font-size: 9pt;
-        color: $info_fg_color;
+    CinnamonGenericContainer {
+        // Date/Time of notification when viewed in notification tray.
+        &:first-child StLabel:first-child:not(:last-child) {
+            font-size: 1em;
+            font-style: italic;
+        }
 
-        &:first-child {
+        // The notification title when viewed both in and out of the notification tray.
+        &:first-child StLabel:last-child {
             font-weight: bold;
-            font-size: 10pt;
-            padding: .2em 0;
-            color: $dark_fg_color;
-        }
-
-        &:last-child {
-            padding: .3em 0;
-            color: $dark_fg_color;
+            font-size: 1.2em;
         }
     }
 
-    &-body {
-        font-weight: normal;
-        font-size: 9pt;
-        padding: .5em 0;
-    }
+    &-body {}
 
-    &-actions {
-        spacing: .2em;
-    }
+    &-actions {}
 
-    // min-height hack to prevent image stretching
-    &.notification-with-image {
-        min-height: 159px;
-
-        .popup-menu-content & {
-            min-height: 172px;
-        }
-
-        #notification-body {
-            padding: 0;
-        }
-    }
+    &.notification-with-image {}
 }
 
-.notification-button,
+/*.notification-button,
 .notification-icon-button {
     @include btn-primary;
 }
 
 .notification-button { @include btn-width(wide); }
 
-.notification-icon-button { @include btn-width(small); }
+.notification-icon-button { @include btn-width(small); }*/
 
 /* ===================================================================
    ! Notification applet
@@ -92,16 +70,14 @@
 /* Notifs look inside the notification applet & other popups. */
 .popup-menu-content {
     #notification {
-        border-image: url("../assets/cinnamon/dark-bg-marked-orange.svg") 7;
-        padding: .8em .8em .6em 1em;
+
 
         &.multi-line-notification {
-            border-image: url("../assets/cinnamon/dark-bg-marked-blue.svg") 7;
+
         }
 
         &.notification-with-image {
-            border-image: url("../assets/cinnamon/dark-bg-marked-green.svg") 7;
-            padding-bottom: .8em;
+
         }
     }
 }
